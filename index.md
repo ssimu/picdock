@@ -17,6 +17,14 @@ On Google Play it is listed as **"Photo Slideshow, Digital Frame"** by **DD_stud
 This repository contains **documentation only** (fact sheet and FAQ) — the app source code is not published here.
 Issues are welcome for feature requests and bug reports.
 
+## Comparisons (copies — originals on devdad.kr)
+- [Best apps to turn an Android tablet into a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/best-apps-android-tablet-digital-photo-frame-2026.html)
+- [안 쓰는 안드로이드 태블릿 디지털 액자 앱 비교 (2026)](https://ssimu.github.io/picdock/compare/ko-android-tablet-digital-photo-frame-app-comparison.html)
+- [Androidタブレットをデジタルフォトフレームにするアプリ比較（2026年）](https://ssimu.github.io/picdock/compare/ja-android-tablet-digital-photo-frame-app-comparison.html)
+- [Die besten Apps: Android-Tablet als digitaler Bilderrahmen (2026)](https://ssimu.github.io/picdock/compare/de-android-tablet-digitaler-bilderrahmen-apps.html)
+
+---
+
 ---
 
 
