@@ -142,7 +142,7 @@ PicDock never shows ads on the slideshow itself. In the free Google Play version
 
 **Is PicDock free? How much is Premium?**
 
-The Google Play version is free to download and stays usable without paying: all photo sources, video playback and the face detection filter are free. Premium is available as a lifetime one-time purchase of US$19.99, or as a yearly or monthly subscription (prices shown in the app; they vary by country). New installs get a 7-day trial of all features.
+The Google Play version is free to download and stays usable without paying: all photo sources except web upload, video playback and the face detection filter are free. Premium is available as a lifetime one-time purchase of US$19.99, or as a yearly or monthly subscription (prices shown in the app; they vary by country). New installs get a 7-day trial of all features.
 
 **Does PicDock require a subscription?**
 
