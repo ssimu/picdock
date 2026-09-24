@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDriveのフォルダをAndroidタブレットのフォトフレームで自動表示する方法（2026）</title>
+    <meta name="description" content="家族の写真はOneDrive、使わなくなったAndroidタブレットは引き出しの中。Microsoftアカウントでサインインし、OneDriveのフォルダを選ぶだけで、新しい写真が30分ごとに自動で届くフォトフレームにする手順。できないこと（職場・学校アカウント、動画）も正直に。">
+    <link rel="canonical" href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="de" href="https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="ja" href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OneDriveのフォルダをAndroidタブレットのフォトフレームで自動表示する方法（2026）">
+    <meta property="og:description" content="MicrosoftアカウントでサインインしてOneDriveのフォルダを選ぶだけ。古いAndroidタブレットを、新しい写真が自動で届くフォトフレームにする手順と、できないこと。">
+    <meta property="og:image" content="https://devdad.kr/blog/images/tablet-frame-kitchen-shelf.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "OneDriveのフォルダをAndroidタブレットのフォトフレームで自動表示する方法（2026）",
+  "description": "AndroidタブレットのPicDockで個人用MicrosoftアカウントからOneDriveにサインインし、フォルダを選んで新しい写真を自動で取り込む手順（選んだフォルダは30分ごと、アカウント全体は2時間ごと）。職場・学校アカウントとOneDriveの動画には対応しないことも説明します。",
+  "image": "https://devdad.kr/blog/images/tablet-frame-kitchen-shelf.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "datePublished": "2026-09-24",
+  "dateModified": "2026-09-24",
+  "inLanguage": "ja",
+  "mainEntityOfPage": "https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "OneDriveのフォルダをAndroidタブレットのフォトフレームで表示する",
+  "description": "フレーム用の写真をOneDriveの最上位フォルダに入れ、AndroidタブレットのPicDockで個人用Microsoftアカウントにサインインし、そのフォルダを写真ソースに選びます。",
+  "inLanguage": "ja",
+  "totalTime": "PT10M",
+  "tool": [
+    {"@type": "HowToTool", "name": "OneDriveを使える個人用Microsoftアカウント（Outlook.com、Hotmail、Live、またはMicrosoft 365 Personal／Family）"},
+    {"@type": "HowToTool", "name": "PicDockを入れたAndroidタブレットまたはスマホ（Android 7.0以降）"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "OneDriveにフレーム用フォルダを作る",
+      "text": "パソコン、スマホ、またはonedrive.comで、OneDriveの最上位に「フォトフレーム」などのフォルダを作り、フレームに映したい写真を入れます。中のサブフォルダも読み込まれます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "写真ソースにOneDriveを選ぶ",
+      "text": "タブレットでPicDockを開き、メディアソースからOneDriveを選びます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Microsoftアカウントでサインインする",
+      "text": "ブラウザでMicrosoftのサインイン画面が開きます。個人用Microsoftアカウントでサインインし、ファイルの読み取りを許可します。PicDockが求めるのは読み取り専用のアクセスで、サインインはその後も保たれます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "フォルダを選ぶ",
+      "text": "PicDockには「ピクチャ」フォルダと、OneDrive最上位のフォルダが一覧表示されます。フォルダを1つ以上（またはアカウント全体）選んでOKをタップします。すでに別のソースを表示中なら「置き換え」か「現在のスライドショーに追加」を選びます。"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "あとは置いておくだけ",
+      "text": "スライドショーの再生中、PicDockは選んだOneDriveフォルダを30分ごと（アカウント全体なら2時間ごと）に読み直し、アプリに戻ったときにも確認します。フォルダに追加した写真は自動で表示されます。"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AndroidタブレットでOneDriveのフォルダをフォトフレームとして表示できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できます。OneDriveアプリ自体はファイルを見るためのアプリでフォトフレームではありませんが、OneDriveにサインインできるフォトフレームアプリなら、フォルダを全画面のスライドショーで再生できます。PicDockではOneDriveソースを選び、個人用Microsoftアカウントでサインインしてフォルダにチェックを入れます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OneDriveに追加した写真は自動でタブレットに表示されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。スライドショーの再生中、PicDockは選んだOneDriveフォルダを30分ごと、アカウント全体を2時間ごとに読み直し、アプリに戻ったときにも確認します。フォルダから削除した写真はフレームからも消えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "職場や学校のOneDriveアカウントでも使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PicDockでは使えません。OneDriveのサインインにMicrosoftの個人用アカウント向けエンドポイントを使っているため、個人用Microsoftアカウント（Outlook.com、Hotmail、Live、Microsoft 365 Personal／Family）だけが対象です。OneDrive for BusinessとSharePointには対応していません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "OneDriveの動画も表示されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PicDockでは表示されません。OneDriveソースは写真のみ（JPG、PNG、GIF、BMP、WebP、Android 9以降はHEIC/HEIFも）で、動画はスキップします。PicDockが再生する動画はタブレット本体に保存したものです。OneDriveの動画も映したい場合、SkyFolioはストアの説明でOneDriveの動画表示に対応するとしています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wi-Fiが切れてもフレームは動き続けますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一部は動きます。写真は表示するときにダウンロードされ、端末内の最大約500MBのキャッシュに残ります。更新の失敗や空の応答は一時的な障害として扱うので、写真リストはそのまま保たれます。一度もダウンロードしていない写真は、接続が戻るまで表示できません。「フォルダ全体をオフライン保存」する機能はありません。"
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>OneDriveのフォルダを<br>Androidタブレットのフォトフレームに</h1>
+        <p>古いAndroidタブレットを、OneDriveのフォルダを映し、新しい写真を自動で取り込むフォトフレームにする方法。できないことも書きました。</p>
+        <div class="post-meta">2026年9月 · 約6分で読めます</div>
+    </div>
+
+    <article class="post">
+        <p><strong>最初にお断り：</strong>以下の手順で使うAndroidアプリPicDockは、私たちが作っています。なので中立ではありません。PicDockについての記述はすべて、2026年9月に公開版（1.8.8）のソースコードと照らし合わせて確認しました。OneDriveで<strong>できないこと</strong>もはっきり書き、OneDrive専用の別の選択肢も紹介します。</p>
+
+        <p>家族のパソコンがWindowsでOfficeも使っているなら、写真はたぶんもうOneDriveに入っています。スマホのカメラアップロード、旅行のあとに誰かが共有してくれたフォルダ、昔のプリントをスキャンしたもの。そして引き出しには、使わなくなったAndroidタブレットが眠っていることが多いはずです。ただ、そのタブレットのOneDriveアプリはファイルを見るためのもので、フォトフレームではありません。棚に置いて一日中フォルダの写真を流してはくれないし、誰かがタップしない限り新しい写真も出てきません。</p>
+
+        <p><strong>結論から：</strong>OneDriveにサインインできるフォトフレームアプリを使います。フレームに映す写真をOneDriveのフォルダ1つにまとめ、タブレットで一度サインインしてそのフォルダを選び、あとは流しっぱなしにするだけ。フォルダに写真を足せば、勝手に表示されるようになります。</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/tablet-frame-kitchen-shelf.jpg" alt="キッチンの棚でデジタルフォトフレームとして動いているAndroidタブレット" width="1200" height="678" loading="lazy">
+            <figcaption>写真はパソコンやスマホからOneDriveのフォルダへ。棚のタブレットは誰も触らなくてもそれを映します。</figcaption>
+        </figure>
+
+        <h2>用意するもの</h2>
+        <ul>
+            <li><strong>OneDriveを使える個人用Microsoftアカウント</strong> — Outlook.com、Hotmail、Live、またはMicrosoft 365 Personal／Family。PicDockでは<strong>職場・学校アカウントは使えません</strong>（詳しくは後述）。</li>
+            <li><strong>Androidタブレットまたはスマホ</strong>（Android 7.0以降）。</li>
+            <li><strong>PicDock</strong>（Google Play表示名『フォトスライドショー・デジタルフレーム』）。macOS向けの picdock.app は名前が似ているだけの別のアプリで、私たちとは関係ありません。</li>
+        </ul>
+
+        <h2>手順1 — OneDriveにフレーム用のフォルダを作る</h2>
+        <ol>
+            <li>パソコン（エクスプローラー → OneDrive）、onedrive.com、またはスマホのOneDriveアプリで、OneDriveの<strong>最上位</strong>にフォルダを作ります。名前は例えば <code>フォトフレーム</code>。</li>
+            <li>フレームに映したい写真をそこへコピーか移動します。サブフォルダがあっても大丈夫です。フォルダを選ぶと、PicDockはその中のフォルダもすべて読み込みます。</li>
+        </ol>
+        <p>なぜ最上位なのか。PicDockのフォルダ一覧に出てくるのは、<strong>「ピクチャ」フォルダ</strong>（Pictures）と、OneDriveのルート直下にあるフォルダだけだからです。もっと深い階層のフォルダは単独では一覧に出ず、親フォルダを選ぶことで含まれます。</p>
+
+        <h2>手順2 — タブレットでサインインしてフォルダを選ぶ</h2>
+        <ol>
+            <li>PicDock → <strong>メディアソース</strong> → <strong>OneDrive</strong> を開きます。</li>
+            <li>ブラウザでMicrosoftのサインイン画面が開きます。個人用Microsoftアカウントでサインインし、アクセス許可の確認を承認します。PicDockが求めるのはファイルの<strong>読み取り専用</strong>のアクセスで、OneDrive内のものを変更したり削除したりはできません。サインインは保たれるので、この手順は最初の一回だけです。</li>
+            <li>フォルダにチェックを入れます（複数選べます）。アカウント全体を対象にすることもできますが、読み込みに時間がかかり、更新の間隔も長くなります。フォトフレームならフォルダを選ぶほうがおすすめです。</li>
+            <li>すでに何か表示しているときは、<strong>「置き換え」</strong>（OneDriveだけにする）か<strong>「現在のスライドショーに追加」</strong>（タブレット内の写真、Googleフォト、Dropbox、iCloud共有アルバム、NASとOneDriveを混ぜる）を選びます。</li>
+        </ol>
+        <p>あとは充電中に画面が消えないよう設定して、棚に置きます。画面の常時点灯、夜間のスリープ、充電器をつないだら自動で起動する設定は、<a href="https://devdad.kr/blog/ja-always-on-photo-frame-tablet.html">常時表示タブレットのガイド</a>にまとめてあります。</p>
+
+        <h2>新しい写真がフレームに届くしくみ</h2>
+        <p>棚のフォトフレームには誰も触らないので、新しい写真がいつ出てくるかは更新間隔で決まります。公開版のPicDockは、スライドショーの再生中にOneDriveを読み直します。</p>
+        <ul>
+            <li><strong>選んだフォルダ：30分ごと。</strong>（複数フォルダでも30分ごと。）</li>
+            <li><strong>アカウント全体：2時間ごと。</strong>ドライブ全体を検索する必要があるためです。</li>
+            <li><strong>アプリに戻ったとき</strong>にも、次に写真が切り替わるタイミングで確認します。「いま写真を入れたから、フレームを見てみよう」というよくある場面でも、待たずに済みます。</li>
+        </ul>
+        <p>削除した写真も同じタイミングでフレームから消えます。OneDriveから応答がないときや、新しい写真がないのに半分以上の写真が消えたように見えるときは、フレームは空になる代わりに今のリストを保ちます。一時的な不調を「全部削除された」とは扱いません。確認はスライドショーの再生中に行われ、一時停止中やアプリを閉じているあいだは更新されません。</p>
+
+        <h2>家族でフォルダを共有する</h2>
+        <p>フレームに表示できるのは、<strong>サインインしたアカウント自身のOneDrive</strong>にあるフォルダです。いちばん簡単な家族の使い方はこうです。フレーム用アカウントが <code>フォトフレーム</code> フォルダを持ち、OneDriveから編集権限付きで共有して、家族がそれぞれの端末から写真を追加できるようにします。家族がアップロードした写真は持ち主のフォルダに入り、フレームは次の更新で取り込みます。ほかの人が持っていて自分に共有されたフォルダについては確認していないので、フレーム用フォルダはフレームのアカウント側に置いてください。</p>
+
+        <h2>オフラインとキャッシュ</h2>
+        <p>写真は表示の順番が来たときにダウンロードされ、端末内の最大約500MBのキャッシュに保存されます（古いものから消えます）。キャッシュにある写真はネットがなくても再表示できますが、一度もダウンロードしていない写真は表示できません。「フォルダ全体をオフライン保存」するスイッチはないので、よくオフラインになる場所のフレームなら、写真をタブレット本体にコピーするほうが確実です。</p>
+
+        <h2>PicDockがOneDriveでできないこと</h2>
+        <p>公開版1.8.8（2026年9月）時点で、はっきり書いておきます。</p>
+        <ul>
+            <li><strong>職場・学校アカウントは非対応。</strong>サインインにMicrosoftの個人用アカウント向けエンドポイントを使っています。OneDrive for BusinessとSharePointのライブラリには対応していません。</li>
+            <li><strong>OneDriveの動画は表示しません。</strong>OneDriveソースは写真のみ（JPG、PNG、GIF、BMP、WebP、Android 9以降はHEIC/HEIFも）で、フォルダ内の動画はスキップします。PicDockが再生する動画はタブレット本体に保存したもので、OneDriveからではありません。</li>
+            <li><strong>アカウント全体では見つかる形式が少なくなります。</strong>このモードで探すのはJPG、PNG、GIFのファイルです。写真がHEIC（iPhoneでよくある形式）なら、フォルダを選んでください。</li>
+            <li><strong>選べるのは最上位のフォルダと「ピクチャ」だけ。</strong>フレーム用フォルダは最上位に置くか、その親フォルダを選んでください。</li>
+            <li><strong>即時ではありません。</strong>フォルダの場合、新しい写真が出るのはアップロードした瞬間ではなく約30分以内です。アプリを開けば、その場で確認します。</li>
+            <li><strong>完全なオフラインコピーはありません</strong>（上記参照）。</li>
+        </ul>
+
+        <h2>もう一つの正直な選択肢：SkyFolio</h2>
+        <p>Snapwoodの<strong>SkyFolio</strong>は、OneDrive専用のギャラリー＆スライドショーアプリです。<a href="https://play.google.com/store/apps/details?id=com.snapwood.skyfolio&amp;hl=en_US">Google Playの掲載ページ</a>（2026年9月24日確認）では、自らを「an photo gallery and slideshow app for Microsoft OneDrive」と説明し、「display photos and videos from One Drive folders」（OneDriveのフォルダの写真と動画を表示）できるとしています。Android TVとキャストにも触れていて、「Sync your photos to your device for offline access.」とオフラインアクセスも提供しています。掲載ページには「アプリ内課金あり」の表示があり、「広告を含む」の表示はありません。私たちは試していないので、掲載内容はご自身で確かめてください。ただ、複数のソースを混ぜることより<strong>OneDriveの動画</strong>や<strong>完全なオフライン同期</strong>が大事なら、検討する価値があります。</p>
+        <p>PicDockはその逆で、OneDriveは同じフレームで混ぜられるソースの一つです。そこに時計、天気、夜間スリープ、充電時の自動起動といった、棚に置くタブレットに必要なものが加わります。ほかのアプリも含めて見たい方は、<a href="https://devdad.kr/blog/ja-android-tablet-digital-photo-frame-app-comparison.html">Androidフォトフレームアプリの比較</a>をどうぞ。</p>
+
+        <h2>料金</h2>
+        <p>Google Play版のPicDockはダウンロード無料で、無料版でも<strong>すべての写真ソース</strong>（OneDriveを含む）と自動更新を使えます。任意のPremiumでは、トランジションの追加、天気予報、時計デザインなどが増えます。Premiumは買い切りの一回購入（米国価格US$19.99）か、年額・月額のサブスクリプションから選べます（価格はアプリ内に表示され、国によって異なります）。詳しくは<a href="https://devdad.kr/picdock/facts/">PicDockのファクトページ</a>（英語）へ。</p>
+
+        <h2>よくある質問</h2>
+
+        <h3>AndroidタブレットでOneDriveのフォルダをフォトフレームとして表示できますか？</h3>
+        <p>できます。OneDriveアプリはファイルを見るためのアプリですが、OneDriveにサインインできるフォトフレームアプリならフォルダを全画面で再生できます。PicDockなら、メディアソース → OneDrive、個人用Microsoftアカウントでサインイン、フォルダにチェック、です。</p>
+
+        <h3>OneDriveに追加した写真は自動で表示されますか？</h3>
+        <p>はい。スライドショーの再生中、PicDockは選んだフォルダを30分ごと（アカウント全体は2時間ごと）に読み直し、アプリに戻ったときにも確認します。削除した写真も消えます。</p>
+
+        <h3>職場や学校のアカウントでも使えますか？</h3>
+        <p>PicDockでは使えません。個人用Microsoftアカウントのみで、OneDrive for BusinessとSharePointには対応していません。</p>
+
+        <h3>OneDriveの動画も表示されますか？</h3>
+        <p>PicDockでは表示されません。OneDriveソースは写真のみで、動画はスキップします。動画が大事なら、SkyFolioはストアの説明でOneDriveの動画表示に対応するとしています。</p>
+
+        <h3>Wi-Fiが切れてもフレームは動き続けますか？</h3>
+        <p>一部は動きます。一度表示した写真は約500MBのキャッシュに残り、更新に失敗しても写真リストは保たれます。ただ、一度もダウンロードしていない写真は接続が戻るまで待つことになります。</p>
+
+        <h2>まとめ</h2>
+        <p>家族の写真はOneDrive、手元に余ったAndroidタブレットがあるなら、フレーム用に<strong>OneDriveの最上位フォルダ</strong>を作り、<strong>個人用Microsoftアカウント</strong>でサインインしてフォルダを選び、スライドショーを流しっぱなしにするだけです。新しい写真は約30分以内に、アプリを開けばすぐに表示されます。写真のみで動画は非対応、職場・学校アカウントも非対応です。</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Donedrive_folder_ja">Google PlayでPicDockを入手</a> · <a href="https://devdad.kr/picdock/facts/">PicDockファクト</a> · <a href="https://devdad.kr/blog/ja-android-tablet-digital-photo-frame-app-comparison.html">Androidフレームアプリ比較</a> · <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">English</a> · <a href="https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html">Deutsch</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

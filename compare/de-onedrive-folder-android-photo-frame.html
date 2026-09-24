@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDrive-Ordner auf einem Android-Tablet als digitalen Bilderrahmen anzeigen (2026)</title>
+    <meta name="description" content="Die Familienfotos liegen in OneDrive, das alte Android-Tablet in der Schublade. Schritt für Schritt: mit dem Microsoft-Konto anmelden, einen OneDrive-Ordner wählen und neue Fotos alle 30 Minuten automatisch auf dem Tablet sehen – plus was nicht geht (Arbeits-/Schulkonten, Videos).">
+    <link rel="canonical" href="https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="de" href="https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="ja" href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OneDrive-Ordner auf einem Android-Tablet als digitalen Bilderrahmen anzeigen (2026)">
+    <meta property="og:description" content="Mit dem Microsoft-Konto anmelden, einen OneDrive-Ordner wählen und ein altes Android-Tablet zum Bilderrahmen machen, der neue Fotos von selbst zeigt – plus was nicht geht.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/tablet-frame-kitchen-shelf.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "OneDrive-Ordner auf einem Android-Tablet als digitalen Bilderrahmen anzeigen (2026)",
+  "description": "Schritt für Schritt: In PicDock auf einem Android-Tablet mit einem privaten Microsoft-Konto bei OneDrive anmelden, einen Ordner wählen und neue Fotos automatisch übernehmen lassen (alle 30 Minuten für einen gewählten Ordner, alle 2 Stunden für das ganze Konto). Mit Einschränkungen: Arbeits- und Schulkonten sowie Videos aus OneDrive werden nicht unterstützt.",
+  "image": "https://devdad.kr/blog/images/tablet-frame-kitchen-shelf.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "datePublished": "2026-09-24",
+  "dateModified": "2026-09-24",
+  "inLanguage": "de",
+  "mainEntityOfPage": "https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Einen OneDrive-Ordner auf einem Android-Tablet als Bilderrahmen anzeigen",
+  "description": "Die Fotos für den Rahmen in einen OneDrive-Ordner auf oberster Ebene legen, sich in PicDock auf dem Android-Tablet mit einem privaten Microsoft-Konto anmelden und diesen Ordner als Fotoquelle wählen.",
+  "inLanguage": "de",
+  "totalTime": "PT10M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Ein privates Microsoft-Konto mit OneDrive (Outlook.com, Hotmail, Live oder Microsoft 365 Single/Family)"},
+    {"@type": "HowToTool", "name": "Android-Tablet oder -Smartphone (ab Android 7.0) mit PicDock"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "In OneDrive einen Rahmen-Ordner anlegen",
+      "text": "Am PC, auf dem Handy oder unter onedrive.com einen Ordner auf der obersten Ebene von OneDrive anlegen (zum Beispiel „Bilderrahmen“) und die gewünschten Fotos hineinlegen. Unterordner darin werden mitgelesen."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "OneDrive als Fotoquelle wählen",
+      "text": "Auf dem Tablet PicDock öffnen, zur Medienquelle gehen und OneDrive wählen."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mit dem Microsoft-Konto anmelden",
+      "text": "Im Browser öffnet sich die Microsoft-Anmeldung. Mit einem privaten Microsoft-Konto anmelden und den Lesezugriff auf die Dateien erlauben. PicDock fordert nur Lesezugriff an und bleibt danach angemeldet."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Den Ordner auswählen",
+      "text": "PicDock listet den Ordner „Bilder“ und die Ordner auf der obersten Ebene von OneDrive. Einen oder mehrere Ordner (oder das ganze Konto) ankreuzen und mit OK bestätigen. Läuft bereits eine andere Quelle, „Ersetzen“ oder „Zur aktuellen Diashow hinzufügen“ wählen."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Einfach laufen lassen",
+      "text": "Solange die Diashow läuft, liest PicDock einen gewählten OneDrive-Ordner alle 30 Minuten neu ein (das ganze Konto alle 2 Stunden) und prüft zusätzlich, wenn Sie zur App zurückkehren. Neu hinzugefügte Fotos erscheinen von selbst."
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "de",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Kann ein Android-Tablet einen OneDrive-Ordner als Bilderrahmen anzeigen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Die OneDrive-App selbst ist ein Dateibrowser und kein Bilderrahmen, aber Bilderrahmen-Apps, die sich bei OneDrive anmelden, spielen einen Ordner als Vollbild-Diashow ab. In PicDock wählen Sie die Quelle OneDrive, melden sich mit einem privaten Microsoft-Konto an und kreuzen den Ordner an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Erscheinen neue Fotos aus OneDrive automatisch auf dem Tablet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Solange die Diashow läuft, liest PicDock einen gewählten OneDrive-Ordner alle 30 Minuten und das ganze Konto alle 2 Stunden neu ein und prüft zusätzlich, wenn Sie zur App zurückkehren. Aus dem Ordner gelöschte Fotos verschwinden auch vom Rahmen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Funktioniert es mit einem OneDrive-Arbeits- oder Schulkonto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In PicDock nicht. Die OneDrive-Anmeldung nutzt Microsofts Endpunkt für private Konten, daher funktionieren nur private Microsoft-Konten (Outlook.com, Hotmail, Live, Microsoft 365 Single oder Family). OneDrive for Business und SharePoint werden nicht unterstützt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Werden Videos aus OneDrive angezeigt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In PicDock nicht. Die OneDrive-Quelle zeigt nur Fotos (JPG, PNG, GIF, BMP, WebP sowie HEIC/HEIF ab Android 9) und überspringt Videos. Videos spielt PicDock aus dem Speicher des Tablets ab. Wenn Ihnen OneDrive-Videos wichtig sind: Laut Store-Eintrag zeigt SkyFolio auch Videos aus OneDrive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Läuft der Rahmen weiter, wenn das WLAN ausfällt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teilweise. Fotos werden beim Anzeigen heruntergeladen und in einem Cache auf dem Gerät von bis zu etwa 500 MB gehalten. Eine fehlgeschlagene oder leere Aktualisierung gilt als vorübergehende Störung, die Fotoliste bleibt also erhalten. Fotos, die nie heruntergeladen wurden, erscheinen erst wieder mit Verbindung. Eine Option „ganzen Ordner offline speichern“ gibt es nicht."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>Ein OneDrive-Ordner als<br>Bilderrahmen auf dem Android-Tablet</h1>
+        <p>So wird ein altes Android-Tablet zum Bilderrahmen, der einen OneDrive-Ordner zeigt und neue Fotos von selbst übernimmt – und was dabei nicht geht.</p>
+        <div class="post-meta">September 2026 · 6 Min. Lesezeit</div>
+    </div>
+
+    <article class="post">
+        <p><strong>Offenlegung vorweg:</strong> Wir entwickeln PicDock, die Android-App aus der Anleitung unten. Neutral sind wir also nicht. Jede Angabe zu PicDock haben wir im September 2026 am Quellcode der veröffentlichten Version (1.8.8) geprüft, wir nennen offen, was PicDock mit OneDrive <strong>nicht</strong> kann, und wir stellen eine reine OneDrive-Alternative vor.</p>
+
+        <p>Wenn in Ihrer Familie Windows und Office den Ton angeben, liegen die Fotos wahrscheinlich längst in OneDrive: der automatische Kamera-Upload vom Handy, der Ordner, den jemand nach dem Urlaub teilt, die eingescannten alten Abzüge. Und oft liegt irgendwo ein altes Android-Tablet in der Schublade. Die OneDrive-App auf diesem Tablet ist aber ein Dateibrowser, kein Bilderrahmen – sie steht nicht den ganzen Tag im Regal und blättert durch einen Ordner, und neue Fotos zeigt sie erst, wenn jemand darauf tippt.</p>
+
+        <p><strong>Kurz gesagt:</strong> Nehmen Sie eine Bilderrahmen-App, die sich bei OneDrive anmeldet. Legen Sie die Fotos für den Rahmen in einen OneDrive-Ordner, melden Sie sich einmal auf dem Tablet an, wählen Sie den Ordner und lassen Sie die Diashow laufen. Neue Fotos im Ordner erscheinen dann von selbst.</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/tablet-frame-kitchen-shelf.jpg" alt="Ein Android-Tablet als digitaler Bilderrahmen auf einem Küchenregal" width="1200" height="678" loading="lazy">
+            <figcaption>Die Fotos kommen vom PC oder Handy in einen OneDrive-Ordner. Das Tablet im Regal zeigt sie, ohne dass jemand es anfasst.</figcaption>
+        </figure>
+
+        <h2>Was Sie brauchen</h2>
+        <ul>
+            <li><strong>Ein privates Microsoft-Konto</strong> mit OneDrive – Outlook.com, Hotmail, Live oder Microsoft 365 Single/Family. <strong>Arbeits- oder Schulkonten funktionieren</strong> in PicDock <strong>nicht</strong> (Details unten).</li>
+            <li><strong>Ein Android-Tablet oder -Smartphone</strong> ab Android 7.0.</li>
+            <li><strong>PicDock</strong> (Google Play: „Foto Diashow, Bilderrahmen“). Nicht zu verwechseln mit der macOS-App picdock.app – das ist ein anderes Produkt eines anderen Entwicklers und hat mit uns nichts zu tun.</li>
+        </ul>
+
+        <h2>Schritt 1 – In OneDrive einen Rahmen-Ordner anlegen</h2>
+        <ol>
+            <li>Legen Sie am PC (Explorer → OneDrive), unter onedrive.com oder in der OneDrive-App auf dem Handy einen Ordner auf der <strong>obersten Ebene</strong> Ihres OneDrive an, etwa <code>Bilderrahmen</code>.</li>
+            <li>Kopieren oder verschieben Sie die Fotos für den Rahmen dorthin. Unterordner sind kein Problem – wenn Sie einen Ordner wählen, liest PicDock auch alle Ordner darin mit.</li>
+        </ol>
+        <p>Warum die oberste Ebene? Die Ordnerliste in PicDock zeigt Ihren Ordner <strong>„Bilder“</strong> (Pictures) und die Ordner direkt im Stammverzeichnis von OneDrive. Tiefer liegende Ordner erscheinen nicht einzeln, sondern werden über ihren übergeordneten Ordner mit eingeschlossen.</p>
+
+        <h2>Schritt 2 – Auf dem Tablet anmelden und den Ordner wählen</h2>
+        <ol>
+            <li>Öffnen Sie PicDock → <strong>Medienquelle</strong> → <strong>OneDrive</strong>.</li>
+            <li>Im Browser öffnet sich die Microsoft-Anmeldung. Melden Sie sich mit Ihrem privaten Microsoft-Konto an und bestätigen Sie die Berechtigungsanfrage. PicDock fordert nur <strong>Lesezugriff</strong> auf Ihre Dateien an; in Ihrem OneDrive kann die App nichts ändern oder löschen. Sie bleiben angemeldet – das ist also ein einmaliger Schritt.</li>
+            <li>Kreuzen Sie den Ordner an (mehrere sind möglich). Alternativ können Sie das ganze Konto verwenden – das geht, wird aber langsamer durchsucht und seltener aktualisiert. Für einen Bilderrahmen ist ein Ordner die bessere Wahl.</li>
+            <li>Läuft schon etwas, wählen Sie <strong>„Ersetzen“</strong> (nur OneDrive) oder <strong>„Zur aktuellen Diashow hinzufügen“</strong> (OneDrive gemischt mit Fotos auf dem Tablet, Google Fotos, Dropbox, einem geteilten iCloud-Album oder einem NAS).</li>
+        </ol>
+        <p>Stellen Sie das Tablet dann so ein, dass der Bildschirm beim Laden anbleibt, und stellen Sie es ins Regal. Wie das geht, samt Nachtruhe und automatischem Start beim Anschließen des Ladegeräts, steht in unserer <a href="https://devdad.kr/blog/de-always-on-photo-frame-tablet.html">Anleitung für den Dauerbetrieb</a>.</p>
+
+        <h2>Wie neue Fotos auf den Rahmen kommen</h2>
+        <p>Einen Bilderrahmen im Regal fasst niemand an – das Aktualisierungsintervall entscheidet also, wann neue Fotos auftauchen. In der veröffentlichten Version liest PicDock OneDrive neu ein, solange die Diashow läuft:</p>
+        <ul>
+            <li><strong>Ein gewählter Ordner: alle 30 Minuten.</strong> (Mehrere Ordner: ebenfalls 30 Minuten.)</li>
+            <li><strong>Das ganze Konto: alle 2 Stunden</strong>, weil dafür das gesamte Laufwerk durchsucht werden muss.</li>
+            <li><strong>Wenn Sie zur App zurückkehren</strong>, prüft PicDock zusätzlich beim nächsten Bildwechsel. Der typische Moment „Ich habe gerade Fotos hochgeladen, mal sehen, ob sie da sind“ funktioniert also ohne Warten.</li>
+        </ul>
+        <p>Gelöschte Fotos verschwinden im selben Rhythmus vom Rahmen. Antwortet OneDrive nicht, oder sieht ein Durchlauf plötzlich so aus, als wäre mehr als die Hälfte der Fotos verschwunden, ohne dass Neues dazukam, behält der Rahmen seine aktuelle Liste, statt sich zu leeren – ein Aussetzer wird nicht als „alles gelöscht“ gewertet. Geprüft wird, während die Diashow läuft; eine pausierte oder geschlossene App aktualisiert nicht.</p>
+
+        <h2>Einen Ordner mit der Familie teilen</h2>
+        <p>Der Rahmen zeigt Ordner aus dem <strong>eigenen OneDrive des angemeldeten Kontos</strong>. Am einfachsten ist diese Aufteilung: Das Konto des Rahmens besitzt den Ordner <code>Bilderrahmen</code> und teilt ihn in OneDrive mit Bearbeitungsrecht, sodass Angehörige von ihren eigenen Geräten Fotos hinzufügen können. Deren Uploads landen im Ordner des Besitzers, und der Rahmen übernimmt sie bei der nächsten Aktualisierung. Ordner, die jemand anderem gehören und mit Ihnen geteilt wurden, haben wir nicht geprüft – legen Sie den Rahmen-Ordner also im Konto des Rahmens an.</p>
+
+        <h2>Offline und Cache</h2>
+        <p>Fotos werden heruntergeladen, wenn sie an der Reihe sind, und in einem Cache auf dem Gerät von bis zu etwa 500 MB gehalten; die ältesten werden zuerst entfernt. Fotos im Cache lassen sich auch ohne Netz wieder anzeigen, nie heruntergeladene nicht. Einen Schalter „ganzen Ordner offline speichern“ gibt es nicht. Ein Rahmen, der oft offline ist, fährt besser, wenn die Fotos direkt auf das Tablet kopiert werden.</p>
+
+        <h2>Was PicDock mit OneDrive nicht kann</h2>
+        <p>Ganz offen, Stand der veröffentlichten Version 1.8.8 (September 2026):</p>
+        <ul>
+            <li><strong>Keine Arbeits- oder Schulkonten.</strong> Die Anmeldung nutzt Microsofts Endpunkt für private Konten. OneDrive for Business und SharePoint-Bibliotheken werden nicht unterstützt.</li>
+            <li><strong>Keine Videos aus OneDrive.</strong> Die OneDrive-Quelle zeigt nur Fotos (JPG, PNG, GIF, BMP, WebP sowie HEIC/HEIF ab Android 9); Videos im Ordner werden übersprungen. Videos spielt PicDock aus dem Speicher des Tablets ab, nicht aus OneDrive.</li>
+            <li><strong>Das ganze Konto findet weniger Formate.</strong> Dieser Modus sucht nach JPG-, PNG- und GIF-Dateien. Liegen Ihre Fotos als HEIC vor (typisch für iPhones), wählen Sie besser einen Ordner.</li>
+            <li><strong>Nur Ordner der obersten Ebene in der Auswahl</strong>, dazu „Bilder“. Legen Sie den Rahmen-Ordner also oben an oder wählen Sie den übergeordneten Ordner.</li>
+            <li><strong>Nicht sofort.</strong> Neue Fotos erscheinen bei einem Ordner innerhalb von etwa 30 Minuten, nicht im Moment des Hochladens – außer Sie öffnen die App, dann wird gleich geprüft.</li>
+            <li><strong>Keine vollständige Offline-Kopie</strong> (siehe oben).</li>
+        </ul>
+
+        <h2>Eine ehrliche Alternative: SkyFolio</h2>
+        <p><strong>SkyFolio</strong> von Snapwood ist eine Galerie- und Diashow-App nur für OneDrive. Ihr <a href="https://play.google.com/store/apps/details?id=com.snapwood.skyfolio&amp;hl=en_US">Google-Play-Eintrag</a> (geprüft am 24. September 2026) beschreibt sie als <em>„an photo gallery and slideshow app for Microsoft OneDrive“</em>, sagt, sie könne <em>„display photos and videos from One Drive folders“</em> (Fotos und Videos aus OneDrive-Ordnern anzeigen), erwähnt Android TV und Casting und bietet Offline-Zugriff: <em>„Sync your photos to your device for offline access.“</em> Laut Eintrag gibt es In-App-Käufe und keine Werbung. Wir haben SkyFolio nicht getestet, lesen Sie den Eintrag also selbst – aber wenn Ihnen <strong>Videos aus OneDrive</strong> oder eine <strong>vollständige Offline-Synchronisierung</strong> wichtiger sind als gemischte Quellen, lohnt sich ein Blick.</p>
+        <p>Bei PicDock ist es umgekehrt: OneDrive ist eine von mehreren Quellen, die Sie auf demselben Rahmen mischen können, dazu Uhr, Wetter, Nachtruhe und automatischer Start beim Laden – das, was ein Tablet im Regal braucht. Einen breiteren Überblick gibt unser <a href="https://devdad.kr/blog/de-android-tablet-digitaler-bilderrahmen-apps.html">Vergleich von Bilderrahmen-Apps für Android</a>.</p>
+
+        <h2>Was es kostet</h2>
+        <p>Die Google-Play-Version von PicDock ist kostenlos, und die Gratisversion enthält <strong>alle Fotoquellen</strong>, OneDrive eingeschlossen, samt automatischer Aktualisierung. Das optionale Premium bringt Extras wie weitere Übergänge, Wettervorhersagen und Uhr-Designs: 19,99 US$ (US-Preis) als lebenslanger Einmalkauf oder alternativ ein Jahres- bzw. Monatsabo; die Preise werden in der App angezeigt und unterscheiden sich je nach Land. Alle Details: <a href="https://devdad.kr/picdock/facts/">PicDock-Faktenblatt</a> (Englisch).</p>
+
+        <h2>Häufige Fragen</h2>
+
+        <h3>Kann ein Android-Tablet einen OneDrive-Ordner als Bilderrahmen anzeigen?</h3>
+        <p>Ja. Die OneDrive-App ist ein Dateibrowser, aber Bilderrahmen-Apps, die sich bei OneDrive anmelden, spielen einen Ordner im Vollbild ab. In PicDock: Medienquelle → OneDrive, mit einem privaten Microsoft-Konto anmelden, Ordner ankreuzen.</p>
+
+        <h3>Erscheinen neue Fotos aus OneDrive automatisch?</h3>
+        <p>Ja. Solange die Diashow läuft, liest PicDock einen gewählten Ordner alle 30 Minuten neu ein (das ganze Konto alle 2 Stunden) und prüft zusätzlich, wenn Sie zur App zurückkehren. Gelöschte Fotos verschwinden ebenfalls.</p>
+
+        <h3>Funktioniert es mit einem Arbeits- oder Schulkonto?</h3>
+        <p>In PicDock nicht. Nur private Microsoft-Konten funktionieren; OneDrive for Business und SharePoint werden nicht unterstützt.</p>
+
+        <h3>Werden Videos aus OneDrive angezeigt?</h3>
+        <p>In PicDock nicht. Die OneDrive-Quelle zeigt nur Fotos und überspringt Videos. Laut Store-Eintrag zeigt SkyFolio auch Videos aus OneDrive, falls Ihnen das wichtig ist.</p>
+
+        <h3>Läuft der Rahmen weiter, wenn das WLAN ausfällt?</h3>
+        <p>Teilweise. Bereits gezeigte Fotos bleiben in einem Cache von etwa 500 MB, und die Fotoliste übersteht eine fehlgeschlagene Aktualisierung. Nie heruntergeladene Fotos warten aber, bis die Verbindung zurück ist.</p>
+
+        <h2>Kurz zusammengefasst</h2>
+        <p>Familie mit OneDrive, übriges Android-Tablet: einen <strong>OneDrive-Ordner auf oberster Ebene</strong> für den Rahmen anlegen, mit einem <strong>privaten Microsoft-Konto</strong> anmelden, den Ordner wählen und die Diashow laufen lassen. Neue Fotos erscheinen innerhalb von etwa 30 Minuten oder sofort, wenn Sie die App öffnen. Nur Fotos, keine Videos, und keine Arbeits- oder Schulkonten.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Donedrive_folder_de">PicDock bei Google Play laden</a> · <a href="https://devdad.kr/picdock/facts/">PicDock-Faktenblatt</a> · <a href="https://devdad.kr/blog/de-android-tablet-digitaler-bilderrahmen-apps.html">Vergleich der Bilderrahmen-Apps</a> · <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">English</a> · <a href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">日本語</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
