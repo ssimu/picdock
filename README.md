@@ -55,7 +55,7 @@ PicDock is an app that turns an Android phone or tablet into a digital photo and
 - People who want to reuse an old Android tablet or phone as a photo frame instead of buying one.
 - Households whose photos live in Google Photos, Dropbox, OneDrive, iCloud Shared Albums or on a NAS.
 - Bedside or kitchen displays that should also show the time and weather.
-- Android TV and Fire tablet owners who want a photo screensaver.
+- Android TV owners who want their own photos on the TV (Fire OS does not allow third-party screensavers).
 - Shops, cafés and events that need an unattended slideshow.
 
 ## Supported photo sources
@@ -160,7 +160,7 @@ No. Face detection and person grouping run on the device with bundled models; ph
 
 **Can PicDock be used as a screensaver or on Android TV?**
 
-Yes. PicDock registers as an Android screensaver (Daydream) and supports Android TV, including control with a remote's D-pad and media keys.
+Yes. PicDock registers as an Android screensaver (Daydream) and supports Android TV, including control with a remote's D-pad and media keys. The screensaver shows photos stored on the device; NAS and cloud sources play in the app's full-screen slideshow instead. Fire OS does not allow third-party screensavers.
 
 ## Last updated
 
