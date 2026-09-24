@@ -25,6 +25,8 @@ Issues are welcome for feature requests and bug reports.
 
 ## Guides (copies — originals on devdad.kr)
 - [How to show an iCloud shared album on an Android tablet photo frame (2026)](https://ssimu.github.io/picdock/compare/icloud-shared-album-android-photo-frame.html)
+- [iCloud共有アルバムをAndroidタブレットのフォトフレームで表示する方法（2026）](https://ssimu.github.io/picdock/compare/ja-icloud-shared-album-android-photo-frame.html)
+- [아이폰 iCloud 공유 앨범을 안드로이드 태블릿 액자로 보는 법 (2026)](https://ssimu.github.io/picdock/compare/ko-icloud-shared-album-android-photo-frame.html)
 
 ---
 
