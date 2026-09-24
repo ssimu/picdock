@@ -38,6 +38,7 @@ Issues are welcome for feature requests and bug reports.
 - [OneDriveのフォルダをAndroidタブレットのフォトフレームで自動表示する方法（2026）](https://ssimu.github.io/picdock/compare/ja-onedrive-folder-android-photo-frame.html)
 - [How to show a Dropbox folder on an Android tablet photo frame (auto-updating, 2026)](https://ssimu.github.io/picdock/compare/dropbox-folder-android-photo-frame.html)
 - [Turn an old Android tablet into a bedside clock and photo frame (night dimming, sleep schedule, alarm, 2026)](https://ssimu.github.io/picdock/compare/bedside-clock-photo-frame-android-tablet.html)
+- [Turn an Amazon Fire tablet (Fire HD 8 / HD 10) into a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/fire-tablet-digital-photo-frame.html)
 - [Use your own photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV screensaver (2026)](https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html)
 
 ---
