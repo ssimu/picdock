@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Your Own Photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV Screensaver (2026)</title>
+    <meta name="description" content="Google TV's Ambient mode shows Google Photos. For photos on a NAS, OneDrive or Dropbox you need another route. What actually works in 2026: a third-party screensaver for photos stored on the TV, a full-screen slideshow app for a NAS, and the limits we checked in the code.">
+    <link rel="canonical" href="https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html">
+    <link rel="alternate" hreflang="en" href="https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html">
+    <link rel="alternate" hreflang="x-default" href="https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Use Your Own Photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV Screensaver (2026)">
+    <meta property="og:description" content="Ambient mode shows Google Photos. For a NAS, OneDrive or Dropbox: what works as a screensaver, what works as a full-screen slideshow, and what does not.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg">
+    <meta property="og:url" content="https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Use Your Own Photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV Screensaver (2026)",
+  "description": "How to show your own photos on an Android TV or Google TV when they are not in Google Photos. Google TV Ambient mode uses Google Photos. PicDock's Android screensaver (version 1.8.8) shows photos stored on the TV itself and does not read a NAS, OneDrive or Dropbox; for NAS photos, PicDock's full-screen slideshow launched from the TV home reads an SMB share directly. OneDrive and Dropbox sign-in on a TV is not verified.",
+  "image": "https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "datePublished": "2026-09-24",
+  "dateModified": "2026-09-24",
+  "inLanguage": "en",
+  "mainEntityOfPage": "https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Show photos from a NAS on an Android TV or Google TV",
+  "description": "Open PicDock from the TV home, add the NAS as an SMB share, and leave the full-screen slideshow running. PicDock's screensaver component only shows photos stored on the TV, so the slideshow app is the route for NAS photos.",
+  "totalTime": "PT15M",
+  "tool": [
+    {"@type": "HowToTool", "name": "Android TV or Google TV device with PicDock installed"},
+    {"@type": "HowToTool", "name": "A NAS or computer sharing a photo folder over SMB (Synology, QNAP, Windows share) on the same network"},
+    {"@type": "HowToTool", "name": "The TV remote (D-pad)"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Share the photo folder on the NAS",
+      "text": "On the NAS, make sure SMB file sharing is on and note the NAS address, the shared folder and a user name and password that can read it."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Open PicDock from the TV home",
+      "text": "PicDock declares a TV launcher entry, so it appears among the apps on the Android TV / Google TV home. Open it with the remote."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add the NAS as a photo source",
+      "text": "Press OK (centre of the D-pad) to show the controls, open Settings and go to Media Source, choose SMB/NAS, and enter the server address, share name and account with the on-screen keyboard."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Leave the slideshow running",
+      "text": "Back on the slideshow, the screen stays on by default. PicDock re-reads the NAS share every 15 minutes while the slideshow runs, so new photos appear on their own. Left and right on the D-pad move between photos; up and down change brightness."
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can Google TV use my own photos as a screensaver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google TV's built-in Ambient mode can show albums from your Google Photos account (Settings > System > Ambient mode). Photos elsewhere need a third-party screensaver or a slideshow app. Some Google TV builds limit which screensavers you can choose, so check whether your TV lists third-party screensavers at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an Android TV screensaver show photos from a NAS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not with PicDock's screensaver. In the released version 1.8.8, PicDock's Android screensaver shows photos stored on the device; if a NAS, OneDrive or Dropbox is selected as the source, the screensaver falls back to all photos on the device. For NAS photos, open the PicDock app from the TV home and let its full-screen slideshow run: that reads the SMB share directly and re-reads it every 15 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do OneDrive and Dropbox work on an Android TV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not verified. PicDock's OneDrive and Dropbox sign-in opens a web sign-in page, which needs a browser that many TVs do not have. Signing in on a phone or tablet is not transferred to the TV. A NAS (SMB) share or photos stored on the TV are the dependable sources on a TV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on Fire TV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As an app, yes: the Amazon Appstore version runs as a full-screen slideshow with remote control support. As a screensaver, no: Fire OS does not let third-party apps replace the screensaver."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is PicDock free on Android TV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Google Play version is free to download and the free version includes every photo source, NAS included. Optional Premium adds extras and is available as a lifetime one-time purchase or a yearly or monthly subscription."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>Your own photos on an<br>Android TV / Google TV</h1>
+        <p>Google TV's screensaver shows Google Photos. If your photos live on a NAS, OneDrive or Dropbox, here is what actually works in 2026 — and what does not.</p>
+        <div class="post-meta">September 2026 · 7 min read</div>
+    </div>
+
+    <article class="post">
+        <p><strong>Disclosure up front.</strong> We make PicDock, the Android app discussed below, so we are not neutral. Every PicDock detail here was checked against the source code of the released version (1.8.8) in September 2026. Several of those details are limitations, and we say so plainly — including where PicDock's own screensaver does <strong>not</strong> do what this article's title asks.</p>
+
+        <p>A TV is the biggest screen in most homes and it spends most of the day dark or showing a streaming app's idle screen. If your family photos already sit on a Synology or QNAP, in OneDrive or in Dropbox, it is natural to want them on the TV when nobody is watching. Google TV makes this easy only for one place: Google Photos.</p>
+
+        <p><strong>Short answer:</strong></p>
+        <ul>
+            <li><strong>Photos in Google Photos</strong> → use Google TV's own <strong>Ambient mode</strong>. Nothing to install.</li>
+            <li><strong>Photos on a NAS</strong> → a system screensaver that reads a NAS is rare. The dependable route is a <strong>full-screen slideshow app opened from the TV home</strong>. PicDock's slideshow reads an SMB share directly; PicDock's <em>screensaver</em> does not.</li>
+            <li><strong>Photos in OneDrive or Dropbox</strong> → on a TV this depends on whether the app can sign in without a browser. For PicDock, TV sign-in is <strong>not verified</strong>.</li>
+            <li><strong>Photos copied onto the TV itself</strong> → PicDock can be picked as the Android screensaver, where your TV allows third-party screensavers.</li>
+        </ul>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg" alt="A photo slideshow running full screen in a living room in the evening" width="1100" height="614" loading="lazy">
+            <figcaption>The goal: family photos on the big screen while nobody is watching.</figcaption>
+        </figure>
+
+        <h2>Screensaver or slideshow app — why the difference matters</h2>
+        <p>Android TV has two ways to put photos on an idle TV:</p>
+        <ul>
+            <li><strong>A screensaver</strong> (Android calls it a <em>dream</em>) starts by itself after the TV has been idle for a while, and stops when you press a button. You choose it in the TV's settings.</li>
+            <li><strong>A slideshow app</strong> is an ordinary app you open from the home screen. It runs until you leave it. It does not start by itself, but it has the full app behind it — network sources, settings, controls.</li>
+        </ul>
+        <p>For photos on a NAS, that difference decides the answer, as the next sections show.</p>
+
+        <h2>Option 1: Google Photos → Ambient mode (Google's own)</h2>
+        <p>If your photos are, or can be, in Google Photos, use what the TV already has. On a Google TV: <strong>Settings → System → Ambient mode</strong>, choose <strong>Google Photos</strong> as the source and pick albums (Google's help page: <a href="https://support.google.com/googletv/answer/10070821?hl=en">Change the screensaver on Google TV</a>). It is free, starts by itself and needs no extra app. It does not read a NAS, OneDrive or Dropbox.</p>
+
+        <h2>Option 2: A NAS → PicDock's full-screen slideshow</h2>
+        <p>What we checked in PicDock 1.8.8:</p>
+        <ul>
+            <li><strong>It appears on the TV home.</strong> The app declares a TV launcher entry (<code>LEANBACK_LAUNCHER</code>) and does not require a touchscreen, location hardware or Wi-Fi hardware.</li>
+            <li><strong>It reads an SMB share</strong> — the file sharing that Synology, QNAP and Windows use — directly, so the photos stay on the NAS.</li>
+            <li><strong>New photos appear by themselves.</strong> While the slideshow runs, it re-reads the NAS share every <strong>15 minutes</strong>.</li>
+            <li><strong>The screen stays on</strong> by default while the slideshow is open.</li>
+            <li><strong>The remote works.</strong> OK (the centre of the D-pad) shows or hides the controls; left/right go to the next or previous photo; up/down change brightness; Play/Pause, Next and Previous media keys work; the Menu key opens settings. The settings screens were fixed in 2026 so the D-pad reaches every switch and slider.</li>
+        </ul>
+        <p>Steps:</p>
+        <ol>
+            <li>On the NAS, check that SMB file sharing is on, and note the NAS address, the shared folder, and a user name and password that can read it.</li>
+            <li>On the TV, open <strong>PicDock</strong> from the home screen.</li>
+            <li>Press <strong>OK</strong> to show the controls, open <strong>Settings → Media Source → SMB/NAS</strong>, and enter the server address, share name and (if needed) user name and password with the on-screen keyboard.</li>
+            <li>Go back to the slideshow and leave it running.</li>
+        </ol>
+        <p>What you give up compared with a screensaver: it does not start by itself when the TV goes idle. You open it when you want the photos on the screen, and leave it. Our <a href="https://devdad.kr/blog/nas-photo-frame-app.html">NAS photo frame guide</a> covers the NAS side (shares, sub-folders, what happens when the NAS is offline).</p>
+
+        <h2>Option 3: Photos on the TV → PicDock as the screensaver</h2>
+        <p>PicDock also registers an Android screensaver (<code>PicDockDreamService</code>). In version 1.8.8 it:</p>
+        <ul>
+            <li>shows photos <strong>stored on the device</strong> — all photos, chosen albums or favourites — plus Google Photos picks that PicDock has already downloaded;</li>
+            <li>uses the app's slideshow interval, shuffle, Ken Burns motion, clock and (if turned on) weather;</li>
+            <li>responds to the remote: left/right (and the media next/previous keys) change the photo, up/down are ignored so a stray press does not end it, OK opens the app, Back closes the screensaver.</li>
+        </ul>
+        <p><strong>What it does not do:</strong> it does not read a NAS, OneDrive or Dropbox. If one of those is the app's photo source, the screensaver falls back to <strong>all photos on the device</strong>. With an iCloud shared album or a mix of several sources selected, the screensaver finds no photos. On a TV, where there are usually few photos stored locally, that makes the screensaver most useful for a folder of photos you have copied onto the TV. How to get files onto your TV's storage depends on the model; we have not verified USB drives.</p>
+        <p><strong>Choosing it:</strong> on Android TV the screensaver is usually under <strong>Settings → Device Preferences → Screen saver</strong>; on Google TV under <strong>Settings → System → Ambient mode</strong>. Menu names vary by TV maker. <strong>Some Google TV builds only offer Google's Ambient mode</strong> and do not list third-party screensavers at all; if PicDock is not in the list, your TV does not allow it, and the slideshow app (Option 2) is the fallback.</p>
+
+        <h2>OneDrive and Dropbox on a TV</h2>
+        <p>PicDock's OneDrive and Dropbox sign-ins open a web sign-in page in a browser. Many TVs have no browser, and PicDock 1.8.8 has no TV-style "enter this code on your phone" sign-in. <strong>Signing in on your phone or tablet is not transferred to the TV.</strong> We have not verified OneDrive or Dropbox sign-in on a TV, so we do not recommend them there. If your photos are in OneDrive or Dropbox, the options are: sync them to a NAS or PC share and use Option 2, or put them on a tablet instead — see our <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">OneDrive folder guide</a> for the tablet route.</p>
+
+        <h2>Fire TV</h2>
+        <p>The Amazon Appstore version of PicDock runs on Fire TV as an app, with remote control support. <strong>Fire OS does not let third-party apps replace the screensaver</strong>, so on Fire TV it is the slideshow-app route only.</p>
+
+        <h2>Getting PicDock onto a Google TV</h2>
+        <p>PicDock (Google Play name: <em>"Photo Slideshow, Digital Frame"</em>) is built for phones and tablets first. It runs on TVs and has a TV launcher entry, but it has not yet been published with TV artwork for Google Play's TV catalogue, so the Play Store on some TVs may not list it. We have not verified other installation routes. PicDock is not the macOS app picdock.app — that is an unrelated product.</p>
+
+        <h2>For media-server users: Plex and Jellyfin</h2>
+        <p>If you already run <strong>Plex</strong> or <strong>Jellyfin</strong> with a photo library, their TV apps can browse and play that library, and the photos stay on your server. As screensavers they are more limited: Jellyfin's Android TV screensaver shows artwork from your media libraries, and using a <strong>photo library</strong> as the screensaver is an open <a href="https://features.jellyfin.org/posts/4063/photo-library-as-screensaver">feature request</a> (checked September 2026). We have not tested Plex's current TV screensaver options — check them in your own setup. If you do not already run a media server, setting one up just for a screensaver is a lot of work compared with Option 2.</p>
+
+        <h2>What it costs</h2>
+        <p>The Google Play version of PicDock is free to download, and the free version includes <strong>every photo source</strong>, NAS included, with automatic refresh. Optional Premium adds extras such as more transitions, forecasts and clock designs: US$19.99 as a lifetime one-time purchase, or a yearly or monthly subscription (prices shown in the app and vary by country). Full details: <a href="https://devdad.kr/picdock/facts/">PicDock facts page</a>.</p>
+
+        <h2>FAQ</h2>
+
+        <h3>Can Google TV use my own photos as a screensaver?</h3>
+        <p>Google TV's Ambient mode shows albums from Google Photos. Other places need a third-party screensaver or a slideshow app, and some Google TV builds do not list third-party screensavers at all.</p>
+
+        <h3>Can an Android TV screensaver show photos from a NAS?</h3>
+        <p>Not with PicDock's screensaver: in version 1.8.8 it shows photos stored on the device and falls back to them when a NAS, OneDrive or Dropbox is selected. Open the PicDock app instead — its slideshow reads the SMB share directly and re-reads it every 15 minutes.</p>
+
+        <h3>Do OneDrive and Dropbox work on an Android TV?</h3>
+        <p>Not verified. The sign-in needs a web page that many TVs cannot open, and a sign-in on your phone is not transferred. Use a NAS share or photos on the TV.</p>
+
+        <h3>Does it work on Fire TV?</h3>
+        <p>As an app, yes. As a screensaver, no — Fire OS does not allow third-party screensavers.</p>
+
+        <h3>Is PicDock free on Android TV?</h3>
+        <p>The Google Play version is free and includes every photo source. Premium is optional: lifetime one-time purchase, or yearly or monthly subscription.</p>
+
+        <h2>In short</h2>
+        <p>Google Photos → Ambient mode. A NAS → open a slideshow app from the TV home; PicDock's reads an SMB share and refreshes every 15 minutes, but its <strong>screensaver</strong> shows only photos stored on the TV. OneDrive and Dropbox on a TV → not verified for PicDock; use a NAS share or a tablet. Fire TV → app yes, screensaver no.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Dandroid_tv_screensaver">Get PicDock on Google Play</a> · <a href="https://devdad.kr/picdock/facts/">PicDock facts</a> · <a href="https://devdad.kr/blog/nas-photo-frame-app.html">NAS photo frame guide</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
