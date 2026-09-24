@@ -28,6 +28,8 @@ Issues are welcome for feature requests and bug reports.
 - [OneDriveのフォルダをAndroidタブレットのフォトフレームで自動表示する方法（2026）](https://ssimu.github.io/picdock/compare/ja-onedrive-folder-android-photo-frame.html)
 - [Use your own photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV screensaver (2026)](https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html)
 
+## More guides (copies — originals on devdad.kr)
+
 ---
 
 ---

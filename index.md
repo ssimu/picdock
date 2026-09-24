@@ -1,5 +1,7 @@
 ---
 title: PicDock — Android digital photo frame app (facts & FAQ)
+## More guides (copies — originals on devdad.kr)
+
 ---
 
 # PicDock — Android digital photo frame app
