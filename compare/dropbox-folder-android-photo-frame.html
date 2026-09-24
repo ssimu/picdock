@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Show a Dropbox Folder on an Android Tablet Photo Frame (Auto-Updating, 2026)</title>
+    <meta name="description" content="Family photos in Dropbox, a spare Android tablet. Step by step: sign in to Dropbox, pick a folder, and let the tablet pick up new photos by itself every 30 minutes — plus what does not work (Dropbox videos, full offline copy).">
+    <link rel="canonical" href="https://devdad.kr/blog/dropbox-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/dropbox-folder-android-photo-frame.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/dropbox-folder-android-photo-frame.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Show a Dropbox Folder on an Android Tablet Photo Frame (Auto-Updating, 2026)">
+    <meta property="og:description" content="Sign in to Dropbox, pick a folder, and turn an Android tablet into a photo frame that picks up new photos by itself — plus what does not work.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-kitchen-counter-frame.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/dropbox-folder-android-photo-frame.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Show a Dropbox Folder on an Android Tablet Photo Frame (Auto-Updating, 2026)",
+  "description": "Step by step: sign in to Dropbox in PicDock on an Android tablet, choose a folder, and let the frame pick up new photos automatically (every 30 minutes for a chosen folder, every 2 hours for the whole account). Includes limitations: Dropbox videos are not shown and there is no full offline copy.",
+  "image": "https://devdad.kr/blog/images/picdock-kitchen-counter-frame.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "datePublished": "2026-09-24",
+  "dateModified": "2026-09-24",
+  "inLanguage": "en",
+  "mainEntityOfPage": "https://devdad.kr/blog/dropbox-folder-android-photo-frame.html"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Show a Dropbox folder on an Android tablet photo frame",
+  "description": "Put the frame photos in a top-level Dropbox folder, sign in to Dropbox in PicDock on an Android tablet, and choose that folder as the photo source.",
+  "totalTime": "PT10M",
+  "tool": [
+    {"@type": "HowToTool", "name": "A Dropbox account"},
+    {"@type": "HowToTool", "name": "Android tablet or phone (Android 7.0 or later) with PicDock installed"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Make a frame folder in Dropbox",
+      "text": "On your computer, phone or dropbox.com, create a folder at the top level of your Dropbox (for example 'Frame') and put the photos you want on the frame into it. Subfolders inside it are included."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Choose Dropbox as the photo source",
+      "text": "On the tablet, open PicDock, go to Photo sources and choose Dropbox."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sign in to Dropbox",
+      "text": "Dropbox's own sign-in page opens (the Dropbox app or the browser). Sign in and allow access. PicDock asks only for permission to read file contents and stays connected afterwards."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pick the folder",
+      "text": "PicDock lists the folders at the top level of your Dropbox. Tick one or more folders (or 'All Photos' for the whole account) and tap OK. Choose Replace or Add to current if another source is already showing."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Leave it running",
+      "text": "While the slideshow runs, PicDock re-reads a chosen Dropbox folder every 30 minutes (every 2 hours in whole-account mode), and checks again when you come back to the app. Photos added to the folder appear on their own."
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can an Android tablet show a Dropbox folder as a photo frame?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Dropbox app itself is a file browser, not a frame, but photo frame apps that sign in to Dropbox can play a folder as a full-screen slideshow. In PicDock you choose the Dropbox source, sign in and tick the folder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do new photos added to Dropbox appear on the tablet automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While the slideshow runs, PicDock re-reads a chosen Dropbox folder every 30 minutes and the whole account every 2 hours, and also checks when you return to the app (at most once every 5 minutes). Photos deleted from the folder are removed from the frame too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are photos in subfolders shown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When you choose a Dropbox folder, PicDock also reads every folder inside it. The folder picker lists only top-level folders, so deeper folders are included through their parent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are videos in Dropbox shown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in PicDock. The Dropbox source shows photos only (JPG, PNG, GIF, BMP, WebP, and HEIC/HEIF on Android 9 or later) and skips videos. If Dropbox videos matter to you, dfolio's Google Play listing says it plays Dropbox movies and videos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the frame keep working if the Wi-Fi drops?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. Photos are downloaded as they are shown and kept in an on-device cache (500 MB by default, adjustable from 100 MB to unlimited), and a failed refresh keeps the current photo list. Photos that were never downloaded cannot be shown until the connection returns. There is no 'download the whole folder for offline' option."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>A Dropbox folder on an<br>Android tablet frame</h1>
+        <p>How to turn an Android tablet into a photo frame that shows a Dropbox folder and picks up new photos by itself — and what does not work.</p>
+        <div class="post-meta">September 2026 · 6 min read</div>
+    </div>
+
+    <article class="post">
+        <p><strong>Disclosure up front.</strong> We make PicDock, the Android app used in the steps below, so we are not neutral. Every PicDock detail here was checked against the source code of the released version (1.8.8) in September 2026, we list what it <strong>cannot</strong> do with Dropbox, and we name a Dropbox-only alternative.</p>
+
+        <p>Plenty of families already keep their photos in Dropbox: camera uploads from a phone, a shared folder after a trip, scans of old prints. And there is often a spare Android tablet in a drawer. The Dropbox app on that tablet is a file browser, not a frame — it will not sit on a shelf and cycle through a folder all day, and it will not show new photos unless someone taps.</p>
+
+        <p><strong>Short answer:</strong> use a frame app that signs in to Dropbox. Put the frame photos in one Dropbox folder, sign in once on the tablet, pick that folder, and leave it running. New photos added to the folder show up on their own.</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-kitchen-counter-frame.jpg" alt="An Android tablet on a kitchen counter running as a digital photo frame" width="1100" height="614" loading="lazy">
+            <figcaption>Photos go into a Dropbox folder from a computer or phone. The tablet on the counter shows them without anyone touching it.</figcaption>
+        </figure>
+
+        <h2>What you need</h2>
+        <ul>
+            <li><strong>A Dropbox account</strong> with the photos in it.</li>
+            <li><strong>An Android tablet or phone</strong> running Android 7.0 or later.</li>
+            <li><strong>PicDock</strong> (Google Play name: <em>"Photo Slideshow, Digital Frame"</em>). PicDock is not the macOS app picdock.app — that is an unrelated product.</li>
+        </ul>
+
+        <h2>Step 1 — In Dropbox: make a frame folder</h2>
+        <ol>
+            <li>On your computer, on dropbox.com or in the Dropbox phone app, create a folder at the <strong>top level</strong> of your Dropbox, for example <code>Frame</code>.</li>
+            <li>Copy or move the photos you want on the frame into it. Subfolders are fine — when you choose a folder, PicDock also reads every folder inside it.</li>
+        </ol>
+        <p>Why the top level? PicDock's folder list shows the folders directly in your Dropbox root. Deeper folders are not listed on their own; they are included through their parent. (Picking <code>Camera Uploads</code> works too, if you want every phone photo on the frame.)</p>
+
+        <h2>Step 2 — On the tablet: sign in and pick the folder</h2>
+        <ol>
+            <li>Open PicDock → <strong>Photo sources</strong> → <strong>Dropbox</strong>.</li>
+            <li>Dropbox's own sign-in page opens. Sign in and allow access. PicDock asks only for permission to <strong>read file contents</strong>; it does not ask to change or delete anything in your Dropbox. You stay connected, so this is a one-time step. If the sign-in does not complete, try again.</li>
+            <li>Tick the folder (you can tick several). "All Photos" uses the whole account instead — possible, but slower to scan and refreshed less often, so a folder is the better choice for a frame.</li>
+            <li>If something is already showing, choose <strong>Replace</strong> (only Dropbox) or <strong>Add to current</strong> (mix Dropbox with photos on the tablet, Google Photos, OneDrive, an iCloud shared album or a NAS).</li>
+        </ol>
+        <p>Then set the tablet to stay on while charging and put it on the shelf. Our <a href="https://devdad.kr/blog/always-on-photo-frame-tablet.html">always-on tablet guide</a> covers keeping the screen on, night hours and starting when the charger is connected.</p>
+
+        <h2>How new photos reach the frame</h2>
+        <p>A frame on a shelf is never touched, so the refresh interval decides when new photos appear. In the released version, PicDock re-reads Dropbox while the slideshow runs:</p>
+        <ul>
+            <li><strong>A chosen folder: every 30 minutes.</strong> (Several folders: also 30 minutes.)</li>
+            <li><strong>Whole account ("All Photos"): every 2 hours</strong>, because it has to walk the entire Dropbox.</li>
+            <li><strong>When you come back to the app</strong>, it checks at the next photo change, at most once every 5 minutes. So the usual "I just added photos, let me look at the frame" moment works without waiting.</li>
+        </ul>
+        <p>Deleted photos are removed from the frame on the same schedule. If Dropbox does not answer, or a scan suddenly looks like more than half the photos vanished with nothing new, the frame keeps its current list instead of emptying itself — a hiccup is not treated as "everything was deleted". The checks run while the slideshow is running; a paused or closed app does not refresh.</p>
+
+        <h2>Sharing one folder with the family</h2>
+        <p>The frame shows folders in the <strong>signed-in account's Dropbox</strong>. The simplest family setup: the frame's account owns the <code>Frame</code> folder and shares it from Dropbox with edit access, so relatives can drop photos into it from their own devices. Their uploads land in the owner's folder, and the frame picks them up at the next refresh. We have not separately tested folders that someone else owns and shared with you, so keep the frame folder in the frame account.</p>
+
+        <h2>Offline and caching</h2>
+        <p>Photos are downloaded as they come up and kept in an on-device cache — <strong>500 MB by default</strong>, adjustable in Photo sources (100 MB, 250 MB, 500 MB, 1 GB, 2 GB or unlimited), where you can also clear it. When the cache is full, the least recently used photos are removed first. Photos already in the cache can be shown again without the network; photos that were never downloaded cannot. There is no "download the whole folder for offline" switch, so a frame that is regularly offline is better served by copying the photos to the tablet itself.</p>
+
+        <h2>What PicDock cannot do with Dropbox</h2>
+        <p>Plainly, as of the released version 1.8.8 (September 2026):</p>
+        <ul>
+            <li><strong>No videos from Dropbox.</strong> The Dropbox source shows photos only (JPG, PNG, GIF, BMP, WebP, and HEIC/HEIF on Android 9 or later); videos and other files in the folder are skipped.</li>
+            <li><strong>Only top-level folders in the picker.</strong> Put the frame folder at the top level, or pick its parent.</li>
+            <li><strong>Not instant.</strong> New photos appear within about 30 minutes for a folder, not the moment you upload them — unless you open the app, which checks right away.</li>
+            <li><strong>No full offline copy</strong> (see above).</li>
+        </ul>
+
+        <h2>Another honest option: dfolio</h2>
+        <p><strong>dfolio</strong> ("dfolio - Dropbox™ Photos") by Snapwood Apps is a Dropbox-only gallery and frame app. Its <a href="https://play.google.com/store/apps/details?id=com.snapwood.dropfolio&amp;hl=en_US">Google Play listing</a> (checked September 24, 2026) describes it as a "fast gallery and beautiful digital photo frame", says "auto-refresh keeps the slideshow up to date when you add new photos", lists "Play Dropbox movies and videos", and mentions an Android TV / Google TV app and Chromecast. The listing shows in-app purchases, 50K+ downloads and a 4.3-star rating, and says it is not affiliated with Dropbox. We have not tested it, so read the listing yourself — but if <strong>Dropbox videos</strong> or a <strong>TV app</strong> matter more to you than mixing sources, it is worth a look.</p>
+        <p>PicDock's case is the other way round: Dropbox is one of several sources you can mix on the same frame, plus the clock, weather, night sleep and charging auto-start that a tablet on a shelf needs. Using OneDrive or iCloud instead? See our <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">OneDrive folder guide</a> and <a href="https://devdad.kr/blog/icloud-shared-album-android-photo-frame.html">iCloud shared album guide</a>. For a wider look, see our <a href="https://devdad.kr/blog/best-apps-android-tablet-digital-photo-frame-2026.html">comparison of Android photo frame apps</a>.</p>
+
+        <h2>What it costs</h2>
+        <p>The Google Play version of PicDock is free to download, and the free version includes all photo sources except web upload — Dropbox included, with automatic refresh. Optional Premium adds extras such as more transitions, forecasts and clock designs: US$19.99 as a lifetime one-time purchase, or a yearly or monthly subscription (prices shown in the app and vary by country). Full details: <a href="https://devdad.kr/picdock/facts/">PicDock facts page</a>.</p>
+
+        <h2>FAQ</h2>
+
+        <h3>Can an Android tablet show a Dropbox folder as a photo frame?</h3>
+        <p>Yes. The Dropbox app is a file browser, but frame apps that sign in to Dropbox can play a folder full screen. In PicDock: Photo sources → Dropbox, sign in, tick the folder.</p>
+
+        <h3>Do new photos added to Dropbox appear automatically?</h3>
+        <p>Yes. While the slideshow runs, PicDock re-reads a chosen folder every 30 minutes (the whole account every 2 hours) and also checks when you return to the app, at most once every 5 minutes. Deleted photos are removed too.</p>
+
+        <h3>Are photos in subfolders shown?</h3>
+        <p>Yes. Choosing a folder includes every folder inside it. The picker lists only top-level folders.</p>
+
+        <h3>Are videos in Dropbox shown?</h3>
+        <p>Not in PicDock. The Dropbox source shows photos only and skips videos. dfolio's listing says it plays Dropbox videos, if that matters to you.</p>
+
+        <h3>Does the frame keep working if the Wi-Fi drops?</h3>
+        <p>Partly. Photos already shown stay in the cache (500 MB by default) and the photo list is kept through a failed refresh, but photos that were never downloaded wait for the connection to return.</p>
+
+        <h2>In short</h2>
+        <p>Dropbox family, spare Android tablet: make a <strong>top-level Dropbox folder</strong> for the frame, sign in once, pick the folder, and leave the slideshow running. New photos appear within about 30 minutes, or right away when you open the app. Photos only, not videos.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Ddropbox_folder">Get PicDock on Google Play</a> · <a href="https://devdad.kr/picdock/facts/">PicDock facts</a> · <a href="https://devdad.kr/blog/best-apps-android-tablet-digital-photo-frame-2026.html">Android frame app comparison</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
