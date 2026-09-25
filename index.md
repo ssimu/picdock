@@ -40,6 +40,7 @@ Issues are welcome for feature requests and bug reports.
 - [Turn an old Android tablet into a bedside clock and photo frame (night dimming, sleep schedule, alarm, 2026)](https://ssimu.github.io/picdock/compare/bedside-clock-photo-frame-android-tablet.html)
 - [Turn an Amazon Fire tablet (Fire HD 8 / HD 10) into a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/fire-tablet-digital-photo-frame.html)
 - [Use your own photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV screensaver (2026)](https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html)
+- [Google Photos on an Android tablet photo frame in 2026 — what changed and what still works](https://ssimu.github.io/picdock/compare/google-photos-android-photo-frame.html)
 
 ---
 

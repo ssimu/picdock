@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Show Google Photos on an Android Tablet Photo Frame in 2026 (and What Changed After Google's API Limits)</title>
+    <meta name="description" content="Why frame apps can no longer read your Google Photos albums (Library API change, March 31, 2025), what still works — the Picker API and Google's partner frames — and how to set up an Android tablet frame honestly, including what does not update automatically.">
+    <link rel="canonical" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Google Photos on an Android Tablet Photo Frame in 2026 — What Changed and What Still Works">
+    <meta property="og:description" content="Since March 31, 2025, third-party apps cannot browse your Google Photos albums. Here is what still works on an Android tablet frame, and when to choose something else.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/google-photos-android-photo-frame.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Show Google Photos on an Android Tablet Photo Frame in 2026 (and What Changed After Google's API Limits)",
+  "description": "Since March 31, 2025 the Google Photos Library API only lets third-party apps read photos those apps uploaded themselves. Frame apps now use the Google Photos Picker API, where you choose items by hand, or become approved Google Photos partners through the Ambient API. This guide explains the change with Google's sources and shows an honest Android tablet setup, including the fact that photos added to an album later are not picked up automatically by Picker-based apps.",
+  "image": "https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "datePublished": "2026-09-25",
+  "dateModified": "2026-09-25",
+  "inLanguage": "en",
+  "mainEntityOfPage": "https://devdad.kr/blog/google-photos-android-photo-frame.html",
+  "citation": [
+    "https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/",
+    "https://developers.google.com/photos/support/updates",
+    "https://developers.google.com/photos/picker/reference/rest/v1/sessions",
+    "https://developers.google.com/photos/picker/guides/media-items",
+    "https://developers.google.com/photos/partner-program/overview",
+    "https://developers.google.com/photos/ambient/guides/about"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Show Google Photos on an Android tablet photo frame (Picker method)",
+  "description": "Pick photos from Google Photos in Google's own picker, let PicDock save them on the tablet, and play them as a slideshow. New photos are added by picking again.",
+  "totalTime": "PT10M",
+  "tool": [
+    {"@type": "HowToTool", "name": "A Google account with photos in Google Photos"},
+    {"@type": "HowToTool", "name": "Android tablet or phone (Android 7.0 or later) with PicDock from Google Play installed"}
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Open the Google Photos source",
+      "text": "On the tablet, open PicDock, go to Photo sources and choose Google Photos, then tap Add photos."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sign in and allow access",
+      "text": "Choose your Google account and allow access. PicDock asks only for the Google Photos Picker permission, which lets it read the items you select and nothing else."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Pick photos in Google's picker",
+      "text": "Google's picker opens in the Google Photos app or the browser. Browse or search your library and albums, select the photos you want (up to 2,000 per pick), tap Done, and return to PicDock."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Let PicDock save them",
+      "text": "PicDock downloads the selected photos to the tablet (sized to at most 2560 pixels on the long side) and skips any it already has. Videos are not added."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Play and top up later",
+      "text": "Tap Play all saved photos. The frame now works offline. To add newer photos later, tap Add photos again and pick them; photos you pick again are skipped automatically."
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why can't photo frame apps show my Google Photos albums anymore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because Google changed the Google Photos Library API. Since March 31, 2025 the read scopes (photoslibrary.readonly, photoslibrary.sharing and photoslibrary) are removed and calls that rely on them return 403 PERMISSION_DENIED; apps can only list albums and items they created themselves. Google announced this on September 18, 2024. Apps now either use the Google Photos Picker API, where you select items by hand, or join Google's partner program for the Ambient API."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an Android tablet frame show a Google Photos album that updates automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only through Google's own devices (such as Google TV or Nest Hub photo modes) or a frame from an approved Google Photos partner that uses the Ambient API; Google says Ambient API access requires acceptance into its partner program. Apps that use the Picker API, including PicDock, receive the items you pick, not a live link to the album, so photos added to the album later must be picked again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many Google Photos can I pick at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to 2,000 items per picking session, which is the Picker API's maximum. In PicDock you can pick again as many times as you like; photos already saved are skipped."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are picked Google Photos kept on the tablet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in PicDock. Google's download links for picked items expire after 60 minutes, so PicDock downloads the photos right away and keeps them in the app's storage until you remove them or uninstall the app. The frame then plays them without Wi-Fi. Removing a photo from the frame does not delete it from Google Photos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PicDock show videos from Google Photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Picker lets you select videos, but PicDock's Google Photos source saves photos only and skips videos. PicDock plays videos from photos stored on the tablet itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best way to get a Google Photos-style frame that updates itself on Android?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either use a Google Photos partner product, or keep the frame photos in a synced folder instead: a OneDrive or Dropbox folder, or a NAS share. PicDock re-reads a chosen OneDrive or Dropbox folder every 30 minutes and a NAS share every 15 minutes while the slideshow runs, so new photos appear without anyone touching the tablet."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>Google Photos on an<br>Android tablet frame in 2026</h1>
+        <p>Why frame apps stopped showing your Google Photos albums, what still works, and when to choose something else.</p>
+        <div class="post-meta">September 2026 · 7 min read</div>
+    </div>
+
+    <article class="post">
+        <p><strong>Disclosure up front.</strong> We make PicDock, the Android app used in the setup below, so we are not neutral. Every PicDock detail here was checked against the source code of the released version (1.8.8) in September 2026. Every statement about Google's APIs links to Google's own pages. We also say plainly when another product fits better.</p>
+
+        <p>If you set up a tablet frame a few years ago, you may have picked a Google Photos album once and watched new photos arrive by themselves. Then, sometime in 2025, many of those apps stopped showing albums, lost the album list, or asked you to "select photos" instead. That was not the apps breaking one by one. Google changed the rules for every third-party app at the same time.</p>
+
+        <p><strong>Short answer:</strong> since <strong>March 31, 2025</strong>, ordinary apps cannot browse your Google Photos library or albums. They can only show photos you <strong>hand-pick</strong> in Google's picker. Auto-updating albums are now reserved for Google's own devices and for frame makers Google accepts as partners. If you want a tablet that picks up new photos on its own, a synced folder (OneDrive, Dropbox or a NAS) is the reliable route.</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg" alt="An Android tablet in a living room running as a digital photo frame in the evening" width="1100" height="614" loading="lazy">
+            <figcaption>A tablet frame can still show Google Photos, but the photos are chosen by hand rather than followed from an album.</figcaption>
+        </figure>
+
+        <h2>What Google changed, and when</h2>
+        <p>On <strong>September 18, 2024</strong> Google announced "<a href="https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/">Updates to the Google Photos APIs: Picker API launch and Library API changes</a>". The key points, from Google's <a href="https://developers.google.com/photos/support/updates">API updates page</a>:</p>
+        <ul>
+            <li><strong>Effective March 31, 2025.</strong></li>
+            <li>The scopes <code>photoslibrary.readonly</code>, <code>photoslibrary.sharing</code> and <code>photoslibrary</code> are removed. API calls that rely only on them return <code>403 PERMISSION_DENIED</code>.</li>
+            <li>Listing, searching and reading are limited to albums and media items <strong>created by the app itself</strong>. Shared-album features were removed from the API.</li>
+            <li>For choosing photos from the whole library, Google points developers to the new <strong>Google Photos Picker API</strong>.</li>
+        </ul>
+        <p>So a frame app can no longer say "show album <em>Grandkids</em>" and re-read it every hour. The album belongs to you, not to the app, and the app is no longer allowed to look inside.</p>
+
+        <h2>The two ways apps can still show Google Photos</h2>
+        <h3>1. The Picker API: you choose, the app receives copies</h3>
+        <p>The app opens Google's own picker (in the Google Photos app or the browser). You browse or search your library, including your albums, and select items. The app then receives <strong>those items</strong>, not a link to an album. Two limits from Google's documentation shape every Picker-based frame:</p>
+        <ul>
+            <li><strong>At most 2,000 items per picking session</strong> (<a href="https://developers.google.com/photos/picker/reference/rest/v1/sessions">sessions reference</a>, <code>maxItemCount</code>).</li>
+            <li><strong>Download links last 60 minutes</strong> (<a href="https://developers.google.com/photos/picker/guides/media-items">media items guide</a>), so the app has to save the photos right away to show them later.</li>
+        </ul>
+        <p>The consequence: when someone adds a new photo to that album next week, the app has no way to know. You pick again.</p>
+
+        <h3>2. The Ambient API: approved partners only</h3>
+        <p>Google also has an <a href="https://developers.google.com/photos/ambient/guides/about">Ambient API</a> for "ambient devices like smart TVs and photo frames", where you choose albums in the Google Photos app and the device keeps showing them. It is not open to everyone: Google's <a href="https://developers.google.com/photos/partner-program/overview">partner program page</a> says "To get access to the Ambient API, you must first be accepted into the partner program." Frames that advertise live Google Photos albums in 2026 are either Google's own devices or accepted partners.</p>
+
+        <h2>Which option fits you</h2>
+        <ul>
+            <li><strong>You want a Google Photos album that updates itself, with no extra steps.</strong> Use Google's own screens (Google TV and Nest Hub photo modes show Google Photos) or a partner frame. Aura, for example, brought back Google Photos support in June 2026 (<a href="https://9to5google.com/2026/06/04/google-photos-support-has-returned-for-auras-digital-photo-frames/">9to5Google</a>), and its <a href="https://help.auraframes.com/hc/en-us/articles/360000324187-Using-Google-Photos-with-Aura">help page</a> describes auto-adding albums. That means buying their hardware; we have not tested it.</li>
+            <li><strong>You want a spare Android tablet to show a hand-picked set of Google Photos, even offline.</strong> A Picker-based app works well. Setup below.</li>
+            <li><strong>You want a spare Android tablet that picks up new family photos on its own.</strong> Put the frame photos in a synced folder instead of a Google Photos album. See <a href="#synced-folder">the synced-folder route</a>.</li>
+        </ul>
+
+        <h2>Setup: Google Photos on an Android tablet with PicDock</h2>
+        <p>You need an Android tablet or phone (Android 7.0 or later) and <strong>PicDock</strong> from Google Play (store name: <em>"Photo Slideshow, Digital Frame"</em>). PicDock is not the macOS app picdock.app, which is an unrelated product. The Google Photos source is in the Google Play version only.</p>
+        <ol>
+            <li>Open PicDock → <strong>Photo sources</strong> → <strong>Google Photos</strong> → <strong>Add photos</strong>.</li>
+            <li>Choose your Google account and allow access. PicDock asks only for the Picker permission (<code>photospicker.mediaitems.readonly</code>): it can read the items you select, nothing else in your library.</li>
+            <li>Google's picker opens. Select photos (you can open an album and select from it), tap <strong>Done</strong> and come back to PicDock. PicDock waits up to 10 minutes for you to finish.</li>
+            <li>PicDock downloads the selected photos to the tablet, sized to at most 2560 pixels on the long side, and shows "<em>N photos added</em>".</li>
+            <li>Tap <strong>Play all saved photos</strong>. If another source is already showing, choose <strong>Replace</strong> or <strong>Add to current</strong> to mix them with photos on the tablet, OneDrive, Dropbox, an iCloud shared album or a NAS.</li>
+        </ol>
+        <p>Then keep the tablet on while charging. Our <a href="https://devdad.kr/blog/always-on-photo-frame-tablet.html">always-on tablet guide</a> covers screen-on, night hours and starting when the charger is connected.</p>
+
+        <h2>How PicDock handles picked photos</h2>
+        <ul>
+            <li><strong>Saved on the tablet, no expiry.</strong> Picked photos stay in the app's own storage until you remove them (long-press in the Google Photos manage screen) or uninstall the app. They play without Wi-Fi. When the saved set passes 500 MB, the manage screen suggests removing photos you no longer need.</li>
+            <li><strong>Removing is local.</strong> Removing a photo from the frame does not touch Google Photos.</li>
+            <li><strong>Duplicates skipped.</strong> Picking the same album again adds only photos that are not saved yet, so "re-pick the whole album" is a safe way to top up.</li>
+            <li><strong>Photos only.</strong> If you select only videos, PicDock says videos cannot be added. Videos stored on the tablet itself do play.</li>
+        </ul>
+
+        <h2>What PicDock cannot do with Google Photos</h2>
+        <p>Plainly, as of the released version 1.8.8 (September 2026):</p>
+        <ul>
+            <li><strong>No automatic updates from Google Photos.</strong> Photos added to an album later do not appear until you pick them. PicDock refreshes other sources on a schedule, but a picked set has nothing to refresh from.</li>
+            <li><strong>No album or full-library browsing inside the app.</strong> Google's policy does not allow it; you browse inside Google's picker.</li>
+            <li><strong>No shared-album following.</strong> Shared albums can be browsed in the picker like any album, but the frame gets copies, not the album.</li>
+            <li><strong>No videos</strong> from Google Photos.</li>
+            <li><strong>Not a Google Photos partner frame.</strong> PicDock uses the public Picker API, not the Ambient API.</li>
+        </ul>
+
+        <h2 id="synced-folder">The synced-folder route: new photos appear by themselves</h2>
+        <p>If "grandma's tablet shows new photos without anyone touching it" is the goal, the honest answer in 2026 is to stop depending on a Google Photos album. Keep a frame folder somewhere a frame app is still allowed to re-read:</p>
+        <ul>
+            <li><strong>OneDrive folder</strong>: PicDock re-reads a chosen folder every 30 minutes. <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">OneDrive folder guide</a>.</li>
+            <li><strong>Dropbox folder</strong>: also every 30 minutes. <a href="https://devdad.kr/blog/dropbox-folder-android-photo-frame.html">Dropbox folder guide</a>.</li>
+            <li><strong>NAS share</strong> (Synology and other SMB shares): every 15 minutes. <a href="https://devdad.kr/blog/nas-photo-frame-app.html">NAS photo frame guide</a>.</li>
+            <li><strong>iCloud shared album</strong> for iPhone families: every 15 minutes. <a href="https://devdad.kr/blog/icloud-shared-album-android-photo-frame.html">iCloud shared album guide</a>.</li>
+        </ul>
+        <p>In each case PicDock also checks when you come back to the app (at most once every 5 minutes), and a failed or suspicious refresh keeps the current photo list instead of emptying the frame. Family members add photos to the folder from their own phones, and the tablet follows.</p>
+
+        <h2>What it costs</h2>
+        <p>The Google Play version of PicDock is free to download, and the free version includes all photo sources except web upload, Google Photos included. Optional Premium adds extras such as more transitions, forecasts and clock designs: US$19.99 as a lifetime one-time purchase, or a yearly or monthly subscription (prices shown in the app and vary by country). Full details: <a href="https://devdad.kr/picdock/facts/">PicDock facts page</a>.</p>
+
+        <h2>FAQ</h2>
+
+        <h3>Why can't photo frame apps show my Google Photos albums anymore?</h3>
+        <p>Google removed the Library API read scopes on March 31, 2025 (announced September 18, 2024). Apps can only read what they uploaded themselves. They now use the Picker API, where you select items by hand, or join Google's partner program for the Ambient API.</p>
+
+        <h3>Can an Android tablet frame show a Google Photos album that updates automatically?</h3>
+        <p>Only via Google's own devices or an approved partner using the Ambient API. Picker-based apps, including PicDock, get the items you pick, so new album photos must be picked again.</p>
+
+        <h3>How many Google Photos can I pick at once?</h3>
+        <p>Up to 2,000 per picking session (the Picker API maximum). In PicDock you can pick again as often as you like; already-saved photos are skipped.</p>
+
+        <h3>Are picked Google Photos kept on the tablet?</h3>
+        <p>Yes. Google's links expire after 60 minutes, so PicDock saves the photos immediately and keeps them until you remove them or uninstall. They play offline.</p>
+
+        <h3>Does PicDock show videos from Google Photos?</h3>
+        <p>No. Its Google Photos source saves photos only. Videos stored on the tablet do play.</p>
+
+        <h3>What is the best way to get a self-updating frame on Android?</h3>
+        <p>A Google Photos partner product, or a synced folder: OneDrive or Dropbox (every 30 minutes in PicDock), or a NAS share (every 15 minutes).</p>
+
+        <h2>In short</h2>
+        <p>Since March 31, 2025, apps cannot follow your Google Photos albums. On a spare Android tablet you can still show <strong>hand-picked</strong> Google Photos (up to 2,000 per pick, saved on the tablet, photos only), topping up by picking again. For albums that update themselves, use Google's own devices or a partner frame. For a tablet that follows new family photos on its own, use a <strong>OneDrive, Dropbox or NAS folder</strong>.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Dgoogle_photos_picker">Get PicDock on Google Play</a> · <a href="https://devdad.kr/picdock/facts/">PicDock facts</a> · <a href="https://devdad.kr/blog/best-apps-android-tablet-digital-photo-frame-2026.html">Android frame app comparison</a></p>
+
+        <p><small>Sources checked September 24, 2026: <a href="https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/">Google for Developers blog</a>, <a href="https://developers.google.com/photos/support/updates">Google Photos API updates</a>, <a href="https://developers.google.com/photos/picker/reference/rest/v1/sessions">Picker sessions reference</a>, <a href="https://developers.google.com/photos/picker/guides/media-items">Picker media items guide</a>, <a href="https://developers.google.com/photos/partner-program/overview">Partner program overview</a>, <a href="https://developers.google.com/photos/ambient/guides/about">Ambient API</a>.</small></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
