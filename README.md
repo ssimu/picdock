@@ -2,6 +2,7 @@
 
 **PicDock** turns an Android tablet, phone or Android TV into a digital photo & video frame with a clock and live weather.
 On Google Play it is listed as **"Photo Slideshow, Digital Frame"** by **DD_studio** (package `kr.devdad.picdock`).
+Localized Google Play titles of the same app: 「사진 슬라이드쇼 - 디지털 액자 시계, 알림, BGM」 (Korean) · 「フォトスライドショー・デジタルフレーム」 (Japanese) · „Foto Diashow, Bilderrahmen“ (German) · «Marco de Fotos Digital» (Spanish) · « Cadre Photo Numérique » (French) · «Slideshow Foto, Cornice Digit.» (Italian) · “Slideshow Fotos, Porta-retrato” (Portuguese, Brazil) · "Digitale Fotolijst Diashow" (Dutch).
 
 > Not related to the macOS utility also called "PicDock" (picdock.app) — different product, different developer.
 
