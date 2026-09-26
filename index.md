@@ -36,6 +36,7 @@ Issues are welcome for feature requests and bug reports.
 - [How to show a OneDrive folder on an Android tablet photo frame (auto-updating, 2026)](https://ssimu.github.io/picdock/compare/onedrive-folder-android-photo-frame.html)
 - [OneDrive-Ordner auf einem Android-Tablet als digitalen Bilderrahmen anzeigen (2026)](https://ssimu.github.io/picdock/compare/de-onedrive-folder-android-photo-frame.html)
 - [OneDriveのフォルダをAndroidタブレットのフォトフレームで自動表示する方法（2026）](https://ssimu.github.io/picdock/compare/ja-onedrive-folder-android-photo-frame.html)
+- [Afficher un dossier OneDrive sur une tablette Android en cadre photo (2026)](https://ssimu.github.io/picdock/compare/fr-onedrive-folder-android-photo-frame.html)
 - [How to show a Dropbox folder on an Android tablet photo frame (auto-updating, 2026)](https://ssimu.github.io/picdock/compare/dropbox-folder-android-photo-frame.html)
 - [Turn an old Android tablet into a bedside clock and photo frame (night dimming, sleep schedule, alarm, 2026)](https://ssimu.github.io/picdock/compare/bedside-clock-photo-frame-android-tablet.html)
 - [Turn an Amazon Fire tablet (Fire HD 8 / HD 10) into a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/fire-tablet-digital-photo-frame.html)
