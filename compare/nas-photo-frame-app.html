@@ -115,7 +115,7 @@
     </div>
 
     <article class="post">
-        <p><strong>Disclosure up front.</strong> We make PicDock, one of the apps below, so we are not neutral. Everything here is checkable, and we say what our own app does <strong>not</strong> do.</p>
+        <p><strong>Disclosure up front.</strong> We make PicDock (on Google Play: “Photo Slideshow, Digital Frame”), one of the apps below, so we are not neutral. Everything here is checkable, and we say what our own app does <strong>not</strong> do.</p>
 
         <p>If you keep photos on a Synology, QNAP or any SMB share, the frame problem is different. You do not want to upload anything — the photos are already stored, backed up and organised. You want the frame to <strong>read the share directly</strong> and stay out of the way.</p>
 
@@ -157,6 +157,11 @@
         <h3>1. Does it speak SMB2/3, not just SMB1?</h3>
         <p>Most NAS vendors disabled SMB1 years ago for security. An app built on an old SMB1 library will simply fail to connect, often with an unhelpful error. Check that the app names SMB2 or SMB3.</p>
 
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-source-picker-en.jpg" alt="PicDock's photo source picker: All Photos, Albums, Favorites, then SMB/NAS, Dropbox, OneDrive, iCloud Shared Album and Google Photos" width="1100" height="1518" loading="lazy">
+            <figcaption>A real device (Galaxy S8+). The NAS sits in the same list as everything else — no separate app, no separate purchase.</figcaption>
+        </figure>
         <h3>2. Does it walk sub-folders?</h3>
         <p>Photo libraries are nested — by year, by trip, by person. An app that reads only the folder you point it at will show a handful of files and look broken. There should be an explicit option to include sub-folders.</p>
 
