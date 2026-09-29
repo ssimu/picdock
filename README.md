@@ -101,7 +101,7 @@ Cloud and NAS sources are refreshed automatically at intervals, so new files in 
 
 ## Pricing
 
-- Google Play — free — price: US$0; what you get: All photo sources (Google Photos, Dropbox, OneDrive, iCloud Shared Albums, NAS/SMB), video playback, face detection filter, dual mode, night mode, alarm, clock and current weather, core transitions and filters, your own music. No time limit. 7-day trial of all features on first install.
+- Google Play — free — price: US$0; what you get: All photo sources except web upload (Google Photos, Dropbox, OneDrive, iCloud Shared Albums, NAS/SMB), video playback, face detection filter, dual mode, night mode, alarm, clock and current weather, core transitions and filters, your own music. No time limit. 7-day trial of all features on first install.
 - Google Play — Premium, lifetime — price: US$19.99 one-time; what you get: All Premium features permanently, no ads. One purchase applies to devices signed in to the same Google account.
 - Google Play — Premium, yearly or monthly — price: Subscription; price shown in the app and varies by country; what you get: Same Premium features while subscribed.
 - Amazon Appstore (Fire tablets) — price: US$4.99 paid app; what you get: All features included; no ads and no in-app purchases.
