@@ -44,6 +44,7 @@ Issues are welcome for feature requests and bug reports.
 - [Use your own photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV screensaver (2026)](https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html)
 - [Coming from Fotoo? An honest Fotoo vs PicDock comparison for Android photo frames (2026)](https://ssimu.github.io/picdock/compare/fotoo-alternative-android.html)
 - [Google Photos on an Android tablet photo frame in 2026 — what changed and what still works](https://ssimu.github.io/picdock/compare/google-photos-android-photo-frame.html)
+- [A digital photo frame gift for parents — using a tablet you already have (2026)](https://ssimu.github.io/picdock/compare/gift-digital-photo-frame-for-parents-old-tablet.html)
 
 ---
 
