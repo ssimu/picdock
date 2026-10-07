@@ -45,6 +45,8 @@ Issues are welcome for feature requests and bug reports.
 - [Coming from Fotoo? An honest Fotoo vs PicDock comparison for Android photo frames (2026)](https://ssimu.github.io/picdock/compare/fotoo-alternative-android.html)
 - [Google Photos on an Android tablet photo frame in 2026 — what changed and what still works](https://ssimu.github.io/picdock/compare/google-photos-android-photo-frame.html)
 - [A digital photo frame gift for parents — using a tablet you already have (2026)](https://ssimu.github.io/picdock/compare/gift-digital-photo-frame-for-parents-old-tablet.html)
+- [Digitaler Bilderrahmen als Geschenk für Eltern und Großeltern – aus dem alten Tablet (2026)](https://ssimu.github.io/picdock/compare/de-geschenk-digitaler-bilderrahmen-eltern-tablet.html)
+- [親へのプレゼントにデジタルフォトフレームを — 古いタブレットで作る方法（2026）](https://ssimu.github.io/picdock/compare/ja-gift-digital-photo-frame-parents-tablet.html)
 - [Frameo alternative for Android tablets: use the tablet you already have (2026)](https://ssimu.github.io/picdock/compare/frameo-alternatives-android.html)
 
 ---
