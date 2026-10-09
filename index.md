@@ -42,6 +42,8 @@ Issues are welcome for feature requests and bug reports.
 - [How to show a Dropbox folder on an Android tablet photo frame (auto-updating, 2026)](https://ssimu.github.io/picdock/compare/dropbox-folder-android-photo-frame.html)
 - [Turn an old Android tablet into a bedside clock and photo frame (night dimming, sleep schedule, alarm, 2026)](https://ssimu.github.io/picdock/compare/bedside-clock-photo-frame-android-tablet.html)
 - [How to use an Amazon Fire tablet (Fire HD 8 / HD 10) as a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/fire-tablet-digital-photo-frame.html)
+- [Turn an old iPad into a digital photo frame (iPad Air 2, mini 4 and newer — 2026)](https://ssimu.github.io/picdock/compare/old-ipad-digital-photo-frame.html)
+- [구형 아이패드를 디지털 액자로 — 아이패드 에어 2·미니 4도 됩니다 (2026)](https://ssimu.github.io/picdock/compare/ko-old-ipad-photo-frame.html)
 - [Use your own photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV screensaver (2026)](https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html)
 - [Coming from Fotoo? An honest Fotoo vs PicDock comparison for Android photo frames (2026)](https://ssimu.github.io/picdock/compare/fotoo-alternative-android.html)
 - [Google Photos on an Android tablet photo frame in 2026 — what changed and what still works](https://ssimu.github.io/picdock/compare/google-photos-android-photo-frame.html)
