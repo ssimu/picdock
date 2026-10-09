@@ -17,6 +17,7 @@ Issues are welcome for feature requests and bug reports.
 ## Comparisons (copies — originals on devdad.kr)
 - [Best apps to turn an Android tablet into a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/best-apps-android-tablet-digital-photo-frame-2026.html)
 - [안 쓰는 안드로이드 태블릿 디지털 액자 앱 비교 (2026)](https://ssimu.github.io/picdock/compare/ko-android-tablet-digital-photo-frame-app-comparison.html)
+- [태블릿 액자 만들기 — 안 쓰는 태블릿을 디지털 액자로 (2026)](https://ssimu.github.io/picdock/compare/ko-tablet-photo-frame.html)
 - [Androidタブレットをデジタルフォトフレームにするアプリ比較（2026年）](https://ssimu.github.io/picdock/compare/ja-android-tablet-digital-photo-frame-app-comparison.html)
 - [Die besten Apps: Android-Tablet als digitaler Bilderrahmen (2026)](https://ssimu.github.io/picdock/compare/de-android-tablet-digitaler-bilderrahmen-apps.html)
 - [Las mejores apps para convertir una tablet Android en marco de fotos digital (2026)](https://ssimu.github.io/picdock/compare/es-android-tablet-marco-fotos-digital-apps.html)
