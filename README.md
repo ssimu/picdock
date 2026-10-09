@@ -120,7 +120,7 @@ Prices are US list prices; Google Play prices are set per country.
 - Android phones and tablets, Android 7.0 (API 24) or later — [Google Play](https://play.google.com/store/apps/details?id=kr.devdad.picdock)
 - Android TV — same Google Play app (TV launcher entry, remote control)
 - Amazon Fire tablets (Fire OS) — [Amazon Appstore](https://www.amazon.com/gp/mas/dl/android?p=kr.devdad.picdock)
-- iPhone and iPad, iOS 17 or later — [App Store](https://apps.apple.com/app/id6759957928) (“PicDock - Live Photo Slideshow”; separate app, features and pricing differ from Android)
+- iPhone and iPad, iOS 15 or later (from 1.6.0, Oct 2026: includes iPad Air 2, iPad mini 4, iPad 5th gen and the first iPad Pro) — [App Store](https://apps.apple.com/app/id6759957928) (“PicDock - Live Photo Slideshow”; separate app, features and pricing differ from Android)
 
 ## Comparison: PicDock, Fotoo and Frameo
 
