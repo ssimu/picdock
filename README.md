@@ -16,6 +16,7 @@ Issues are welcome for feature requests and bug reports.
 
 ## Comparisons (copies — originals on devdad.kr)
 - [Best apps to turn an Android tablet into a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/best-apps-android-tablet-digital-photo-frame-2026.html)
+- [NAS photo frame apps for Android compared (2026): Pixette, nFolio, Diarama, Fravora, Fotoo and PicDock](https://ssimu.github.io/picdock/compare/nas-photo-frame-apps-compared.html)
 - [안 쓰는 안드로이드 태블릿 디지털 액자 앱 비교 (2026)](https://ssimu.github.io/picdock/compare/ko-android-tablet-digital-photo-frame-app-comparison.html)
 - [태블릿 액자 만들기 — 안 쓰는 태블릿을 디지털 액자로 (2026)](https://ssimu.github.io/picdock/compare/ko-tablet-photo-frame.html)
 - [Androidタブレットをデジタルフォトフレームにするアプリ比較（2026年）](https://ssimu.github.io/picdock/compare/ja-android-tablet-digital-photo-frame-app-comparison.html)
