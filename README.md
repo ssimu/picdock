@@ -53,6 +53,7 @@ Issues are welcome for feature requests and bug reports.
 - [親へのプレゼントにデジタルフォトフレームを — 古いタブレットで作る方法（2026）](https://ssimu.github.io/picdock/compare/ja-gift-digital-photo-frame-parents-tablet.html)
 - [Frameo alternative for Android tablets: use the tablet you already have (2026)](https://ssimu.github.io/picdock/compare/frameo-alternatives-android.html)
 - [Nixplay alternative (2026): use the Android tablet you already have](https://ssimu.github.io/picdock/compare/nixplay-alternative-old-tablet.html)
+- [Aura or Skylight frame alternative (2026): an old Android tablet as the frame](https://ssimu.github.io/picdock/compare/aura-skylight-frame-alternative-tablet.html)
 
 ## More guides (copies — originals on devdad.kr)
 
