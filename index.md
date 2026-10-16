@@ -47,6 +47,7 @@ Issues are welcome for feature requests and bug reports.
 - [How to use an Amazon Fire tablet (Fire HD 8 / HD 10) as a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/fire-tablet-digital-photo-frame.html)
 - [Turn an old iPad into a digital photo frame (iPad Air 2, mini 4 and newer — 2026)](https://ssimu.github.io/picdock/compare/old-ipad-digital-photo-frame.html)
 - [구형 아이패드를 디지털 액자로 — 아이패드 에어 2·미니 4도 됩니다 (2026)](https://ssimu.github.io/picdock/compare/ko-old-ipad-photo-frame.html)
+- [Altes iPad als digitaler Bilderrahmen — iPad Air 2, mini 4 und neuer (2026)](https://ssimu.github.io/picdock/compare/de-old-ipad-photo-frame.html)
 - [Use your own photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV screensaver (2026)](https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html)
 - [Android screensaver with your own photos (2026): tablet, phone and Android TV](https://ssimu.github.io/picdock/compare/android-screensaver-your-photos.html)
 - [Coming from Fotoo? An honest Fotoo vs PicDock comparison for Android photo frames (2026)](https://ssimu.github.io/picdock/compare/fotoo-alternative-android.html)
