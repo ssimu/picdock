@@ -39,6 +39,7 @@ Issues are welcome for feature requests and bug reports.
 - [How to show a Dropbox folder on an Android tablet photo frame (auto-updating, 2026)](https://ssimu.github.io/picdock/compare/dropbox-folder-android-photo-frame.html)
 - [Turn an old Android tablet into a bedside clock and photo frame (night dimming, sleep schedule, alarm, 2026)](https://ssimu.github.io/picdock/compare/bedside-clock-photo-frame-android-tablet.html)
 - [How to use an Amazon Fire tablet (Fire HD 8 / HD 10) as a digital photo frame (2026)](https://ssimu.github.io/picdock/compare/fire-tablet-digital-photo-frame.html)
+- [Fireタブレットをフォトフレームにする方法 — Fire HD 8・Fire HD 10（2026年版）](https://ssimu.github.io/picdock/compare/ja-fire-tablet-photo-frame.html)
 - [Turn an old iPad into a digital photo frame (iPad Air 2, mini 4 and newer — 2026)](https://ssimu.github.io/picdock/compare/old-ipad-digital-photo-frame.html)
 - [구형 아이패드를 디지털 액자로 — 아이패드 에어 2·미니 4도 됩니다 (2026)](https://ssimu.github.io/picdock/compare/ko-old-ipad-photo-frame.html)
 - [Altes iPad als digitaler Bilderrahmen — iPad Air 2, mini 4 und neuer (2026)](https://ssimu.github.io/picdock/compare/de-old-ipad-photo-frame.html)
