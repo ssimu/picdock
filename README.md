@@ -56,6 +56,7 @@ Issues are welcome for feature requests and bug reports.
 - [Frameo alternative for Android tablets: use the tablet you already have (2026)](https://ssimu.github.io/picdock/compare/frameo-alternatives-android.html)
 - [Nixplay alternative (2026): use the Android tablet you already have](https://ssimu.github.io/picdock/compare/nixplay-alternative-old-tablet.html)
 - [Aura or Skylight frame alternative (2026): an old Android tablet as the frame](https://ssimu.github.io/picdock/compare/aura-skylight-frame-alternative-tablet.html)
+- [A photo frame that shows only your dog (or cat): how pet filters work (2026)](https://ssimu.github.io/picdock/compare/pet-photo-frame-filter-android.html)
 
 ## More guides (copies — originals on devdad.kr)
 
@@ -109,6 +110,7 @@ Cloud and NAS sources are refreshed automatically at intervals, so new files in 
 - Dual mode: two portrait photos side by side on a landscape screen (or two landscape photos stacked on a portrait screen).
 - Clock (several styles) and weather: current conditions, hourly and 5-day forecast, animated rain and snow (weather data from Open-Meteo).
 - On-device face detection filter (“only photos with people”); pet filter and automatic person grouping (Premium).
+- Pet filter (Premium): shows only photos that contain a pet — dogs, cats or both (rabbits and other small pets are usually included). It detects whether a pet is in a photo; it does not recognise individual animals, so it cannot tell your dog from another dog. The image-labelling model is bundled in the app and runs on the device; photos are not uploaded for this analysis. (Detail added 2026-10-17.)
 - Photo filters (black & white, sepia, vintage, warm, cool); capture date, location and album info from EXIF.
 - Favorites and hidden photos.
 - Background music: your own files or built-in tracks.

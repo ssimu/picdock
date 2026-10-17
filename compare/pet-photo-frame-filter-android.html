@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Copy for crawler access; canonical = devdad.kr original -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Photo Frame That Shows Only Your Dog (or Cat): How Pet Filters Work in 2026</title>
+    <meta name="description" content="Want a digital frame that shows only your dog or pet photos? The difference between a pet filter (is there a pet in the photo?) and recognising your own dog, what Google Photos and Aura do here, and how PicDock's on-device pet filter works on an Android tablet.">
+    <link rel="canonical" href="https://devdad.kr/blog/pet-photo-frame-filter-android.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/pet-photo-frame-filter-android.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/pet-photo-frame-filter-android.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A Photo Frame That Shows Only Your Dog (or Cat): How Pet Filters Work in 2026">
+    <meta property="og:description" content="A pet filter answers “is there a pet in this photo?”, not “is this my dog?”. Which tools do which, from their own pages, and how to get a frame that shows only your pet.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-settings-subject-filter-en.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/pet-photo-frame-filter-android.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "A Photo Frame That Shows Only Your Dog (or Cat): How Pet Filters Work in 2026",
+  "description": "How to make a digital photo frame show only pet photos. A pet filter detects whether a dog or cat is in a photo; it does not recognise your particular dog. Google Photos can group photos of individual pets and add them to a live album automatically (checked 2026-10-17), and Aura frames can sync a Google Photos album. PicDock, an Android photo frame app made by the author, has a Premium pet filter that runs on the device and shows only photos with dogs, cats or both.",
+  "image": "https://devdad.kr/blog/images/picdock-settings-subject-filter-en.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "datePublished": "2026-10-17",
+  "dateModified": "2026-10-17",
+  "inLanguage": "en",
+  "mainEntityOfPage": "https://devdad.kr/blog/pet-photo-frame-filter-android.html"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a digital photo frame show only my dog's photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, in two different ways. A pet filter shows only photos that contain a pet, any dog or cat, which works well when there is one pet in the family. To show only one particular dog, you need a tool that recognises individual animals: Google Photos can group photos of the same pet and add them to a live album automatically (not available in all countries), and a frame that syncs that album, such as an Aura frame, then shows only that pet. A third way needs no recognition at all: keep your dog's photos in one album or folder and point the frame at it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PicDock recognise my dog?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. PicDock's pet filter detects whether a pet is in a photo, dogs, cats or both, and shows only those photos. It does not recognise individual animals, so it cannot tell your dog from another dog. If the frame should show one particular dog among several pets, use an album or folder of that dog as the photo source instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is PicDock's pet filter free, and are photos uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The pet filter is part of PicDock Premium (lifetime, yearly or monthly); every photo source except web upload is free. The image-labelling model is bundled in the app and runs on the device, so photos are not uploaded for this analysis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I make a pet-only frame without paying for anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Put your pet's photos in one album on the tablet, or in a Dropbox or OneDrive folder, and choose that album or folder as the photo source in PicDock. Chosen albums and cloud folders are free sources; a cloud folder is refreshed automatically, so new pet photos added there appear on the frame."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/weatherdeck/">WeatherDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>A photo frame that shows<br>only your dog (or cat)</h1>
+        <p>“Only pet photos” and “only my dog” are two different features. Which tools do which, according to their own pages, and the simplest way to get there on a tablet.</p>
+        <div class="post-meta">October 2026 · 6 min read</div>
+    </div>
+
+    <article class="post">
+        <p><strong>Disclosure up front.</strong> We make PicDock, an Android app that turns a tablet into a photo frame, and it has a pet filter — so we are not neutral. To keep this fair, every detail about other products comes from <strong>their own help pages, websites or Google Play listings, checked on October 17, 2026</strong>, with a link next to each fact. Every PicDock detail comes from our <a href="https://devdad.kr/picdock/facts/">public fact sheet</a>. PicDock is listed on Google Play as <em>"Photo Slideshow, Digital Frame"</em> by DD_studio. There is a section on what PicDock's pet filter cannot do, and on where Google Photos and Aura do this better.</p>
+
+        <p>A camera roll with a dog in it is mostly dog. But it also holds receipts, screenshots and twenty photos of a birthday cake, and nobody wants those on the kitchen shelf. So people search for a frame that shows <em>only the dog</em>. Before choosing a tool, it helps to know that there are two quite different features hiding behind that wish.</p>
+
+        <p><strong>Short answer:</strong></p>
+        <ul>
+            <li><strong>One pet in the family, or any of your pets is fine</strong> → a <strong>pet filter</strong> is enough. It keeps photos that contain a dog or cat and skips the rest.</li>
+            <li><strong>Several dogs, and the frame should show one of them</strong> → you need <strong>individual recognition</strong>. Google Photos can group photos of the same pet and fill a live album with them; a frame that syncs that album shows only that pet. See <a href="#individual">recognising your own dog</a>.</li>
+            <li><strong>You do not want any automatic analysis</strong> → keep the pet's photos in one album or folder and point the frame at it. No filter needed.</li>
+        </ul>
+
+        <h2>“Is there a pet?” vs. “Is this my dog?”</h2>
+        <p>A <strong>pet filter</strong> looks at each photo and asks a yes/no question: is there a dog or a cat in it? It works without knowing anything about your animals, so there is nothing to set up, and it is right far more often than it is wrong. But it treats your dog, the neighbour's dog and a dog in the background of a park photo the same way.</p>
+        <p><strong>Individual recognition</strong> is a different job: the software groups photos in which the <em>same</em> animal appears, the way face grouping works for people, and you label the group. That is what “only Max, not Bella” needs. It also means the tool builds a model of your pet from your library, which is worth knowing about if you care where that happens.</p>
+
+        <h2 id="individual">Recognising your own dog: Google Photos (and Aura)</h2>
+        <p>Google Photos does the individual kind. Its help page <a href="https://support.google.com/photos/answer/6128838?hl=en">“Set up &amp; manage your face groups”</a> (checked October 17, 2026) says you can <em>“apply a label to people or pets that appear in photos grouped by Google Photos”</em>, and that pets are part of Face Groups unless you turn off <em>“Show pets with people”</em>. The same page notes that the feature <em>“isn’t available in all geographic regions, all domains, or all account types”</em>.</p>
+        <p>Google's <a href="https://support.google.com/photos/answer/6128849?hl=en">“Create &amp; edit photo albums”</a> page describes <strong>live albums</strong>: you choose people and pets, and matching photos are added to the album automatically. Google adds two caveats there: <em>“Live albums are not available in all countries”</em>, and <em>“Face Groups isn’t perfect. Photos that don’t have any of the selected people may occasionally be added.”</em></p>
+        <p>To put that album on a frame, the frame has to follow the album as it grows. Aura says on <a href="https://auraframes.com/news/how-to-effortlessly-display-google-photos-on-your-aura-frame">its Google Photos page</a> that you can <em>“sync an entire Google Photos album to automatically update Aura frames as new photos are added”</em>. So a Google Photos live album of one pet, synced to an Aura frame, gives a frame that shows that pet and keeps up with new photos. <strong>For “only this one dog”, that is the more complete route today</strong> — and it is not what PicDock does (see below).</p>
+
+        <h2>What the popular frame apps say about pets</h2>
+        <p>We checked the Google Play listings of the apps people most often compare (US English, October 17, 2026). None of the three listings mentions a pet filter:</p>
+        <ul>
+            <li><a href="https://play.google.com/store/apps/details?id=com.bo.fotoo&amp;hl=en_US&amp;gl=US">Fotoo - Photo Frame Slideshow</a> (Bopp Studio): sources include Google Photos, Dropbox, Google Drive, OneDrive and Samba/SMB; weather, time, background music and screensaver are listed. A pet or face filter is <strong>not stated</strong>. 3.8 stars (6,746 ratings), 1M+ downloads, updated Sep 21, 2026.</li>
+            <li><a href="https://play.google.com/store/apps/details?id=net.frameo.app&amp;hl=en_US&amp;gl=US">Frameo</a>: the companion app for Frameo Wi-Fi frames; it sends photos from phones to the frame. A pet filter is <strong>not stated</strong>. 4.8 stars (147,833 ratings), 5M+ downloads, updated Oct 12, 2026.</li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.pushd.client&amp;hl=en_US&amp;gl=US">Aura Frames</a>: a pet filter is <strong>not stated</strong> on the listing itself; the individual-pet route above runs through Google Photos. 4.8 stars (30,115 ratings), 1M+ downloads, updated Oct 16, 2026.</li>
+        </ul>
+        <p>“Not stated” means the listing does not mention it, not that the feature cannot exist. If it matters, ask the developer.</p>
+
+        <h2>How PicDock's pet filter works</h2>
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-settings-subject-filter-en.jpg" alt="PicDock's Subject Filter card with the option Pets (dogs and cats) marked Premium, and a status line counting analysed photos and photos with pets" width="1100" height="841" loading="lazy">
+            <figcaption>The Subject Filter card in PicDock's slideshow settings. “Pets (dogs &amp; cats)” is marked Premium.</figcaption>
+        </figure>
+        <p>From our <a href="https://devdad.kr/picdock/facts/">fact sheet</a>, precisely:</p>
+        <ul>
+            <li><strong>It is a yes/no filter.</strong> It shows only photos that contain a pet — dogs, cats or both. Rabbits and other small pets are usually included.</li>
+            <li><strong>It does not recognise individual animals.</strong> It cannot tell your dog from another dog. In a home with one dog, “photos with a dog” is usually the same thing as “photos of our dog”; with two dogs, it is not.</li>
+            <li><strong>It runs on the device.</strong> The image-labelling model is bundled in the app, and photos are not uploaded for this analysis.</li>
+            <li><strong>It is part of Premium.</strong> The slideshow and every photo source except web upload are free; the pet filter is one of the Premium features.</li>
+        </ul>
+        <p>PicDock also has a face filter (“only photos with people”) and automatic person grouping. How those work, and why it matters where the analysis runs, is in <a href="https://devdad.kr/blog/photo-frame-face-recognition-private.html">photo frames that show only certain people</a>.</p>
+
+        <h2>The no-filter way: an album or a folder</h2>
+        <p>Filters are a shortcut. If you already have, or are willing to make, an album of your pet, any frame app can show only that. In PicDock, a <strong>chosen album</strong> on the device, or a <strong>Dropbox or OneDrive folder</strong>, can be the photo source — both are free. A cloud folder is refreshed automatically, so when someone in the family drops a new photo of the dog into it, the frame picks it up without touching the tablet. This is also the way to show one particular dog among several: the album decides, not a model.</p>
+        <p>Setup guides: <a href="https://devdad.kr/blog/dropbox-folder-android-photo-frame.html">Dropbox folder</a> · <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">OneDrive folder</a> · <a href="https://devdad.kr/blog/turn-old-tablet-into-digital-photo-frame.html">turn an old tablet into a frame</a>.</p>
+
+        <h2>Side by side</h2>
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr><th></th><th>PicDock pet filter</th><th>Google Photos live album (+ a frame that syncs it)</th><th>Album or folder you curate</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Shows only pet photos</td><td>Yes (dogs, cats or both)</td><td>Yes</td><td>Yes</td></tr>
+                <tr><td>Tells one dog from another</td><td>No</td><td>Yes (Face Groups; “isn’t perfect”, per Google)</td><td>Yes — you choose the photos</td></tr>
+                <tr><td>Where the analysis runs</td><td>On the device</td><td>In Google Photos</td><td>No analysis</td></tr>
+                <tr><td>New photos added automatically</td><td>From the selected source</td><td>Yes, to the live album; Aura syncs albums</td><td>Only if you add them to the album or folder</td></tr>
+                <tr><td>Availability limits</td><td>Premium; Android app</td><td>Not in all countries or account types (Google)</td><td>None</td></tr>
+            </tbody>
+        </table>
+        </div>
+        <p>Sources: <a href="https://devdad.kr/picdock/facts/">PicDock facts</a>; Google Photos Help <a href="https://support.google.com/photos/answer/6128838?hl=en">face groups</a> and <a href="https://support.google.com/photos/answer/6128849?hl=en">albums</a>; <a href="https://auraframes.com/news/how-to-effortlessly-display-google-photos-on-your-aura-frame">Aura</a>. All checked October 17, 2026.</p>
+
+        <h2>What PicDock does not do</h2>
+        <ul>
+            <li><strong>No individual pet recognition.</strong> It cannot pick out <em>your</em> dog. Use an album or folder for that.</li>
+            <li><strong>Google Photos is a picker, not a live album.</strong> You pick photos and they are saved on the device; PicDock does not follow a Google Photos live album as it grows. Aura does this better.</li>
+            <li><strong>No Google Drive.</strong> Google Drive is not a supported photo source.</li>
+            <li><strong>No video from cloud sources.</strong> Videos play from device storage and, as an opt-in beta, from a NAS / SMB share; videos in Google Photos, Dropbox, OneDrive or iCloud Shared Albums are not played.</li>
+            <li><strong>This is about the Android app.</strong> Cloud and NAS sources are Android-only; PicDock's separate iPhone and iPad app shows the photo library on the device.</li>
+        </ul>
+
+        <h2>What it costs</h2>
+        <p>PicDock on Google Play is free to download, and <strong>every photo source except web upload is free</strong>, with no time limit; new installs get a 7-day trial of all features, the pet filter included. Optional Premium (the pet filter, person grouping, more transitions, forecasts and more) is available as a <strong>lifetime purchase (US$19.99), or a yearly or monthly subscription</strong> — prices are shown in the app and vary by country. The Amazon Appstore version for Fire tablets is a US$4.99 paid app. Full details: <a href="https://devdad.kr/picdock/facts/">PicDock facts page</a>.</p>
+
+        <h2>FAQ</h2>
+
+        <h3>Can a digital photo frame show only my dog's photos?</h3>
+        <p>Yes, in two different ways. A pet filter shows only photos that contain a pet, which works well with one pet in the family. To show one particular dog, you need individual recognition: Google Photos can group photos of the same pet into a live album (not in all countries), and a frame that syncs albums, such as Aura, shows it. Or keep the dog's photos in one album or folder and point the frame at it.</p>
+
+        <h3>Does PicDock recognise my dog?</h3>
+        <p>No. Its pet filter detects whether a pet is in a photo — dogs, cats or both — and does not recognise individual animals. For one dog among several, use an album or folder of that dog as the source.</p>
+
+        <h3>Is PicDock's pet filter free, and are photos uploaded?</h3>
+        <p>The pet filter is part of Premium (lifetime, yearly or monthly); every photo source except web upload is free. The model is bundled in the app and runs on the device; photos are not uploaded for this analysis.</p>
+
+        <h3>Can I make a pet-only frame without paying for anything?</h3>
+        <p>Yes. Put your pet's photos in one album on the tablet, or in a Dropbox or OneDrive folder, and choose it as the source. Albums and cloud folders are free sources, and cloud folders refresh automatically.</p>
+
+        <h2>In short</h2>
+        <p>Decide which question you are asking. “Only photos with our dog in them” is a pet filter, and with one dog it is usually all you need. “Only Max” is individual recognition, which Google Photos does today and an album-syncing frame can follow. And an album you curate yourself does both jobs without any model at all. Related: <a href="https://devdad.kr/blog/photo-frame-face-recognition-private.html">photo frames that show only certain people</a> · <a href="https://devdad.kr/blog/gift-digital-photo-frame-for-parents-old-tablet.html">a photo frame gift for parents</a>.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Dpet_filter_en" data-store="google_play">Get PicDock on Google Play</a> · <a href="https://devdad.kr/picdock/facts/">PicDock facts</a> · <a href="https://devdad.kr/blog/photo-frame-face-recognition-private.html">People filter and privacy</a> · <a href="https://devdad.kr/blog/turn-old-tablet-into-digital-photo-frame.html">Old tablet as a frame</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.querySelectorAll('a[data-store]').forEach(function(a){a.addEventListener('click',function(){gtag('event','store_outbound_click',{store:a.dataset.store,campaign:'pet_filter_en',link_url:a.href});});});</script>
+</body>
+</html>
