@@ -53,6 +53,7 @@ Issues are welcome for feature requests and bug reports.
 - [Alternativa a Fotoo para Android: comparativa honesta con PicDock (2026)](https://ssimu.github.io/picdock/compare/es-fotoo-alternative-android.html)
 - [Alternativa ao Fotoo para Android: comparação honesta com o PicDock (2026)](https://ssimu.github.io/picdock/compare/pt-fotoo-alternative-android.html)
 - [Alternative à Fotoo pour Android : comparatif honnête avec PicDock (2026)](https://ssimu.github.io/picdock/compare/fr-fotoo-alternative-android.html)
+- [Alternativa a Fotoo per Android: confronto onesto con PicDock (2026)](https://ssimu.github.io/picdock/compare/it-fotoo-alternative-android.html)
 - [Google Photos on an Android tablet photo frame in 2026 — what changed and what still works](https://ssimu.github.io/picdock/compare/google-photos-android-photo-frame.html)
 - [A digital photo frame gift for parents — using a tablet you already have (2026)](https://ssimu.github.io/picdock/compare/gift-digital-photo-frame-for-parents-old-tablet.html)
 - [Digitaler Bilderrahmen als Geschenk für Eltern und Großeltern – aus dem alten Tablet (2026)](https://ssimu.github.io/picdock/compare/de-geschenk-digitaler-bilderrahmen-eltern-tablet.html)
