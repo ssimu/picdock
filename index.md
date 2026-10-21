@@ -48,6 +48,7 @@ Issues are welcome for feature requests and bug reports.
 - [Fireタブレットをフォトフレームにする方法 — Fire HD 8・Fire HD 10（2026年版）](https://ssimu.github.io/picdock/compare/ja-fire-tablet-photo-frame.html)
 - [Samsung Galaxy Tab as a digital photo frame (2026): the Samsung settings that matter](https://ssimu.github.io/picdock/compare/galaxy-tab-digital-photo-frame.html)
 - [Wall-mounted tablet as a digital photo frame: power, mounting and burn-in (2026)](https://ssimu.github.io/picdock/compare/wall-mounted-tablet-photo-frame.html)
+- [Google Photos and OneDrive in one slideshow on an Android tablet: which photo frame apps mix sources (2026)](https://ssimu.github.io/picdock/compare/google-photos-onedrive-one-slideshow-android.html)
 - [Turn an old iPad into a digital photo frame (iPad Air 2, mini 4 and newer — 2026)](https://ssimu.github.io/picdock/compare/old-ipad-digital-photo-frame.html)
 - [구형 아이패드를 디지털 액자로 — 아이패드 에어 2·미니 4도 됩니다 (2026)](https://ssimu.github.io/picdock/compare/ko-old-ipad-photo-frame.html)
 - [Altes iPad als digitaler Bilderrahmen — iPad Air 2, mini 4 und neuer (2026)](https://ssimu.github.io/picdock/compare/de-old-ipad-photo-frame.html)
