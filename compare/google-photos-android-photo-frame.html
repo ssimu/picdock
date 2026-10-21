@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Copy for crawler access; canonical = devdad.kr original -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
     <script>
@@ -16,6 +17,7 @@
     <meta name="description" content="Why frame apps can no longer read your Google Photos albums (Library API change, March 31, 2025), what still works — the Picker API and Google's partner frames — and how to set up an Android tablet frame honestly, including what does not update automatically.">
     <link rel="canonical" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
     <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
+    <link rel="alternate" hreflang="ja" href="https://devdad.kr/blog/ja-google-photos-android-photo-frame.html">
     <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Google Photos on an Android Tablet Photo Frame in 2026 — What Changed and What Still Works">
@@ -42,7 +44,7 @@
     "url": "https://devdad.kr/"
   },
   "datePublished": "2026-09-25",
-  "dateModified": "2026-09-25",
+  "dateModified": "2026-10-21",
   "inLanguage": "en",
   "mainEntityOfPage": "https://devdad.kr/blog/google-photos-android-photo-frame.html",
   "citation": [
@@ -159,6 +161,7 @@
             <nav class="nav-links">
                 <a href="https://devdad.kr/blog/">Blog</a>
                 <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/weatherdeck/">WeatherDock</a>
                 <a href="https://devdad.kr/contact.html">Contact</a>
             </nav>
         </div>
@@ -218,7 +221,7 @@
             <li>Choose your Google account and allow access. PicDock asks only for the Picker permission (<code>photospicker.mediaitems.readonly</code>): it can read the items you select, nothing else in your library.</li>
             <li>Google's picker opens. Select photos (you can open an album and select from it), tap <strong>Done</strong> and come back to PicDock. PicDock waits up to 10 minutes for you to finish.</li>
             <li>PicDock downloads the selected photos to the tablet, sized to at most 2560 pixels on the long side, and shows "<em>N photos added</em>".</li>
-            <li>Tap <strong>Play all saved photos</strong>. If another source is already showing, choose <strong>Replace</strong> or <strong>Add to current</strong> to mix them with photos on the tablet, OneDrive, Dropbox, an iCloud shared album or a NAS.</li>
+            <li>Tap <strong>Play all saved photos</strong>. If another source is already showing, choose <strong>Replace</strong> or <strong>Add to current</strong> to mix them with photos on the tablet, OneDrive, Dropbox, an iCloud shared album or a NAS. More on mixing sources: <a href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">Google Photos and OneDrive in one slideshow</a>.</li>
         </ol>
         <p>Then keep the tablet on while charging. Our <a href="https://devdad.kr/blog/always-on-photo-frame-tablet.html">always-on tablet guide</a> covers screen-on, night hours and starting when the charger is connected.</p>
 
@@ -276,7 +279,7 @@
         <h2>In short</h2>
         <p>Since March 31, 2025, apps cannot follow your Google Photos albums. On a spare Android tablet you can still show <strong>hand-picked</strong> Google Photos (up to 2,000 per pick, saved on the tablet, photos only), topping up by picking again. For albums that update themselves, use Google's own devices or a partner frame. For a tablet that follows new family photos on its own, use a <strong>OneDrive, Dropbox or NAS folder</strong>.</p>
 
-        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Dgoogle_photos_picker">Get PicDock on Google Play</a> · <a href="https://devdad.kr/picdock/facts/">PicDock facts</a> · <a href="https://devdad.kr/blog/best-apps-android-tablet-digital-photo-frame-2026.html">Android frame app comparison</a></p>
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad_blog%26utm_medium%3Dguide%26utm_campaign%3Dgoogle_photos_picker">Get PicDock on Google Play</a> · <a href="https://devdad.kr/picdock/facts/">PicDock facts</a> · <a href="https://devdad.kr/blog/best-apps-android-tablet-digital-photo-frame-2026.html">Android frame app comparison</a> · <a href="https://devdad.kr/blog/ja-google-photos-android-photo-frame.html">日本語</a></p>
 
         <p><small>Sources checked September 24, 2026: <a href="https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/">Google for Developers blog</a>, <a href="https://developers.google.com/photos/support/updates">Google Photos API updates</a>, <a href="https://developers.google.com/photos/picker/reference/rest/v1/sessions">Picker sessions reference</a>, <a href="https://developers.google.com/photos/picker/guides/media-items">Picker media items guide</a>, <a href="https://developers.google.com/photos/partner-program/overview">Partner program overview</a>, <a href="https://developers.google.com/photos/ambient/guides/about">Ambient API</a>.</small></p>
     </article>

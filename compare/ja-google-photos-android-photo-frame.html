@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Copy for crawler access; canonical = devdad.kr original -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoogleフォトをAndroidタブレットのフォトフレームで表示する方法（2026）— APIの変更で何が変わったか</title>
+    <meta name="description" content="フォトフレームアプリがGoogleフォトのアルバムを読めなくなった理由（2025年3月31日のLibrary API変更）、今でも使える方法（Picker APIとGoogleのパートナー向けAmbient API）、そしてAndroidタブレットでの正直な設定手順。自動では更新されない点もはっきり書きます。">
+    <link rel="canonical" href="https://devdad.kr/blog/ja-google-photos-android-photo-frame.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
+    <link rel="alternate" hreflang="ja" href="https://devdad.kr/blog/ja-google-photos-android-photo-frame.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/google-photos-android-photo-frame.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GoogleフォトをAndroidタブレットのフォトフレームに（2026）— 変わったことと、今も使える方法">
+    <meta property="og:description" content="2025年3月31日から、他社アプリはGoogleフォトのアルバムを読めなくなりました。タブレットのフォトフレームで今もできること、そして別の方法を選ぶべき場面。">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/ja-google-photos-android-photo-frame.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GoogleフォトをAndroidタブレットのフォトフレームで表示する方法（2026）— APIの変更で何が変わったか",
+  "description": "2025年3月31日から、Google Photos Library APIで他社アプリが読めるのは、そのアプリ自身がアップロードした写真だけになりました。フォトフレームアプリは、写真を手で選ぶGoogle Photos Picker APIを使うか、Googleのパートナープログラムに参加してAmbient APIを使います。この記事はGoogleの公式ページを出典にこの変更を説明し、Androidタブレットでの設定手順を紹介します。Picker方式のアプリでは、アルバムに後から追加した写真は自動では届きません。",
+  "image": "https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg",
+  "author": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "publisher": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "datePublished": "2026-10-21",
+  "dateModified": "2026-10-21",
+  "inLanguage": "ja",
+  "mainEntityOfPage": "https://devdad.kr/blog/ja-google-photos-android-photo-frame.html",
+  "citation": [
+    "https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/",
+    "https://developers.google.com/photos/support/updates",
+    "https://developers.google.com/photos/picker/reference/rest/v1/sessions",
+    "https://developers.google.com/photos/picker/guides/media-items",
+    "https://developers.google.com/photos/partner-program/overview",
+    "https://developers.google.com/photos/ambient/guides/about"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "フォトフレームアプリでGoogleフォトのアルバムが表示できなくなったのはなぜですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GoogleがGoogle Photos Library APIを変更したためです。2025年3月31日に読み取り用のスコープ（photoslibrary.readonly、photoslibrary.sharing、photoslibrary）が廃止され、アプリが一覧・読み取りできるのは、そのアプリ自身が作ったアルバムと写真だけになりました。Googleは2024年9月18日にこれを発表しています。現在のアプリは、写真を手で選ぶGoogle Photos Picker APIを使うか、Googleのパートナープログラムに参加してAmbient APIを使います。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "AndroidタブレットのフォトフレームでGoogleフォトのアルバムを自動更新できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "アルバムの継続的な表示に使えるAmbient APIは、Googleのパートナープログラムに受け入れられた開発者だけのものです。PicDockを含むPicker方式のアプリが受け取るのは選んだ写真そのもので、アルバムへのリンクではありません。アルバムに後から追加した写真は、もう一度選ぶ必要があります。Fotooは2026年10月21日時点のGoogle Playの更新内容に「New Google Photos Ambient support」と書いています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "一度に何枚まで選べますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Picker APIの上限は、1回の選択セッションにつき2,000件です。何回でも選び直して写真を足せます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Googleフォトの動画も表示されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PicDockでは表示されません。PicDockはクラウドに保存された動画を再生しないので、Googleフォトから取り込めるのは写真だけです。動画はタブレット本体に保存したものを再生します。"
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/weatherdeck/">WeatherDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>Googleフォトを<br>Androidタブレットのフォトフレームに（2026）</h1>
+        <p>フォトフレームアプリがGoogleフォトのアルバムを映せなくなった理由、今でも使える方法、そして別の方法を選ぶべき場面。</p>
+        <div class="post-meta">2026年10月 · 7分で読めます</div>
+    </div>
+
+    <article class="post">
+        <p><strong>最初にお断り：</strong>以下の手順で使うAndroidアプリPicDockは、私たちが開発しています。なので中立ではありません。PicDockについての記述は<a href="https://devdad.kr/picdock/facts/ja/">PicDockのファクトシート</a>の内容だけを使い、GoogleのAPIについての記述はすべてGoogle自身のページ（2026年10月21日に再確認）にリンクしています。ほかの製品のほうが合う場面も、はっきり書きます。</p>
+
+        <p>何年か前にタブレットをフォトフレームにした方なら、Googleフォトのアルバムを一度選ぶだけで、新しい写真が勝手に増えていった経験があるかもしれません。ところが2025年のどこかで、多くのアプリがアルバムを表示しなくなったり、アルバムの一覧が消えたり、「写真を選んでください」と言うようになったりしました。アプリが一つずつ壊れたわけではありません。Googleが、すべての他社アプリに対して同時にルールを変えたのです。</p>
+
+        <p><strong>結論から：</strong><strong>2025年3月31日</strong>から、ふつうのアプリはGoogleフォトのライブラリやアルバムの中を見られなくなりました。表示できるのは、Googleの選択画面で<strong>自分で選んだ写真</strong>だけです。自動で増えていくアルバムは、Google自身の製品と、Googleがパートナーとして認めたメーカーのものになりました。タブレットに新しい写真を勝手に表示させたいなら、同期されるフォルダ（OneDrive、Dropbox、NAS）を使うのが確実です。</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-living-room-evening-frame.jpg" alt="夕方のリビングでデジタルフォトフレームとして動いているAndroidタブレット" width="1100" height="614" loading="lazy">
+            <figcaption>タブレットのフォトフレームでGoogleフォトは今も表示できます。ただし写真はアルバムから追いかけるのではなく、手で選びます。</figcaption>
+        </figure>
+
+        <h2>Googleが変えたこと、その時期</h2>
+        <p><strong>2024年9月18日</strong>、Googleは「<a href="https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/">Updates to the Google Photos APIs: Picker API launch and Library API changes</a>」（英語）を発表しました。Googleの<a href="https://developers.google.com/photos/support/updates">APIの更新ページ</a>（英語）に書かれている要点はこうです。</p>
+        <ul>
+            <li><strong>2025年3月31日から適用。</strong></li>
+            <li><code>photoslibrary.readonly</code>、<code>photoslibrary.sharing</code>、<code>photoslibrary</code> のスコープが廃止。共有アルバムの関連機能は <code>403 PERMISSION_DENIED</code> を返すようになりました。</li>
+            <li>一覧・検索・読み取りができるのは、<strong>そのアプリ自身が作った</strong>アルバムと写真だけ。</li>
+            <li>ライブラリ全体から写真を選ぶ方法として、Googleは新しい<strong>Google Photos Picker API</strong>を案内しています。</li>
+        </ul>
+        <p>つまりフォトフレームアプリは、もう「<em>孫</em>」というアルバムを1時間ごとに読み直すことができません。アルバムの持ち主はあなたで、アプリはその中をのぞくことを許されなくなったのです。</p>
+
+        <h2>アプリが今もGoogleフォトを表示できる2つの方法</h2>
+        <h3>1. Picker API：あなたが選び、アプリはその写真を受け取る</h3>
+        <p>アプリはGoogle自身の選択画面（Googleフォトのアプリかブラウザー）を開きます。あなたはライブラリやアルバムを見たり検索したりして写真を選びます。アプリが受け取るのは<strong>選ばれた写真そのもの</strong>で、アルバムへのリンクではありません。Googleのドキュメントにある2つの制限が、Picker方式のフォトフレームすべての動き方を決めています。</p>
+        <ul>
+            <li><strong>1回の選択セッションで最大2,000件</strong>（<a href="https://developers.google.com/photos/picker/reference/rest/v1/sessions">sessionsリファレンス</a>の <code>maxItemCount</code>、英語）。</li>
+            <li><strong>ダウンロード用のURLは60分で切れる</strong>（<a href="https://developers.google.com/photos/picker/guides/media-items">media itemsガイド</a>、英語）。なので、あとで表示するにはアプリがすぐに保存しておく必要があります。</li>
+        </ul>
+        <p>その結果、来週だれかがそのアルバムに写真を追加しても、アプリにはそれを知る手段がありません。もう一度選ぶことになります。</p>
+
+        <h3>2. Ambient API：認められたパートナーだけ</h3>
+        <p>Googleには「smart TVs and photo frames」のような機器向けの<a href="https://developers.google.com/photos/ambient/guides/about">Ambient API</a>（英語）もあります。誰でも使えるわけではなく、Googleの<a href="https://developers.google.com/photos/partner-program/overview">パートナープログラムのページ</a>（英語）には「To get access to the Ambient API, you must first be accepted into the partner program.」（Ambient APIを使うには、まずパートナープログラムに受け入れられる必要がある）と書かれています。2026年に「Googleフォトのアルバムが自動で更新される」とうたう製品は、Google自身のものか、受け入れられたパートナーのものです。</p>
+
+        <h2>どの方法が合うか</h2>
+        <ul>
+            <li><strong>Googleフォトのアルバムが勝手に更新されてほしい。手間は増やしたくない。</strong>Google自身の製品か、パートナーの製品を選びます。Androidアプリでは、<strong>Fotoo</strong>（Bopp Studio）の<a href="https://play.google.com/store/apps/details?id=com.bo.fotoo&amp;hl=ja&amp;gl=JP">Google Playの掲載ページ</a>（2026年10月21日確認）の更新内容に「New Google Photos Ambient support; existing users must reconnect and select photos again」とあります。私たちは試していないので、どう動くかはご自身で確かめてください。</li>
+            <li><strong>余っているAndroidタブレットで、選んだGoogleフォトの写真をオフラインでも流したい。</strong>Picker方式のアプリで十分です。手順は下にあります。</li>
+            <li><strong>家族が追加した写真を、タブレットが勝手に拾ってほしい。</strong>Googleフォトのアルバムではなく、同期されるフォルダに写真を置きます。<a href="#synced-folder">同期フォルダの方法</a>をご覧ください。</li>
+        </ul>
+
+        <h2>設定：PicDockでGoogleフォトをAndroidタブレットに表示する</h2>
+        <p>用意するのは、Androidタブレットかスマートフォン（Android 7.0以降）と、Google Playの<strong>PicDock</strong>（表示名『フォトスライドショー・デジタルフレーム』、開発元 DD_studio）です。macOS向けの picdock.app は名前が同じだけの別の製品で、私たちとは関係ありません。</p>
+        <ol>
+            <li>PicDock → <strong>メディアソース</strong> → <strong>Google フォト</strong> → <strong>写真を追加</strong> を開きます。</li>
+            <li>Googleアカウントを選び、アクセスを許可します。</li>
+            <li>Googleの選択画面が開きます。写真を選び（アルバムを開いてその中から選ぶこともできます）、選び終えたらPicDockに戻ります。</li>
+            <li>選んだ写真はタブレットに保存され、オフラインでも再生できます。</li>
+            <li><strong>保存した写真をすべて再生</strong> をタップします。すでに別のソースを表示しているときは、<strong>置き換え</strong>か<strong>現在のスライドショーに追加</strong>を選べます。追加を選ぶと、タブレット内の写真、OneDrive、Dropbox、iCloud共有アルバム、NASの写真と1つのスライドショーにまとめられます（<a href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">ソースを組み合わせる方法</a>、英語）。</li>
+        </ol>
+        <p>あとは充電中に画面が消えないように設定して置くだけです。画面の常時点灯、夜間のスリープ、充電器をつないだら自動で始める設定は、<a href="https://devdad.kr/blog/ja-always-on-photo-frame-tablet.html">常時表示タブレットのガイド</a>にまとめてあります。</p>
+
+        <h2>PicDockがGoogleフォトでできないこと</h2>
+        <ul>
+            <li><strong>Googleフォトからの自動更新はありません。</strong>アルバムに後から追加した写真は、選ぶまで表示されません。PicDockはクラウドとNASのソースを一定間隔で読み直しますが、選んだ写真の束には読み直す元がありません。</li>
+            <li><strong>アプリの中でアルバムやライブラリ全体を見ることはできません。</strong>Googleのルールで許されていないので、写真はGoogleの選択画面で探します。</li>
+            <li><strong>共有アルバムを追いかけることはできません。</strong>共有アルバムも選択画面では普通のアルバムと同じように見られますが、フレームが受け取るのは写真のコピーです。</li>
+            <li><strong>クラウドの動画は再生しません。</strong>Googleフォト、OneDrive、Dropboxから表示するのは写真だけです。動画はタブレット本体に保存したものを再生します（NASの動画はオプトインのベータ機能）。</li>
+            <li><strong>Googleドライブには対応していません。</strong></li>
+            <li><strong>クラウドとNASのソースはAndroid版だけです。</strong>iPhone・iPad版のPicDockは別のアプリ（iOS 15以降）で、使うのは端末の写真ライブラリ（参加しているiCloud共有アルバムを含む）だけです。GoogleフォトやOneDrive、NASのソースはありません。</li>
+        </ul>
+
+        <h2 id="synced-folder">同期フォルダの方法：新しい写真が勝手に表示される</h2>
+        <p>「おばあちゃんのタブレットに、誰も触らなくても新しい写真が出てくる」ことが目的なら、2026年の正直な答えは、Googleフォトのアルバムに頼るのをやめることです。フォトフレームアプリが今も読み直せる場所に、フレーム用のフォルダを作ります。</p>
+        <ul>
+            <li><strong>OneDriveのフォルダ</strong>：<a href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">OneDriveフォルダのガイド</a>。</li>
+            <li><strong>Dropboxのフォルダ</strong>：<a href="https://devdad.kr/blog/dropbox-folder-android-photo-frame.html">Dropboxフォルダのガイド</a>（英語）。</li>
+            <li><strong>NASの共有フォルダ</strong>（SynologyなどSMBの共有）：<a href="https://devdad.kr/blog/ja-nas-photo-frame-app.html">NASのフォトフレームガイド</a>。</li>
+            <li><strong>iCloud共有アルバム</strong>（iPhoneの家族向け）：<a href="https://devdad.kr/blog/ja-icloud-shared-album-android-photo-frame.html">iCloud共有アルバムのガイド</a>。</li>
+        </ul>
+        <p>PicDockはこれらのソースを一定間隔で自動更新するので、選んだフォルダに新しいファイルが入れば、端末に触れなくてもフレームに表示されます。家族はそれぞれのスマホからフォルダに写真を追加するだけです。</p>
+
+        <h2>料金</h2>
+        <p>Google Play版のPicDockはダウンロード無料で、Webアップロード以外のすべての写真ソース（Googleフォトを含む）を無料で使えます。プレミアムは任意で、買い切り（米国価格US$19.99）か、年額・月額のサブスクリプションから選べます（価格はアプリ内に表示され、国によって異なります）。新しくインストールすると、全機能を7日間お試しできます。Fireタブレット向けのAmazonアプリストア版はUS$4.99の有料アプリです。詳しくは<a href="https://devdad.kr/picdock/facts/ja/">ファクトシート</a>へ。</p>
+
+        <h2>よくある質問</h2>
+
+        <h3>フォトフレームアプリでGoogleフォトのアルバムが表示できなくなったのはなぜですか？</h3>
+        <p>Googleが2025年3月31日にLibrary APIの読み取りスコープを廃止したためです（発表は2024年9月18日）。アプリが読めるのは自分でアップロードしたものだけになりました。今は、写真を手で選ぶPicker APIを使うか、パートナープログラムに参加してAmbient APIを使います。</p>
+
+        <h3>AndroidタブレットのフォトフレームでGoogleフォトのアルバムを自動更新できますか？</h3>
+        <p>Ambient APIを使えるのは、Googleのパートナープログラムに受け入れられた開発者だけです。PicDockを含むPicker方式のアプリは選んだ写真を受け取るので、アルバムに増えた写真はもう一度選びます。Fotooは更新内容で「Google Photos Ambient support」をうたっています。</p>
+
+        <h3>一度に何枚まで選べますか？</h3>
+        <p>Picker APIの上限は1回のセッションにつき2,000件です。何回でも選び直して足せます。</p>
+
+        <h3>Googleフォトの動画も表示されますか？</h3>
+        <p>PicDockでは表示されません。クラウドに保存された動画は再生しないので、Googleフォトからは写真だけです。タブレット本体に保存した動画は再生できます。</p>
+
+        <h2>まとめ</h2>
+        <p>2025年3月31日から、アプリはGoogleフォトのアルバムを追いかけられなくなりました。余ったAndroidタブレットでは、<strong>自分で選んだ</strong>Googleフォトの写真（1回最大2,000件、タブレットに保存、写真のみ）を表示でき、増やしたいときは選び直します。自動で更新されるアルバムが必要ならGoogle自身の製品かパートナーの製品を、家族の新しい写真をタブレットが勝手に拾ってほしいなら<strong>OneDrive、Dropbox、NASのフォルダ</strong>を使いましょう。</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad%26utm_medium%3Dblog%26utm_campaign%3Dgoogle_photos_ja" data-store="google_play">Google PlayでPicDockを入手</a> · <a href="https://devdad.kr/picdock/facts/ja/">PicDockファクトシート</a> · <a href="https://devdad.kr/blog/ja-android-tablet-digital-photo-frame-app-comparison.html">Androidフレームアプリ比較</a> · <a href="https://devdad.kr/blog/google-photos-android-photo-frame.html">English</a></p>
+
+        <p><small>出典（2026年10月21日確認）：<a href="https://developers.googleblog.com/en/google-photos-picker-api-launch-and-library-api-updates/">Google for Developers blog</a>、<a href="https://developers.google.com/photos/support/updates">Google Photos API updates</a>、<a href="https://developers.google.com/photos/picker/reference/rest/v1/sessions">Picker sessions reference</a>、<a href="https://developers.google.com/photos/picker/guides/media-items">Picker media items guide</a>、<a href="https://developers.google.com/photos/partner-program/overview">Partner program overview</a>、<a href="https://developers.google.com/photos/ambient/guides/about">Ambient API</a>、<a href="https://play.google.com/store/apps/details?id=com.bo.fotoo&amp;hl=ja&amp;gl=JP">Fotoo（Google Play 日本）</a>。</small></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.querySelectorAll('a[data-store]').forEach(function(a){a.addEventListener('click',function(){gtag('event','store_outbound_click',{store:a.dataset.store,campaign:'google_photos_ja',link_url:a.href});});});</script>
+</body>
+</html>
