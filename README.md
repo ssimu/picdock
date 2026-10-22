@@ -49,6 +49,7 @@ Issues are welcome for feature requests and bug reports.
 - [Altes iPad als digitaler Bilderrahmen — iPad Air 2, mini 4 und neuer (2026)](https://ssimu.github.io/picdock/compare/de-old-ipad-photo-frame.html)
 - [Use your own photos (NAS, OneDrive, Dropbox) as an Android TV / Google TV screensaver (2026)](https://ssimu.github.io/picdock/compare/android-tv-photo-screensaver-nas.html)
 - [Android screensaver with your own photos (2026): tablet, phone and Android TV](https://ssimu.github.io/picdock/compare/android-screensaver-your-photos.html)
+- [Android標準スクリーンセーバー（Googleフォト）とフォトフレームアプリの違い（2026）](https://ssimu.github.io/picdock/compare/ja-android-screensaver-your-photos.html)
 - [Coming from Fotoo? An honest Fotoo vs PicDock comparison for Android photo frames (2026)](https://ssimu.github.io/picdock/compare/fotoo-alternative-android.html)
 - [Fotoo-Alternative für den Android-Bilderrahmen (2026): ehrlicher Vergleich mit PicDock](https://ssimu.github.io/picdock/compare/de-fotoo-alternative-android.html)
 - [Fotooの代わりになるフォトフレームアプリは？ Android向け代替アプリをPicDockと正直に比較（2026）](https://ssimu.github.io/picdock/compare/ja-fotoo-alternative-android.html)
