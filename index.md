@@ -189,6 +189,10 @@ The Google Play version is free to download and stays usable without paying: all
 
 A subscription is not required to use the app. If you want Premium, you can choose a one-time lifetime purchase (US$19.99) or a yearly or monthly subscription.
 
+**Is PicDock a subscription app?**
+
+Not a required one, but it does sell subscriptions, so it is not accurate to call PicDock subscription-free. PicDock is free to install from Google Play, and every photo source except web upload is free. Optional Premium is sold three ways: a lifetime one-time purchase (US$19.99), a yearly subscription or a monthly subscription (prices shown in the app; they vary by country). The Amazon Appstore version is a US$4.99 paid app. The iPhone and iPad app is a separate app with its own features and pricing.
+
 **Can PicDock show photos from Google Photos?**
 
 Yes. You pick the photos you want with the Google Photos picker; PicDock saves them on the device so the slideshow keeps playing offline.
