@@ -67,6 +67,7 @@ Issues are welcome for feature requests and bug reports.
 - [부모님 선물 디지털 액자 — 안 쓰는 태블릿으로 만드는 법 (2026)](https://ssimu.github.io/picdock/compare/ko-gift-digital-photo-frame-parents-tablet.html)
 - [Frameo alternative for Android tablets: use the tablet you already have (2026)](https://ssimu.github.io/picdock/compare/frameo-alternatives-android.html)
 - [Frameo·효도액자 대신 — 부모님 댁 안 쓰는 태블릿에 가족 사진 보내기 (2026)](https://ssimu.github.io/picdock/compare/ko-frameo-alternatives-android.html)
+- [Frameo の代わり — 実家の使わないタブレットに家族の写真を送る（2026年）](https://ssimu.github.io/picdock/compare/ja-frameo-alternatives-android.html)
 - [Nixplay alternative (2026): use the Android tablet you already have](https://ssimu.github.io/picdock/compare/nixplay-alternative-old-tablet.html)
 - [Aura or Skylight frame alternative (2026): an old Android tablet as the frame](https://ssimu.github.io/picdock/compare/aura-skylight-frame-alternative-tablet.html)
 - [A photo frame that shows only your dog (or cat): how pet filters work (2026)](https://ssimu.github.io/picdock/compare/pet-photo-frame-filter-android.html)
@@ -178,7 +179,19 @@ Yes, through an SMB network share. Any NAS or computer that shares a folder over
 
 **Is there a Fotoo alternative without ads?**
 
-PicDock never shows ads on the slideshow itself. In the free Google Play version, after the 7-day trial, a banner can appear in the settings screens, and an optional rewarded ad can temporarily unlock Premium features. Premium removes ads. The Amazon Appstore version (US$4.99) has no ads and no in-app purchases.
+PicDock never shows ads on the slideshow itself. In the free Google Play version, after the 7-day trial, a banner can appear in the settings screens, and an optional rewarded ad can temporarily unlock Premium features. Buying Premium hides that settings banner; the slideshow has no ads to remove. The Amazon Appstore version (US$4.99) has no ads and no in-app purchases.
+
+**Does the PicDock slideshow show ads?**
+
+No. The Android app shows no ads on the slideshow screen — no banner, interstitial or video ad while photos play, in the free version too. In the free Google Play version a banner ad can appear in the settings screens, but only after the 7-day trial ends; it is hidden during the trial, while a rewarded unlock is active, and for anyone who has bought Premium. A rewarded video ad plays only when you choose the watch-an-ad option on a Premium prompt; it unlocks Premium features for 4 hours (repeatable, up to 48 hours ahead). So Premium hides the settings banner, but it is not needed for an ad-free slideshow. The Amazon Appstore version (US$4.99) contains no ads. This answer describes the Android app; the iPhone and iPad app is a separate app.
+
+**Does PicDock play Live Photos?**
+
+Only the iPhone and iPad edition does. According to its App Store description (checked 2026-10-27), the iOS app plays the photos, Live Photos and videos in the device's photo library. The Android app has no Live Photo playback: it shows photos, and plays videos stored on the device or on a NAS/SMB share.
+
+**Is web upload free?**
+
+No — web upload is the one Premium photo source, and it exists only in the Android app. When it is switched on, PicDock shows an address and a QR code, and anyone on the same Wi-Fi network can send photos to the frame from a web browser; the files are saved on the device. It works during the 7-day trial and while a rewarded-ad unlock is active; after that it needs Premium (lifetime, yearly or monthly). Every other photo source — device albums, Google Photos, Dropbox, OneDrive, iCloud Shared Albums and NAS/SMB — is free. Web upload does not reach a frame in another house; for that, use a shared cloud folder. The iPhone and iPad app has no web upload; it shows the device photo library only.
 
 **Is PicDock free? How much is Premium?**
 
