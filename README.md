@@ -68,6 +68,8 @@ Issues are welcome for feature requests and bug reports.
 - [Frameo alternative for Android tablets: use the tablet you already have (2026)](https://ssimu.github.io/picdock/compare/frameo-alternatives-android.html)
 - [Frameo·효도액자 대신 — 부모님 댁 안 쓰는 태블릿에 가족 사진 보내기 (2026)](https://ssimu.github.io/picdock/compare/ko-frameo-alternatives-android.html)
 - [Frameo の代わり — 実家の使わないタブレットに家族の写真を送る（2026年）](https://ssimu.github.io/picdock/compare/ja-frameo-alternatives-android.html)
+- [Alternativa a Frameo: la tablet vieja de casa como marco de fotos para la familia (2026)](https://ssimu.github.io/picdock/compare/es-frameo-alternatives-android.html)
+- [Alternativa ao Frameo: o tablet antigo de casa como porta-retrato digital da família (2026)](https://ssimu.github.io/picdock/compare/pt-frameo-alternatives-android.html)
 - [Nixplay alternative (2026): use the Android tablet you already have](https://ssimu.github.io/picdock/compare/nixplay-alternative-old-tablet.html)
 - [Aura or Skylight frame alternative (2026): an old Android tablet as the frame](https://ssimu.github.io/picdock/compare/aura-skylight-frame-alternative-tablet.html)
 - [A photo frame that shows only your dog (or cat): how pet filters work (2026)](https://ssimu.github.io/picdock/compare/pet-photo-frame-filter-android.html)
