@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Copy for crawler access; canonical = devdad.kr original -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Fotos und OneDrive in einer Diashow auf dem Android-Tablet (2026): Welche Bilderrahmen-Apps Quellen mischen</title>
+    <meta name="description" content="Kann eine Bilderrahmen-App auf dem Android-Tablet Google Fotos und OneDrive zusammen zeigen? Wie die kombinierte Quelle von PicDock Google Fotos (Auswahl), OneDrive, Dropbox, NAS, geteilte iCloud-Alben und Gerätefotos mischt, was sich nicht von selbst aktualisiert, und was Fravora und Fotoo laut deutschem Google-Play-Eintrag (geprüft am 30. Oktober 2026) bieten.">
+    <link rel="canonical" href="https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="de" href="https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Google Fotos und OneDrive in einer Diashow auf dem Android-Tablet">
+    <meta property="og:description" content="Mehrere Fotoquellen auf einem Tablet-Bilderrahmen: was geht, was sich nicht von selbst aktualisiert, und ein ehrlicher Blick auf PicDock, Fravora und Fotoo.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-source-picker-en.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Google Fotos und OneDrive in einer Diashow auf dem Android-Tablet (2026): Welche Bilderrahmen-Apps Quellen mischen",
+  "description": "PicDock, eine Android-Bilderrahmen-App des Autors, hat eine kombinierte Quelle, die Fotos vom Gerät, aus Google Fotos (mit Googles Auswahl gewählt und auf dem Tablet gespeichert), OneDrive, Dropbox, geteilten iCloud-Alben und NAS/SMB-Freigaben in einer Diashow mischt. OneDrive, Dropbox, iCloud und NAS werden automatisch neu eingelesen; der Google-Fotos-Teil ist wegen Googles API-Änderung vom 31. März 2025 eine feste, von Hand gewählte Auswahl. Cloud-Videos werden nicht abgespielt, Google Drive wird nicht unterstützt, und Cloud- und NAS-Quellen gibt es nur in der Android-App. Laut deutschem Google-Play-Eintrag (geprüft am 30.10.2026) zeigt Fravora Fotos aus lokalen Ordnern, SMB/NAS und Cloud-Speichern (Google Fotos, OneDrive, Dropbox, Immich) in einer Diashow; Fotoo nennt Google Photos, Dropbox, Google Drive, OneDrive und Samba/SMB.",
+  "image": "https://devdad.kr/blog/images/picdock-source-picker-en.jpg",
+  "author": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "publisher": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "de",
+  "mainEntityOfPage": "https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html",
+  "citation": [
+    "https://play.google.com/store/apps/details?id=com.aniujual.fravora&hl=de&gl=DE",
+    "https://play.google.com/store/apps/details?id=com.bo.fotoo&hl=de&gl=DE",
+    "https://developers.google.com/photos/support/updates"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "de",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Gibt es eine Bilderrahmen-App, die Google Fotos und OneDrive zusammen zeigt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Auf Android kann PicDock Google Fotos (mit Googles Auswahl gewählte Fotos), OneDrive-Ordner, Dropbox-Ordner, geteilte iCloud-Alben, NAS/SMB-Freigaben und Fotos auf dem Gerät in einer Diashow kombinieren. Laut seinem Google-Play-Eintrag zeigt auch Fravora Fotos aus lokalen Ordnern, NAS und Cloud-Speichern, darunter Google Fotos und OneDrive, in einer Diashow. Der Eintrag von Fotoo nennt beide Dienste, sagt aber nicht, ob sie gemischt werden können."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Erscheinen neue Fotos aus Google Fotos und OneDrive von selbst auf dem Rahmen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In PicDock erscheinen neue Fotos in einem gewählten OneDrive- oder Dropbox-Ordner, einem geteilten iCloud-Album oder einer NAS-Freigabe automatisch, weil PicDock diese Quellen während der Diashow regelmäßig neu einliest. Neue Google-Fotos nicht: Seit dem 31. März 2025 erhalten gewöhnliche Apps nur die Fotos, die Sie in Googles Auswahl antippen. Neuere Google-Fotos fügen Sie hinzu, indem Sie erneut auswählen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist das Mischen von Quellen in PicDock kostenlos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. In der Google-Play-Version sind alle Fotoquellen außer dem Web-Upload kostenlos, ebenso das Kombinieren. Premium ist optional und wird als lebenslanger Kauf (in den USA 19,99 US$), Jahresabo oder Monatsabo angeboten; der Preis für Ihr Land steht in der App. Da Jahres- und Monatsabos neben dem lebenslangen Kauf verkauft werden, ist PicDock nicht abofrei – Sie brauchen aber keines davon. Die Amazon-Appstore-Version für Fire-Tablets ist eine kostenpflichtige App (4,99 US$)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann die iPhone- oder iPad-Version von PicDock Google Fotos und OneDrive mischen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Cloud- und NAS-Quellen gibt es nur in der Android-App. PicDock für iPhone und iPad ist eine eigene App und zeigt nur Fotos aus der Fotos-Mediathek des Geräts."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/weatherdeck/">WeatherDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>Google Fotos und OneDrive<br>in einer Tablet-Diashow</h1>
+        <p>Mehrere Fotoquellen auf einem Android-Bilderrahmen: was geht, was sich nicht von selbst aktualisiert, und wie drei Apps im Vergleich dastehen.</p>
+        <div class="post-meta">Oktober 2026 · 7 Min. Lesezeit</div>
+    </div>
+
+    <article class="post">
+        <p><strong>Vorweg offen gesagt:</strong> PicDock, die Android-App, um die es in dieser Anleitung geht, wird von uns entwickelt – wir sind also nicht neutral. Angaben zu PicDock stammen von unserer <a href="https://devdad.kr/picdock/facts/">Faktenseite</a> (englisch). Angaben zu Fravora und Fotoo stammen ausschließlich aus ihren deutschen Google-Play-Einträgen, abgerufen am 30. Oktober 2026, und wir schreiben dazu, wo sie besser sind. Auf Google Play heißt PicDock „Foto Diashow, Bilderrahmen“ (Entwickler DD_studio).</p>
+
+        <p>Familien haben ihre Fotos selten an einem Ort. Das Handy des einen sichert in Google Fotos, der Windows-Laptop der anderen füllt OneDrive, und die Großeltern haben alte Abzüge auf ein NAS gescannt. Eine Bilderrahmen-App, die nur eine dieser Quellen liest, lässt den Großteil der Familie außen vor.</p>
+
+        <p><strong>Kurze Antwort:</strong> Ja, ein Android-Tablet kann Google Fotos und OneDrive in einer Diashow zeigen. In PicDock fügen Sie eine Quelle hinzu, dann die nächste mit <strong>„Zur aktuellen Diashow hinzufügen“</strong>, und die Fotos werden gemischt. Ein ehrlicher Haken: Wegen Googles API-Änderung von 2025 ist der <strong>Google-Fotos-Teil eine Auswahl, die Sie von Hand treffen</strong>, und wächst nicht von selbst, während der OneDrive-Teil seinem Ordner automatisch folgt.</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-source-picker-en.jpg" alt="Quellenauswahl von PicDock (englische Oberfläche): Alle Fotos, Alben, Favoriten, dann SMB/NAS, Dropbox, OneDrive, geteiltes iCloud-Album und Google Fotos" width="1100" height="1518" loading="lazy">
+            <figcaption>Jede Quelle in dieser Liste lässt sich zur laufenden Diashow hinzufügen (Bildschirmfoto der englischen Oberfläche).</figcaption>
+        </figure>
+
+        <h2>Warum ausgerechnet Google Fotos der schwierige Teil ist</h2>
+        <p>Bei OneDrive, Dropbox und NAS-Freigaben darf eine Bilderrahmen-App einen Ordner jederzeit neu einlesen. Bei Google Fotos nicht mehr. Laut Googles <a href="https://developers.google.com/photos/support/updates">Seite mit API-Updates</a> wurden die Lesezugriffe auf die Mediathek am <strong>31. März 2025</strong> entfernt; gewöhnliche Apps erhalten seitdem nur die Elemente, die Sie in Googles Auswahl (Picker) antippen. Ein Rahmen mit „Google Fotos plus OneDrive“ besteht also eigentlich aus zwei verschiedenen Arten von Quelle nebeneinander.</p>
+
+        <h2>Was PicDock in eine Diashow packen kann</h2>
+        <p>Die kombinierte Quelle kann eine beliebige Mischung hieraus enthalten (Android-App, Google-Play-Version):</p>
+        <table>
+            <thead>
+                <tr><th>Quelle</th><th>So fügen Sie sie hinzu</th><th>Neue Fotos erscheinen von selbst?</th><th>Videos</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Fotos auf dem Gerät</td><td>Alle Fotos, gewählte Alben oder Favoriten</td><td>Ja</td><td>Ja</td></tr>
+                <tr><td>Google Fotos</td><td>Fotos in Googles Auswahl antippen; PicDock speichert sie auf dem Tablet</td><td><strong>Nein</strong>, für neuere erneut auswählen</td><td>Nein</td></tr>
+                <tr><td>OneDrive</td><td>Anmelden, einen oder mehrere Ordner ankreuzen</td><td>Ja, regelmäßig neu eingelesen</td><td>Nein</td></tr>
+                <tr><td>Dropbox</td><td>Anmelden, einen oder mehrere Ordner ankreuzen</td><td>Ja, regelmäßig neu eingelesen</td><td>Nein</td></tr>
+                <tr><td>Geteiltes iCloud-Album</td><td>Öffentlichen Link des Albums einfügen</td><td>Ja, regelmäßig neu eingelesen</td><td>Nein</td></tr>
+                <tr><td>NAS / SMB-Freigabe</td><td>Host, Freigabe und Konto</td><td>Ja, regelmäßig neu eingelesen</td><td>Optionale Beta</td></tr>
+            </tbody>
+        </table>
+        <p>Die Fotos aller Teile werden in eine Liste gemischt. Eine kombinierte Quelle wird im Takt ihres am häufigsten aktualisierten Teils neu eingelesen und prüft außerdem, wenn Sie zur App zurückkehren.</p>
+
+        <h2>Einrichtung: Google Fotos plus OneDrive in PicDock</h2>
+        <p>Sie brauchen ein Android-Tablet oder -Smartphone (ab Android 7.0) und <strong>PicDock</strong> von Google Play („Foto Diashow, Bilderrahmen“, Entwickler DD_studio). Nicht zu verwechseln mit dem macOS-Programm picdock.app.</p>
+        <ol>
+            <li><strong>Mit OneDrive anfangen.</strong> Medienquelle → OneDrive, mit einem privaten Microsoft-Konto anmelden, den Ordner für den Rahmen ankreuzen. Details: <a href="https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html">Anleitung für OneDrive-Ordner</a>.</li>
+            <li><strong>Google Fotos hinzufügen.</strong> Medienquelle → Google Fotos → <strong>„Fotos hinzufügen“</strong>, Fotos auswählen (Sie können ein Album öffnen und daraus wählen), zu PicDock zurückkehren und <strong>„Alle Fotos abspielen“</strong> antippen.</li>
+            <li>PicDock fragt: <em>„Die aktuelle Diashow durch diese Auswahl ersetzen oder sie hinzufügen?“</em> Wählen Sie <strong>„Zur aktuellen Diashow hinzufügen“</strong>.</li>
+            <li>Bei Bedarf dasselbe für Dropbox, eine NAS-Freigabe, ein geteiltes iCloud-Album oder Alben auf dem Gerät. Die Reihenfolge spielt keine Rolle.</li>
+            <li>Um später einen Teil zu pausieren oder zu entfernen, öffnen Sie in den Einstellungen der Fotoquelle <strong>„Kombinierte Quellen verwalten“</strong>: Häkchen entfernen pausiert eine Quelle, das Papierkorb-Symbol entfernt sie.</li>
+        </ol>
+        <p>Ist ein Teil beim Laden der Diashow nicht erreichbar (das NAS schläft, das WLAN ist noch nicht bereit), zeigt PicDock die Fotos der übrigen Quellen und meldet, wie viele Quellen fehlgeschlagen sind. Bei späteren Aktualisierungen leert ein ausgefallener Teil den Rahmen nicht: PicDock behält die aktuelle Liste, bis wieder alle Teile antworten.</p>
+
+        <h2>Fravora und Fotoo: was ihre Einträge sagen</h2>
+        <p>Nur Angaben aus dem jeweiligen deutschen Google-Play-Eintrag (hl=de, gl=DE) vom 30. Oktober 2026. Fravora und Fotoo haben wir nicht selbst getestet.</p>
+        <table>
+            <thead>
+                <tr><th></th><th>PicDock</th><th>Fravora</th><th>Fotoo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Titel bei Google Play / Entwickler</td><td>Foto Diashow, Bilderrahmen / DD_studio</td><td>Fravora: Digital-Bilderrahmen / aniujual software</td><td>Fotoo – Fotorahmen mit Diashow / Bopp Studio</td></tr>
+                <tr><td>Genannte Quellen</td><td>Gerät, Google Fotos, Dropbox, OneDrive, geteilte iCloud-Alben, NAS/SMB, Web-Upload (Premium)</td><td>Lokale Ordner, Synology- und QNAP-NAS über SMB, Google Fotos, Microsoft OneDrive, Dropbox, Immich</td><td>Lokale Fotogalerie, Google Photos, Dropbox, Google Drive, Microsoft OneDrive, Samba/SMB</td></tr>
+                <tr><td>Mehrere Quellen in einer Diashow</td><td>Ja (kombinierte Quelle)</td><td>Ja: „in einer nahtlosen Diashow“</td><td>Nicht angegeben</td></tr>
+                <tr><td>Wie Google Fotos gelesen wird</td><td>Googles Auswahl, Fotos werden auf dem Tablet gespeichert</td><td>Nicht angegeben</td><td>In der Beschreibung nicht angegeben</td></tr>
+                <tr><td>Wetter und Uhr</td><td>Ja</td><td>Ja</td><td>Ja</td></tr>
+                <tr><td>Weitere genannte Extras</td><td>Dual-Modus, Hintergrundmusik, Bildschirmschoner, Gesichtsfilter (Haustierfilter in Premium)</td><td>Internetradio, Sprachsteuerung, Mikroverschiebungen gegen Einbrennen, Betriebszeiten-Zeitplan</td><td>Hintergrundmusik, Bildschirmschoner, geplante automatische Wiedergabe; laut Neuerungen Akkuanzeige und gesichtserkennender Fokus-Effekt</td></tr>
+                <tr><td>Angezeigte Preise (In-App-Käufe)</td><td>0,99 €–19,99 €</td><td>5,99 €</td><td>24,99 €–39,99 €</td></tr>
+                <tr><td>Hinweis „Enthält Werbung“</td><td>Nicht angezeigt*</td><td>Angezeigt (laut Beschreibung eine optionale belohnte Anzeige)</td><td>Nicht angezeigt</td></tr>
+                <tr><td>Downloads</td><td>10.000+</td><td>100+</td><td>1 Mio.+</td></tr>
+                <tr><td>Bewertung</td><td>4,2 (182 Rezensionen)</td><td>Keine Bewertung angezeigt</td><td>3,9 (6770 Rezensionen)</td></tr>
+                <tr><td>Aktualisiert am</td><td>25.10.2026</td><td>21.08.2026</td><td>21.09.2026</td></tr>
+            </tbody>
+        </table>
+        <p><small>* PicDock zeigt in der Diashow selbst nie Werbung; in der kostenlosen Google-Play-Version kann nach dem 7-tägigen Test in den Einstellungen ein Banner erscheinen, und eine optionale belohnte Anzeige schaltet Premium vorübergehend frei (<a href="https://devdad.kr/picdock/facts/">Faktenseite</a>).<br>Quellen, abgerufen am 30.10.2026 (deutscher Store): <a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;hl=de&amp;gl=DE">PicDock</a>, <a href="https://play.google.com/store/apps/details?id=com.aniujual.fravora&amp;hl=de&amp;gl=DE">Fravora</a>, <a href="https://play.google.com/store/apps/details?id=com.bo.fotoo&amp;hl=de&amp;gl=DE">Fotoo</a>. Preise und Bewertungen unterscheiden sich je nach Land und ändern sich.</small></p>
+
+        <h3>Wo Fravora besser ist</h3>
+        <ul>
+            <li><strong>Der Eintrag sagt ausdrücklich, dass Quellen gemischt werden</strong>: „Zeigen Sie Fotos aus lokalen Ordnern, SMB/NAS-Netzwerkfreigaben und Cloud-Speichern in einer nahtlosen Diashow.“</li>
+            <li><strong>Immich</strong>, der selbst gehostete Fotoserver, steht auf der Quellenliste. PicDock unterstützt Immich nicht.</li>
+            <li><strong>Integriertes Internetradio und Sprachsteuerung</strong> („Erkennung des Aktivierungsworts direkt auf dem Gerät“), dazu „Mikroverschiebungen zum Schutz vor Einbrennen“ für Bildschirme im Dauerbetrieb.</li>
+            <li>Laut Eintrag ist „kein Abonnement erforderlich“, angezeigt wird ein einzelner In-App-Kauf für 5,99 €. Die App ist noch jung: 100+ Downloads und noch keine Bewertung.</li>
+        </ul>
+
+        <h3>Wo Fotoo besser ist</h3>
+        <ul>
+            <li><strong>Google Drive</strong>, das PicDock nicht unterstützt.</li>
+            <li><strong>Verbreitung</strong>: über 1 Mio. Downloads und 6770 Rezensionen.</li>
+            <li>Laut den letzten Neuerungen ein <strong>gesichtserkennender Fokus-Effekt</strong> und eine Akkuanzeige. Ob Google Photos und OneDrive in derselben Diashow laufen können, sagt der Eintrag nicht.</li>
+        </ul>
+        <p>Wo PicDock passt: Sie wollen Google Fotos und OneDrive (oder Dropbox, ein NAS, ein geteiltes iCloud-Album) <strong>in derselben Diashow</strong>, mit Uhr, Wetter, nächtlichem Abdunkeln und Autostart am Ladegerät – und alle Fotoquellen außer dem Web-Upload kostenlos.</p>
+
+        <h2>Was PicDock nicht kann</h2>
+        <ul>
+            <li><strong>Der Google-Fotos-Teil aktualisiert sich nicht von selbst.</strong> Neue Fotos in einem Google-Fotos-Album erscheinen erst, wenn Sie sie auswählen. Für einen Rahmen, den die Familie füllt, ohne ihn anzufassen, legen Sie diese Fotos besser in einen OneDrive- oder Dropbox-Ordner.</li>
+            <li><strong>Keine Unterstützung für Google Drive.</strong></li>
+            <li><strong>Keine Wiedergabe von Videos aus der Cloud.</strong> Google Fotos, OneDrive und Dropbox liefern nur Fotos; Videos laufen vom Gerät und, als optionale Beta, von einem NAS.</li>
+            <li><strong>Der Android-Bildschirmschoner zeigt nur Fotos vom Gerät.</strong> Eine kombinierte Quelle läuft in der Vollbild-Diashow der App.</li>
+            <li><strong>Cloud- und NAS-Quellen gibt es nur auf Android.</strong> PicDock für iPhone und iPad (ab iOS 15) ist eine eigene App und zeigt nur Fotos aus der Fotos-Mediathek des Geräts – ohne Google Fotos, OneDrive, Dropbox oder NAS.</li>
+        </ul>
+
+        <h2>Was es kostet</h2>
+        <p>Die Google-Play-Version ist kostenlos zu laden und zu nutzen: <strong>Alle Fotoquellen außer dem Web-Upload sind kostenlos</strong>, das Kombinieren ebenfalls. Premium ist optional und wird als <strong>lebenslanger Kauf (in den USA 19,99 US$), Jahresabo oder Monatsabo</strong> angeboten; der Preis für Ihr Land steht in der App. Neue Installationen erhalten einen 7-tägigen Test aller Funktionen. Die Amazon-Appstore-Version für Fire-Tablets ist eine kostenpflichtige App (4,99 US$). Details auf der <a href="https://devdad.kr/picdock/facts/">Faktenseite</a>.</p>
+        <p><strong>Ist PicDock ein Abo?</strong> Sie brauchen keins, aber es gibt Abos: Das optionale Premium wird als lebenslanger Kauf, Jahresabo oder Monatsabo verkauft, PicDock „abofrei“ zu nennen wäre also nicht korrekt. Die Installation ist kostenlos, und jede Fotoquelle außer dem Web-Upload ist kostenlos. Die App für iPhone und iPad ist eine eigene App im App Store mit eigenen Funktionen und Preisen.</p>
+
+        <h2>Häufige Fragen</h2>
+
+        <h3>Gibt es eine Bilderrahmen-App, die Google Fotos und OneDrive zusammen zeigt?</h3>
+        <p>Ja. Auf Android kombiniert PicDock Google Fotos (ausgewählte Fotos), OneDrive- und Dropbox-Ordner, geteilte iCloud-Alben, NAS-Freigaben und Gerätefotos in einer Diashow. Laut Eintrag mischt auch Fravora lokale, NAS- und Cloud-Fotos, darunter Google Fotos und OneDrive. Der Eintrag von Fotoo nennt beide Dienste, sagt aber nicht, ob sie gemischt werden können.</p>
+
+        <h3>Erscheinen neue Fotos aus Google Fotos und OneDrive von selbst auf dem Rahmen?</h3>
+        <p>In PicDock erscheinen neue Fotos aus OneDrive, Dropbox, geteilten iCloud-Alben und vom NAS von selbst; neue Google-Fotos nicht, weil gewöhnliche Apps nur ausgewählte Fotos erhalten. Wählen Sie sie erneut aus, um sie hinzuzufügen.</p>
+
+        <h3>Ist das Mischen von Quellen in PicDock kostenlos?</h3>
+        <p>Ja. Alle Fotoquellen außer dem Web-Upload sind in der Google-Play-Version kostenlos, das Kombinieren ebenso. Premium ist optional: lebenslang (in den USA 19,99 US$), Jahresabo oder Monatsabo – Sie brauchen keins davon. Die Amazon-Version ist eine kostenpflichtige App (4,99 US$).</p>
+
+        <h3>Kann die iPhone- oder iPad-Version von PicDock Google Fotos und OneDrive mischen?</h3>
+        <p>Nein. Cloud- und NAS-Quellen gibt es nur auf Android. Die iOS-App zeigt nur Fotos aus der Fotos-Mediathek des Geräts.</p>
+
+        <h2>Kurz gesagt</h2>
+        <p>Ein Android-Tablet kann Google Fotos und OneDrive zusammen zeigen. In PicDock fügen Sie die zweite Quelle mit <strong>„Zur aktuellen Diashow hinzufügen“</strong> hinzu. Der OneDrive-Ordner hält sich selbst aktuell, der Google-Fotos-Teil bleibt so, wie Sie ihn ausgewählt haben. Wenn Sie Google Drive brauchen, sehen Sie sich Fotoo an; wenn Sie Immich, Radio oder Sprachsteuerung brauchen, Fravora. Weiterlesen: <a href="https://devdad.kr/blog/de-onedrive-folder-android-photo-frame.html">OneDrive-Ordner als Bilderrahmen</a> · <a href="https://devdad.kr/blog/de-nas-photo-frame-apps-compared.html">NAS-Bilderrahmen-Apps im Vergleich</a> · <a href="https://devdad.kr/blog/de-android-tablet-digitaler-bilderrahmen-apps.html">Bilderrahmen-Apps für Android-Tablets</a> · <a href="https://devdad.kr/blog/google-photos-android-photo-frame.html">Google Fotos auf dem Tablet-Rahmen (englisch)</a>.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad%26utm_medium%3Dblog%26utm_campaign%3Dmixed_sources_de" data-store="google_play">PicDock bei Google Play laden</a> · <a href="https://devdad.kr/picdock/facts/">PicDock-Fakten</a> · <a href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html" hreflang="en">English</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.querySelectorAll('a[data-store]').forEach(function(a){a.addEventListener('click',function(){gtag('event','store_outbound_click',{store:a.dataset.store,campaign:'mixed_sources_de',link_url:a.href});});});</script>
+</body>
+</html>

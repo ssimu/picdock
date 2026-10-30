@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Copy for crawler access; canonical = devdad.kr original -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안드로이드 기본 화면 보호기(Google 포토)와 액자 앱의 차이 — 충전 중에만 vs 상시 표시·시계·밤 소등 (2026)</title>
+    <meta name="description" content="픽셀 화면 보호기의 개인 디지털 액자, 픽셀 태블릿의 Google 포토 슬라이드쇼, Google TV 대기 모드, 갤럭시 화면 보호기처럼 안드로이드에 처음부터 있는 사진 표시와 액자 앱은 무엇이 다를까요? 충전 중에만 뜨는가, 계속 켜 두는가, 시계와 밤 소등은 어떻게 되는가. Google·삼성 도움말에서 확인한 내용입니다.">
+    <link rel="canonical" href="https://devdad.kr/blog/ko-android-screensaver-your-photos.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/android-screensaver-your-photos.html">
+    <link rel="alternate" hreflang="ja" href="https://devdad.kr/blog/ja-android-screensaver-your-photos.html">
+    <link rel="alternate" hreflang="ko" href="https://devdad.kr/blog/ko-android-screensaver-your-photos.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/android-screensaver-your-photos.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="안드로이드 기본 화면 보호기(Google 포토)와 액자 앱의 차이 (2026)">
+    <meta property="og:description" content="기본 화면 보호기는 충전 중에 화면이 꺼질 때만 뜹니다. 기기 사진이면 화면 보호기, NAS·클라우드 사진이나 시계·밤 소등까지 원하면 액자 앱의 전체 화면 슬라이드쇼. Google·삼성 도움말로 확인했습니다.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-bedside-phone-frame.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/ko-android-screensaver-your-photos.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "안드로이드 기본 화면 보호기(Google 포토)와 액자 앱의 차이 — 충전 중에만 vs 상시 표시·시계·밤 소등 (2026)",
+  "description": "안드로이드에 처음부터 있는 화면 보호기와 액자 앱의 차이. Google 도움말(2026년 10월 30일 확인)에 따르면 픽셀 휴대전화의 화면 보호기는 충전 중이거나 도킹한 상태에서 개인 디지털 액자를 보여 줄 수 있고, 픽셀 태블릿은 충전 중에만 Google 포토 앨범 슬라이드쇼를 띄우며, Google TV는 대기 모드에서 Google 포토 앨범을 보여 줍니다. 삼성 도움말에 따르면 갤럭시 화면 보호기는 충전 중 화면이 꺼질 때 고른 앨범을 보여 줍니다. PicDock 같은 액자 앱은 충전기를 연결하면 자동으로 시작해 화면을 켜 둔 채 시계와 날씨를 띄우고, 야간 모드와 잠자기 예약(화면 끄기 선택 가능)으로 밤을 처리하며, NAS와 클라우드 사진은 앱의 전체 화면 슬라이드쇼에서 재생합니다.",
+  "image": "https://devdad.kr/blog/images/picdock-bedside-phone-frame.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DevDad",
+    "url": "https://devdad.kr/"
+  },
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "inLanguage": "ko",
+  "mainEntityOfPage": "https://devdad.kr/blog/ko-android-screensaver-your-photos.html",
+  "citation": [
+    "https://support.google.com/pixelphone/answer/2818748?hl=ko",
+    "https://support.google.com/googlepixeltablet/answer/13555748?hl=en",
+    "https://support.google.com/googletv/answer/10070821?hl=ko",
+    "https://www.samsung.com/ae/support/mobile-devices/how-to-enable-screensaver-on-my-samsung-phone/",
+    "https://developer.android.com/reference/android/service/dreams/DreamService"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ko",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "앱을 설치하지 않고도 안드로이드 화면 보호기에 내 사진을 띄울 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "기기에 따라 됩니다. Google 도움말에 따르면 픽셀 휴대전화는 설정 → 디스플레이 및 터치 → 화면 보호기에서 충전 중에 개인 디지털 액자를 띄울 수 있고(일부 단계는 Android 14 이상), 픽셀 태블릿은 충전 중에 Google 포토 앨범 슬라이드쇼를 띄우며, Google TV는 설정 → 시스템 → 대기 모드에서 Google 포토를 고를 수 있습니다. 삼성 도움말에 따르면 갤럭시는 Settings > Display > Screensaver에서 앨범을 고르면 충전 중 화면이 꺼질 때 표시됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "기본 화면 보호기와 액자 앱은 무엇이 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "화면 보호기는 충전 중(또는 도킹 상태)에 화면이 자동으로 꺼지는 시점에만 뜨고, 만지면 사라집니다. 픽셀 도움말에는 전원 버튼으로 화면을 끄면 화면 보호기가 시작되지 않는다고 적혀 있습니다. 액자 앱은 앞에 띄워 두는 일반 앱입니다. PicDock은 충전기를 연결하거나 부팅하면 자동으로 시작해 화면을 켠 채 유지하고, 사진 위에 시계와 날씨를 띄우며, 예약 시간에 밝기를 낮추는 야간 모드와 화면을 끌 수도 있는 잠자기 예약으로 밤을 처리합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "화면 보호기로 NAS·OneDrive·Dropbox 사진을 보여 줄 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PicDock의 화면 보호기로는 안 됩니다. PicDock 화면 보호기는 기기에 저장된 사진만 보여 줍니다. NAS와 클라우드 소스는 안드로이드 앱의 전체 화면 슬라이드쇼에서 재생되고, 일정 간격으로 자동 갱신되므로 기기를 만지지 않아도 새 사진이 나타납니다. iPhone·iPad용 PicDock은 별개의 앱으로, 기기 사진 보관함만 보여 줍니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PicDock은 무료인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google Play 버전은 무료로 설치해 기간 제한 없이 쓸 수 있고, 웹 업로드를 제외한 모든 사진 소스가 무료입니다. 선택형 프리미엄은 평생 이용권(미국 US$19.99), 연간 구독, 월간 구독 세 가지로 판매합니다(가격은 앱에 표시되며 국가마다 다릅니다). Fire 태블릿용 Amazon Appstore 버전은 US$4.99 유료 앱입니다."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/weatherdeck/">WeatherDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>안드로이드 기본 화면 보호기(Google 포토)와<br>액자 앱의 차이 (2026)</h1>
+        <p>충전 중에만 뜨는가, 계속 켜 두는가. 시계와 밤 소등은 어떻게 되는가. 먼저 안드로이드에 처음부터 있는 기능부터 확인합니다.</p>
+        <div class="post-meta">2026년 10월 · 7분 분량</div>
+    </div>
+
+    <article class="post">
+        <p><strong>먼저 밝힙니다.</strong> 이 글에서 소개하는 안드로이드 앱 PicDock은 저희가 개발하고 있습니다. 그러니 중립이 아닙니다. 그래서 안드로이드와 Google, 삼성이 이미 넣어 둔 기능부터 소개합니다. 기본 기능 설명은 전부 <strong>Google·삼성 도움말(2026년 10월 30일 확인)</strong>에서 옮겼고 링크를 달았습니다. PicDock에 대한 내용은 <a href="https://devdad.kr/picdock/facts/ko/">PicDock 팩트 시트</a>에 적힌 것만 씁니다. PicDock은 Google Play에 ‘사진 슬라이드쇼 - 디지털 액자 시계, 알림, BGM’(개발사 DD_studio)이라는 이름으로 올라 있습니다. 기본 기능이 더 나은 경우도 분명히 적겠습니다.</p>
+
+        <p>충전기에 꽂아 둔 태블릿, 침대 옆 휴대폰, 아무도 안 보는 TV. 모두 까만 화면 대신 가족 사진을 띄울 수 있습니다. 안드로이드에서 이 일을 맡는 것이 <strong>화면 보호기</strong>입니다. 안드로이드 개발자 문서는 이것을 “dream”이라고 부르며, 충전 중인 기기가 유휴 상태가 되거나 데스크 독에 꽂혔을 때 시작되는 화면 보호기라고 설명합니다(<a href="https://developer.android.com/reference/android/service/dreams/DreamService">DreamService 레퍼런스</a>. 옛 안드로이드에서는 ‘Daydream’이라는 이름이었습니다).</p>
+
+        <p><strong>결론부터:</strong></p>
+        <ul>
+            <li><strong>충전 중에 사진이 잠깐 보이면 충분하다</strong> → 기본 화면 보호기. 픽셀 휴대전화·픽셀 태블릿·Google TV·갤럭시 모두 도움말에 사진 화면 보호기가 있습니다. 설치할 것이 없습니다.</li>
+            <li><strong>하루 종일 켜 두고 시계·날씨도 보고 싶다</strong> → 액자 앱. 화면 보호기는 만지면 사라지고, 전원 버튼으로 화면을 끄면 시작되지도 않습니다.</li>
+            <li><strong>밤에는 어둡게, 자는 동안에는 아예 꺼졌으면 한다</strong> → 액자 앱의 야간 모드·잠자기 예약. 픽셀 휴대전화는 어두워지면 저조도 시계로 바뀌거나 화면을 끄는 기능이 기본으로 있습니다.</li>
+            <li><strong>사진이 NAS, OneDrive, Dropbox에 있다</strong> → PicDock 화면 보호기는 이것들을 읽지 않습니다. 충전기를 꽂으면 시작되는 앱의 전체 화면 슬라이드쇼를 씁니다.</li>
+            <li><strong>Fire 태블릿</strong> → Fire OS는 서드파티 화면 보호기를 허용하지 않습니다. 앱을 앞에 띄워 둡니다.</li>
+        </ul>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-bedside-phone-frame.jpg" alt="침대 옆 협탁의 나무 거치대에 세운 안드로이드 기기가 사진을 보여 주고 있다. 옆에 스탠드와 책" width="1100" height="614" loading="lazy">
+            <figcaption>화면 보호기는 충전 중에만 돌기 때문에, 충전기 옆 거치대가 자연스러운 자리입니다.</figcaption>
+        </figure>
+
+        <h2>1분 비교: 기본 화면 보호기 vs 액자 앱</h2>
+        <table>
+            <tr><th></th><th>기본 화면 보호기</th><th>액자 앱(PicDock 전체 화면 슬라이드쇼)</th></tr>
+            <tr><td>언제 보이나</td><td>충전 중(또는 도킹 상태)에 화면이 자동으로 꺼지는 시점. 만지면 사라짐</td><td>앱이 앞에 떠 있는 동안 계속. PicDock은 충전기를 연결하거나 부팅하면 자동으로 시작하고 화면을 켜 둔 채 유지</td></tr>
+            <tr><td>어디서 설정하나</td><td>기기의 설정 앱</td><td>앱 안</td></tr>
+            <tr><td>사진 위치</td><td>기기마다 다름(픽셀 태블릿·Google TV는 Google 포토 앨범, 갤럭시는 고른 앨범)</td><td>기기, Google 포토(선택 도구), Dropbox, OneDrive, iCloud 공유 앨범, NAS/SMB, 이들의 결합</td></tr>
+            <tr><td>시계·날씨</td><td>기기마다 다름(픽셀 휴대전화·Google TV는 시계와 날씨 표시 가능)</td><td>사진 위에 시계(여러 스타일)와 실시간 날씨, 배터리 표시</td></tr>
+            <tr><td>밤</td><td>픽셀 휴대전화는 어두운 조명 모드(저조도 시계 또는 화면 끄기)</td><td>예약 시간에 밝기를 낮추는 야간 모드, 화면을 끌 수도 있는 잠자기 예약, 다시 알림이 있는 알람</td></tr>
+            <tr><td>설치</td><td>필요 없음</td><td>필요</td></tr>
+        </table>
+        <p>헷갈리기 쉬운 점이 하나 있습니다. 픽셀 도움말에는 <em>“전원 버튼으로 휴대전화를 끄면 화면 보호기가 시작되지 않습니다”</em>라고 적혀 있습니다. 화면이 스스로 꺼질 때까지 기다려야 합니다(<a href="https://support.google.com/pixelphone/answer/2818748?hl=ko">Google 픽셀 휴대전화 고객센터: 화면 보호기 설정</a>).</p>
+        <p>둘 중 무엇이 맞는지는 대부분 <strong>사진이 어디에 있는가</strong>와 <strong>화면을 얼마나 오래 켜 둘 것인가</strong>로 정해집니다.</p>
+
+        <h2>방법 1: 기기에 처음부터 있는 화면 보호기</h2>
+        <p>무엇을 설치하기 전에 여기부터 확인하세요.</p>
+
+        <h3>픽셀 휴대전화</h3>
+        <p>Google 도움말은 “휴대전화를 충전 중이거나 도킹한 상태에서 휴대전화의 화면 보호기에 사진, 다채로운 배경, 시계 등을 표시할 수 있습니다”라고 설명합니다. 충전 중에 쓸 맞춤 화면 보호기에는 다양한 시계 스타일, 날씨 업데이트, <strong>개인 디지털 액자</strong>, 충전 상태, 홈 컨트롤을 넣을 수 있습니다. 경로는 <strong>설정 → 디스플레이 및 터치 → 화면 보호기</strong>이고, ‘화면 보호기 선택’에서 고른 뒤 <strong>표시 시점</strong>에서 <em>충전하는 동안</em> 또는 <em>똑바로 세워져 있고 충전 중일 때</em>를 고릅니다. 방이 어두워지면 저조도 시계로 바뀌거나 화면을 끄는 <strong>어두운 조명 모드</strong>도 있습니다. 일부 단계는 <strong>Android 14 이상</strong>에서만 되고, 개인 디지털 액자에는 사진 및 미디어 라이브러리 접근 권한이 필요합니다. 출처: <a href="https://support.google.com/pixelphone/answer/2818748?hl=ko">Google 픽셀 휴대전화 고객센터</a>(2026년 10월 30일 확인).</p>
+
+        <h3>픽셀 태블릿</h3>
+        <p>픽셀 태블릿 도움말은 한국어판이 없어 영어판을 봤습니다. 잠긴 상태로 충전하는 동안 화면 보호기를 띄울 수 있고, 종류는 <strong>Google Photos</strong>(좋아하는 사진으로 만드는 액자 슬라이드쇼), Home Controls, Art Gallery, 전체 화면 시계, 날씨입니다. 경로는 <strong>Settings → Hub Mode → Screen saver</strong>에서 <em>Use screen saver</em>를 켜고 고르는 것이고, Google 포토는 기존 앨범을 고르거나 새로 만듭니다. 도움말에는 “Your screen saver will only start when your tablet is charging”(화면 보호기는 태블릿을 충전할 때만 시작된다)이라고 적혀 있고, 일부 단계는 <strong>Android 15 이상</strong>이 대상입니다. 출처: <a href="https://support.google.com/googlepixeltablet/answer/13555748?hl=en">Google Pixel Tablet Help</a>(2026년 10월 30일 확인).</p>
+
+        <h3>Google TV</h3>
+        <p>Google TV 홈 화면에서 <strong>설정 → 시스템 → 대기 모드 → 설정 → 소스</strong>로 가서 <strong>Google 포토</strong>를 고르고, 본인 확인 뒤 쓸 앨범을 고릅니다. ‘화면 정보’에서 시간과 날씨도 표시할 수 있습니다. 출처: <a href="https://support.google.com/googletv/answer/10070821?hl=ko">Google TV 고객센터: Google TV 화면 보호기 변경하기</a>(2026년 10월 30일 확인). 읽는 곳은 Google 포토이지 NAS가 아닙니다. TV에 NAS 사진을 띄우려면 <a href="https://devdad.kr/blog/android-tv-photo-screensaver-nas.html">Android TV·Google TV와 NAS 사진(영문)</a>을 보세요.</p>
+
+        <h3>삼성 갤럭시 휴대폰·태블릿</h3>
+        <p>삼성 도움말 <a href="https://www.samsung.com/ae/support/mobile-devices/how-to-enable-screensaver-on-my-samsung-phone/">“How to Enable Screen Saver on a Galaxy Phone”</a>(휴대폰과 태블릿을 함께 다룸, 최종 업데이트 2026-06-24, 2026년 10월 30일 확인)에 따르면 경로는 <strong>Settings &gt; Display &gt; Screensaver</strong>이고, <em>Photo Frame, Photo Table, Photos</em> 같은 옵션을 고른 뒤 <em>Select Album</em>으로 사진을 고릅니다. 그리고 “Once the screen turns off while your device is charging, the selected screensaver will appear”(충전 중 화면이 꺼지면 고른 화면 보호기가 나타난다)라고 적혀 있습니다. 이 도움말은 영문판이라, 한국어 기기에서 메뉴가 정확히 어떤 이름으로 보이는지는 이 글에서 확인하지 못했습니다. 보통 디스플레이 설정 안에서 ‘화면 보호기’를 찾으면 됩니다. 갤럭시 탭의 화면 꺼짐 시간·배터리 보호 설정은 <a href="https://devdad.kr/blog/galaxy-tab-digital-photo-frame.html">갤럭시 탭을 디지털 액자로(영문)</a>에 정리했습니다.</p>
+
+        <h3>다른 제조사</h3>
+        <p>레노버 등 다른 제조사도 화면 보호기를 자체 메뉴(대개 디스플레이 설정 안)에 두고, 고를 수 있는 내용은 기종과 안드로이드 버전마다 다릅니다. 이 글에서는 각 제조사 도움말을 확인하지 않았습니다.</p>
+
+        <h3>기본 기능이 더 나은 점</h3>
+        <ul>
+            <li><strong>설치할 것이 없습니다.</strong> 계정 설정이나 앱 업데이트를 신경 쓸 필요가 없습니다.</li>
+            <li><strong>Google 포토 앨범을 그대로 씁니다.</strong> 픽셀 태블릿과 Google TV는 도움말에 따르면 앨범을 골라 보여 줍니다. 일반 서드파티 앱은 2025년 3월 31일부터 Google 포토 라이브러리를 읽지 못하고 사용자가 선택 도구에서 고른 사진만 받게 되어(<a href="https://developers.google.com/photos/support/updates">Google Photos API 업데이트</a>), PicDock에서는 Google 포토 사진을 선택 도구로 다시 골라야 합니다.</li>
+            <li><strong>충전 중에만 돌아 켜진 채로 남지 않습니다.</strong> 쓰려고 만지면 바로 사라집니다.</li>
+            <li><strong>픽셀 휴대전화의 어두운 조명 모드</strong>는 방이 어두워지면 저조도 시계로 바꾸거나 화면을 끕니다.</li>
+        </ul>
+        <p><strong>기본 기능으로 충분한 경우:</strong> 사진이 Google 포토나 기기에 있고, 충전 중에 사진이 보이면 그만이다. 그렇다면 기본 화면 보호기를 쓰세요.</p>
+
+        <h2>방법 2: 화면 보호기 앱(기기에 저장한 사진)</h2>
+        <p>기기에 사진 화면 보호기가 없거나 더 세밀하게 설정하고 싶다면, 서드파티 앱을 화면 보호기로 등록할 수 있습니다. PicDock은 안드로이드 휴대폰·태블릿·Android TV에서 안드로이드 화면 보호기(Daydream)로 등록됩니다.</p>
+        <ul>
+            <li><strong>보여 주는 것:</strong> 기기에 저장된 사진. 태블릿이라면 대개 카메라 사진이나 복사해 둔 폴더입니다.</li>
+            <li><strong>고르는 법:</strong> PicDock을 설치한 뒤 기기의 화면 보호기 설정을 열고, 설치된 화면 보호기 목록에서 PicDock을 고릅니다. 기종에 따라 제조사 자체 옵션만 보일 수 있습니다. 목록에 PicDock이 없으면 방법 3을 쓰세요.</li>
+            <li><strong>도는 시점:</strong> 다른 안드로이드 화면 보호기와 같이, 충전 중이거나 도킹했을 때 화면이 자동으로 꺼지는 시점입니다. 계속 켜 두는 것은 화면 보호기가 아니라 방법 3의 몫입니다.</li>
+        </ul>
+
+        <h2>방법 3: 상시 표시 액자 — 전체 화면 슬라이드쇼</h2>
+        <p>충전기에 꽂아 둔 채 거의 떼지 않는 태블릿이라면, 화면 보호기를 기다릴 것 없이 액자 앱을 계속 띄워 두는 편이 낫습니다. 사진이 시놀로지·QNAP NAS나 가족이 함께 쓰는 OneDrive·Dropbox 폴더에 있는 경우에도 이쪽입니다. PicDock 화면 보호기는 이것들을 읽지 않지만, 앱의 <strong>전체 화면 슬라이드쇼</strong>는 읽습니다.</p>
+        <ul>
+            <li><strong>충전기를 연결하면(또는 부팅하면) 자동으로 시작</strong>하고, 도는 동안 화면을 켜 둡니다.</li>
+            <li><strong>사진 위에 시계와 날씨:</strong> 여러 스타일의 시계, 현재 날씨(시간별·5일 예보는 프리미엄), 배터리 표시. 날씨 데이터는 Open-Meteo가 제공합니다.</li>
+            <li><strong>밤 처리:</strong> 예약 시간에 밝기를 낮추는 <strong>야간 모드</strong>, 정해 둔 시간 동안 사진을 쉬게 하는 <strong>잠자기 예약</strong>(‘화면을 완전히 끄기’를 고르면 화면을 끔), 다시 알림이 있는 알람.</li>
+            <li><strong>소스를 직접 읽음:</strong> Google 포토(선택 도구로 고른 사진은 기기에 저장되어 오프라인에서도 재생), Dropbox, OneDrive, iCloud 공유 앨범, NAS/SMB 공유 폴더, 또는 이들의 결합.</li>
+            <li><strong>스스로 갱신:</strong> 클라우드와 NAS 소스는 일정 간격으로 자동 갱신되므로, 고른 폴더에 새 파일이 생기면 기기를 만지지 않아도 액자에 나타납니다.</li>
+        </ul>
+        <p>자세한 가이드: <a href="https://devdad.kr/blog/ko-always-on-photo-frame-tablet.html">상시 표시 태블릿 액자(자동 시작·화면 켜짐)</a> · <a href="https://devdad.kr/blog/ko-nas-photo-frame-app.html">NAS·SMB</a> · <a href="https://devdad.kr/blog/ko-icloud-shared-album-android-photo-frame.html">iCloud 공유 앨범</a> · <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">OneDrive 폴더(영문)</a> · <a href="https://devdad.kr/blog/google-photos-android-photo-frame.html">Google 포토(영문)</a></p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/tablet-frame-kitchen-shelf.jpg" alt="주방 선반에 놓인 태블릿이 디지털 액자로 가족 사진을 보여 주고 있다" width="1200" height="678" loading="lazy">
+            <figcaption>충전기에서 떼지 않는 태블릿이라면 충전기로 시작되는 슬라이드쇼가 화면 보호기 역할을 대신합니다. 네트워크의 사진도 보여 줍니다.</figcaption>
+        </figure>
+
+        <h2>Fire 태블릿</h2>
+        <p><strong>Fire OS는 서드파티 화면 보호기를 허용하지 않습니다.</strong> Fire 태블릿에서는 액자 앱이 화면 보호기 자리를 대신할 수 없고, 앞에 띄워 두는 앱으로 씁니다. Amazon Appstore 버전 PicDock은 <strong>US$4.99 유료 앱</strong>으로 모든 기능이 들어 있고, 광고도 인앱 결제도 없습니다.</p>
+
+        <h2>PicDock이 못 하는 것</h2>
+        <ul>
+            <li><strong>화면 보호기로는 기기에 저장된 사진만 보여 줍니다.</strong> NAS, OneDrive, Dropbox 같은 클라우드 소스는 앱의 슬라이드쇼에서만 재생됩니다.</li>
+            <li><strong>Google 드라이브는 지원하지 않습니다.</strong></li>
+            <li><strong>클라우드의 동영상은 재생하지 않습니다.</strong> 동영상은 기기 저장공간과, 선택 사항인 베타 기능으로 NAS/SMB 공유 폴더에서 재생됩니다. Google 포토, Dropbox, OneDrive, iCloud 공유 앨범의 동영상은 재생되지 않습니다.</li>
+            <li><strong>Google 포토는 ‘고른 사진’이지 저절로 늘어나는 앨범이 아닙니다.</strong> 고른 사진은 기기에 저장되므로 새 사진은 다시 골라야 합니다. 저절로 갱신되는 Google 포토 앨범만 원한다면 픽셀 태블릿이나 Google TV의 기본 화면 보호기가 더 맞을 수 있습니다.</li>
+            <li><strong>Fire OS에서는 서드파티 화면 보호기가 되지 않습니다</strong>(위에서 설명).</li>
+            <li><strong>클라우드·NAS 소스는 안드로이드 앱에만 있습니다.</strong> iPhone·iPad용 PicDock은 별개의 앱으로, 기기의 사진 보관함에서만 사진을 보여 줍니다.</li>
+        </ul>
+
+        <h2>가격</h2>
+        <p>Google Play 버전 PicDock은 무료로 설치해 기간 제한 없이 쓸 수 있고, <strong>웹 업로드를 제외한 모든 사진 소스가 무료</strong>입니다. 새로 설치하면 모든 기능을 7일 동안 체험할 수 있습니다. 프리미엄(전환 효과 전부, 시간별·5일 예보, 시계 디자인, 반려동물 필터 등)은 선택 사항이고, <strong>평생 이용권(미국 US$19.99), 연간 구독, 월간 구독</strong> 중에서 고릅니다(가격은 앱에 표시되며 국가마다 다릅니다). 슬라이드쇼 화면에는 광고가 나오지 않고, Play 무료 버전에서는 7일 체험이 끝난 뒤 설정 화면에 배너가 나올 수 있습니다. Fire 태블릿용 Amazon Appstore 버전은 US$4.99 유료 앱입니다. 자세한 내용은 <a href="https://devdad.kr/picdock/facts/ko/">팩트 시트</a>에 있습니다.</p>
+
+        <h2>자주 묻는 질문</h2>
+
+        <h3>앱을 설치하지 않고도 안드로이드 화면 보호기에 내 사진을 띄울 수 있나요?</h3>
+        <p>기기에 따라 됩니다. 픽셀 휴대전화는 개인 디지털 액자(일부 단계는 Android 14 이상), 픽셀 태블릿은 Google 포토 앨범(일부 단계는 Android 15 이상), Google TV는 대기 모드에서 Google 포토, 갤럭시는 화면 보호기에서 고른 앨범을 보여 줍니다. 사진 옵션이 없다면 PicDock 같은 화면 보호기 앱으로 기기 사진을 띄울 수 있습니다.</p>
+
+        <h3>기본 화면 보호기와 액자 앱은 무엇이 다른가요?</h3>
+        <p>화면 보호기는 충전 중(또는 도킹 상태)에 화면이 자동으로 꺼지는 시점에만 뜨고, 만지면 사라집니다. 전원 버튼으로 화면을 끄면 시작되지 않습니다. 액자 앱은 앞에 띄워 두는 앱으로, PicDock은 충전기를 연결하면 자동으로 시작해 화면을 켜 둔 채 시계와 날씨를 보여 주고, 야간 모드와 잠자기 예약으로 밤에는 어둡게 하거나 화면을 끕니다.</p>
+
+        <h3>화면 보호기로 NAS·OneDrive·Dropbox 사진을 보여 줄 수 있나요?</h3>
+        <p>PicDock 화면 보호기로는 안 됩니다. 기기에 저장된 사진만 보여 줍니다. NAS와 클라우드 사진은 충전기를 꽂으면 시작되는 안드로이드 앱의 전체 화면 슬라이드쇼에서 보여 주고, 폴더는 자동으로 갱신됩니다. iPhone·iPad 앱은 기기 사진 보관함만 보여 줍니다.</p>
+
+        <h3>PicDock은 무료인가요?</h3>
+        <p>Google Play 버전은 무료이고, 웹 업로드를 제외한 모든 사진 소스가 무료입니다. 프리미엄은 평생 이용권(미국 US$19.99), 연간 구독, 월간 구독 중에서 고를 수 있지만 쓰지 않아도 됩니다. Amazon Appstore 버전은 US$4.99 유료 앱입니다.</p>
+
+        <h2>정리</h2>
+        <p>충전 중에 사진이 잠깐 보이면 충분하다: 기본 화면 보호기(픽셀·Google TV·갤럭시). 사진은 기기에 있는데 사진 화면 보호기가 없다: PicDock 같은 화면 보호기 앱. 하루 종일 켜 두고 시계·날씨를 보며 밤에는 어둡게 하거나 끄고 싶다, 또는 사진이 NAS·OneDrive·Dropbox에 있다: 충전기에 꽂아 둔 PicDock 슬라이드쇼. Fire 태블릿: 화면 보호기가 아니라 앱을 앞에.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad%26utm_medium%3Dblog%26utm_campaign%3Dscreensaver_ko" data-store="google_play">Google Play에서 PicDock 받기</a> · <a href="https://devdad.kr/picdock/facts/ko/">PicDock 팩트 시트</a> · <a href="https://devdad.kr/blog/ko-android-tablet-digital-photo-frame-app-comparison.html">안드로이드 액자 앱 비교</a> · <a href="https://devdad.kr/blog/android-screensaver-your-photos.html" hreflang="en">English</a> · <a href="https://devdad.kr/blog/ja-android-screensaver-your-photos.html" hreflang="ja">日本語</a></p>
+
+        <p><small>출처(2026년 10월 30일 확인): <a href="https://support.google.com/pixelphone/answer/2818748?hl=ko">Google 픽셀 휴대전화 고객센터: 화면 보호기 설정</a>, <a href="https://support.google.com/googlepixeltablet/answer/13555748?hl=en">Google Pixel Tablet Help: Set up a screen saver and photo frame</a>, <a href="https://support.google.com/googletv/answer/10070821?hl=ko">Google TV 고객센터: Google TV 화면 보호기 변경하기</a>, <a href="https://www.samsung.com/ae/support/mobile-devices/how-to-enable-screensaver-on-my-samsung-phone/">Samsung: How to Enable Screen Saver on a Galaxy Phone</a>, <a href="https://developer.android.com/reference/android/service/dreams/DreamService">Android DreamService 레퍼런스</a>.</small></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.querySelectorAll('a[data-store]').forEach(function(a){a.addEventListener('click',function(){gtag('event','store_outbound_click',{store:a.dataset.store,campaign:'screensaver_ko',link_url:a.href});});});</script>
+</body>
+</html>
