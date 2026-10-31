@@ -53,6 +53,8 @@ Issues are welcome for feature requests and bug reports.
 - [Wall-mounted tablet as a digital photo frame: power, mounting and burn-in (2026)](https://ssimu.github.io/picdock/compare/wall-mounted-tablet-photo-frame.html)
 - [Google Photos and OneDrive in one slideshow on an Android tablet: which photo frame apps mix sources (2026)](https://ssimu.github.io/picdock/compare/google-photos-onedrive-one-slideshow-android.html)
 - [Google Fotos und OneDrive in einer Diashow auf dem Android-Tablet (2026)](https://ssimu.github.io/picdock/compare/de-google-photos-onedrive-one-slideshow-android.html)
+- [GoogleフォトとOneDriveを1つのスライドショーに — Androidタブレットのフォトフレーム（2026）](https://ssimu.github.io/picdock/compare/ja-google-photos-onedrive-one-slideshow-android.html)
+- [구글 포토와 원드라이브 사진을 한 슬라이드쇼로 — 안드로이드 태블릿 디지털 액자 (2026)](https://ssimu.github.io/picdock/compare/ko-google-photos-onedrive-one-slideshow-android.html)
 - [Turn an old iPad into a digital photo frame (iPad Air 2, mini 4 and newer — 2026)](https://ssimu.github.io/picdock/compare/old-ipad-digital-photo-frame.html)
 - [구형 아이패드를 디지털 액자로 — 아이패드 에어 2·미니 4도 됩니다 (2026)](https://ssimu.github.io/picdock/compare/ko-old-ipad-photo-frame.html)
 - [Altes iPad als digitaler Bilderrahmen — iPad Air 2, mini 4 und neuer (2026)](https://ssimu.github.io/picdock/compare/de-old-ipad-photo-frame.html)

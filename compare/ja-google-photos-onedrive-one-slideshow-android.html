@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Copy for crawler access; canonical = devdad.kr original -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoogleフォトとOneDriveを1つのスライドショーに — Androidタブレットのフォトフレーム（2026）</title>
+    <meta name="description" content="1台のAndroidタブレットで、GoogleフォトとOneDriveの写真を一緒に流せるか。PicDockの「組み合わせ」でGoogleフォト（選択ツール）、OneDrive、Dropbox、NAS、iCloud共有アルバム、端末の写真を混ぜる手順と、自動では増えない部分、そしてFravora・Fotooの日本のGoogle Playの説明（2026年10月31日確認）との比較。">
+    <link rel="canonical" href="https://devdad.kr/blog/ja-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="de" href="https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="ja" href="https://devdad.kr/blog/ja-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="ko" href="https://devdad.kr/blog/ko-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GoogleフォトとOneDriveを1つのスライドショーに — Androidタブレット">
+    <meta property="og:description" content="複数の写真ソースを1台のタブレットのフォトフレームで混ぜる方法。できること、自動では更新されない部分、PicDock・Fravora・Fotooの正直な比較。">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-source-picker-en.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/ja-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "GoogleフォトとOneDriveを1つのスライドショーに — Androidタブレットのフォトフレーム（2026）",
+  "description": "筆者が開発するAndroid用フォトフレームアプリPicDockには、端末の写真、Googleフォト（Googleの選択ツールで選び、タブレットに保存）、OneDrive、Dropbox、iCloud共有アルバム、NAS/SMB共有を1つのスライドショーに混ぜる「組み合わせ」ソースがあります。OneDrive・Dropbox・iCloud・NASの部分は自動で読み直されますが、Googleフォトの部分は2025年3月31日のGoogleのAPI変更により、手で選んだ固定のセットです。クラウドの動画は再生せず、Googleドライブには対応していません。クラウドとNASのソースはAndroid版だけの機能です。日本のGoogle Play（2026-10-31確認）によると、Fravoraはローカルフォルダ、SMB/NAS、クラウド（Googleフォト、OneDrive、Dropbox、Immich）の写真をシームレスなスライドショーで表示し、FotooはGoogle フォト、Dropbox、Google ドライブ、Microsoft OneDrive、Samba/SMBを挙げています。",
+  "image": "https://devdad.kr/blog/images/picdock-source-picker-en.jpg",
+  "author": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "publisher": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "datePublished": "2026-10-31",
+  "dateModified": "2026-10-31",
+  "inLanguage": "ja",
+  "mainEntityOfPage": "https://devdad.kr/blog/ja-google-photos-onedrive-one-slideshow-android.html",
+  "citation": [
+    "https://play.google.com/store/apps/details?id=com.aniujual.fravora&hl=ja&gl=JP",
+    "https://play.google.com/store/apps/details?id=com.bo.fotoo&hl=ja&gl=JP",
+    "https://developers.google.com/photos/support/updates"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "GoogleフォトとOneDriveの写真を一緒に表示できるフォトフレームアプリはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "あります。AndroidのPicDockは、Googleフォト（Googleの選択ツールで選んだ写真）、OneDriveのフォルダ、Dropboxのフォルダ、iCloud共有アルバム、NAS/SMB共有、端末の写真を1つのスライドショーにまとめられます。日本のGoogle Playの説明によると、Fravoraもローカルフォルダ、NAS、クラウド（GoogleフォトとOneDriveを含む）の写真をシームレスなスライドショーで表示します。Fotooの説明は両方のサービスを挙げていますが、混ぜて再生できるかは書かれていません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GoogleフォトやOneDriveに追加した新しい写真は、フレームに自動で表示されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PicDockでは、選んだOneDriveやDropboxのフォルダ、iCloud共有アルバム、NAS共有に入った新しい写真は自動で表示されます。スライドショーの再生中にこれらのソースを一定間隔で読み直すためです。Googleフォトの新しい写真は自動では増えません。2025年3月31日以降、一般のアプリが受け取れるのはGoogleの選択ツールで選んだ写真だけなので、新しい写真はもう一度選んで追加します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PicDockでソースを混ぜるのは無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "無料です。Google Play版ではWebアップロードを除くすべての写真ソースが無料で、組み合わせも無料です。プレミアムは任意で、買い切り（米国ではUS$19.99）、年額サブスクリプション、月額サブスクリプションの3種類があります。サブスクリプションも販売しているので、PicDockをサブスクリプションのないアプリと言うのは正確ではありませんが、どれも買わずに使えます。FireタブレットのAmazonアプリストア版はUS$4.99の有料アプリです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "iPhone・iPad版のPicDockでもGoogleフォトとOneDriveを混ぜられますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できません。クラウドとNASのソースはAndroid版だけの機能です。iPhone・iPad版のPicDockは別のアプリで、端末の写真ライブラリ（参加しているiCloud共有アルバムをアルバムとして選ぶことも含む）を表示します。Googleフォト、OneDrive、Dropbox、NASのソースはありません。"
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/weatherdeck/">WeatherDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>GoogleフォトとOneDriveを<br>1つのスライドショーに</h1>
+        <p>1台のAndroidタブレットで複数の写真ソースを混ぜる方法。できること、自動では更新されない部分、3つのアプリの比較。</p>
+        <div class="post-meta">2026年10月 · 約7分で読めます</div>
+    </div>
+
+    <article class="post">
+        <p><strong>最初にお断りします。</strong>この記事で紹介するAndroidアプリPicDockは私たちが開発しているもので、中立な立場ではありません。PicDockについての記述は私たちの<a href="https://devdad.kr/picdock/facts/ja/">ファクトシート</a>に基づきます。FravoraとFotooについての記述は、2026年10月31日に取得した日本のGoogle Playの説明（hl=ja、gl=JP）だけを出典とし、相手のほうが優れている点も書きます。PicDockの日本のGoogle Playでの表示名は『フォトスライドショー・デジタルフレーム』（開発元 DD_studio）です。</p>
+
+        <p>家族の写真が1か所にまとまっていることはあまりありません。片方のスマートフォンはGoogleフォトにバックアップし、もう片方のWindowsパソコンはOneDriveに写真をためていて、祖父母が昔のプリントをスキャンしたファイルはNASにある。ひとつのソースしか読めないフォトフレームアプリでは、家族の写真の大半が映りません。</p>
+
+        <p><strong>結論から:</strong> はい、AndroidタブレットでGoogleフォトとOneDriveを1つのスライドショーにできます。PicDockでは、まず1つのソースを設定し、次のソースを選ぶときに<strong>「現在のスライドショーに追加」</strong>を選ぶと、写真がまとめてシャッフルされます。正直に書いておくべき注意点がひとつあります。2025年のGoogleのAPI変更のため、<strong>Googleフォトの部分は手で選んだセット</strong>で、自動では増えません。一方、OneDriveの部分はフォルダの中身に自動で追従します。</p>
+
+        <p>なお、これは<strong>Android版の話</strong>です。iPhone・iPad版のPicDockにはGoogleフォトやOneDriveのソースがなく、この組み合わせはできません。</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-source-picker-en.jpg" alt="PicDockの写真ソース選択画面（英語表示）：すべての写真、アルバム、お気に入り、SMB/NAS、Dropbox、OneDrive、iCloud共有アルバム、Googleフォト" width="1100" height="1518" loading="lazy">
+            <figcaption>この一覧のソースは、どれも再生中のスライドショーに追加できます（英語表示の画面）。</figcaption>
+        </figure>
+
+        <h2>なぜGoogleフォトだけが難しいのか</h2>
+        <p>OneDrive、Dropbox、NAS共有では、フォトフレームアプリがいつでもフォルダを読み直せます。Googleフォトはもうそうはいきません。Googleの<a href="https://developers.google.com/photos/support/updates">APIの更新情報ページ</a>によると、ライブラリを読み取るためのスコープは<strong>2025年3月31日</strong>に廃止され、一般のアプリが受け取れるのは、Googleの選択ツール（Picker）でユーザーが選んだ項目だけになりました。つまり「Googleフォト＋OneDrive」のフレームは、実際には性質の違う2種類のソースを並べて使うことになります。詳しくは<a href="https://devdad.kr/blog/ja-google-photos-android-photo-frame.html">Googleフォトをフォトフレームに表示する方法</a>で説明しています。</p>
+
+        <h2>PicDockで1つのスライドショーにまとめられるもの</h2>
+        <p>「組み合わせ」ソースには、次のソースを好きなように混ぜられます（Android版、Google Play版）。</p>
+        <table>
+            <thead>
+                <tr><th>ソース</th><th>追加のしかた</th><th>新しい写真は自動で表示？</th><th>動画</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>端末の写真</td><td>すべての写真・動画、選んだアルバム、お気に入り</td><td>はい</td><td>はい</td></tr>
+                <tr><td>Google フォト</td><td>Googleの選択ツールで写真を選ぶ。PicDockがタブレットに保存</td><td><strong>いいえ</strong>。新しい写真はもう一度選ぶ</td><td>いいえ</td></tr>
+                <tr><td>OneDrive</td><td>サインインして、フォルダにチェック（複数可）</td><td>はい。一定間隔で読み直し</td><td>いいえ</td></tr>
+                <tr><td>Dropbox</td><td>サインインして、フォルダにチェック（複数可）</td><td>はい。一定間隔で読み直し</td><td>いいえ</td></tr>
+                <tr><td>iCloud共有アルバム</td><td>アルバムの公開リンクを貼り付ける</td><td>はい。一定間隔で読み直し</td><td>いいえ</td></tr>
+                <tr><td>NAS / SMB共有</td><td>ホスト、共有名、アカウントを入力</td><td>はい。一定間隔で読み直し</td><td>オプトインのベータ</td></tr>
+            </tbody>
+        </table>
+        <p>すべての部分の写真は1つのリストにシャッフルされます。クラウドとNASのソースは一定間隔で自動更新されるので、選んだフォルダに新しいファイルが入れば、タブレットに触れなくてもフレームに表示されます。OneDriveの更新間隔は<a href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">OneDriveフォルダのガイド</a>に書いています。</p>
+
+        <h2>設定手順：PicDockでGoogleフォト＋OneDrive</h2>
+        <p>必要なのは、Android 7.0以降のタブレットまたはスマートフォンと、Google Playの<strong>PicDock</strong>（表示名『フォトスライドショー・デジタルフレーム』、開発元 DD_studio）です。同じ名前のmacOSユーティリティ（picdock.app）とは別物です。</p>
+        <ol>
+            <li><strong>OneDriveから始めます。</strong>「メディアソース」→「OneDrive」で個人用Microsoftアカウントにサインインし、フレーム用のフォルダにチェックを入れます。詳しくは<a href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">OneDriveフォルダのガイド</a>へ。</li>
+            <li><strong>Googleフォトを追加します。</strong>「メディアソース」→「Google フォト」→<strong>「写真を追加」</strong>で写真を選び（アルバムを開いて選ぶこともできます）、PicDockに戻って<strong>「保存した写真をすべて再生」</strong>をタップします。</li>
+            <li>PicDockが<em>「選択したソースで置き換えますか、それとも現在のスライドショーに追加しますか？」</em>と聞くので、<strong>「現在のスライドショーに追加」</strong>を選びます。</li>
+            <li>必要ならDropbox、NAS共有、iCloud共有アルバム、端末のアルバムも同じように追加します。順番は関係ありません。</li>
+            <li>あとで一部を一時停止したり外したりするには、設定の「メディアソース」で<strong>「混合構成の管理」</strong>を開きます。チェックを外すと一時停止、ゴミ箱をタップすると削除です。</li>
+        </ol>
+        <p>スライドショーを読み込むときに一部のソースにつながらない場合（NASがスリープ中、Wi-Fiがまだつながっていないなど）、PicDockは<em>「N件のソースを読み込めませんでした — 残りの写真のみ表示します」</em>と知らせ、残りのソースの写真を表示します。その後の自動更新では、一部が失敗してもフレームが空になることはなく、すべてのソースが応答するまで今のリストを使い続けます。</p>
+
+        <h2>FravoraとFotoo：ストアの説明に書かれていること</h2>
+        <p>2026年10月31日時点の日本のGoogle Play（hl=ja、gl=JP）の説明に書かれた事実だけを使っています。FravoraとFotooは私たちが試したものではありません。</p>
+        <table>
+            <thead>
+                <tr><th></th><th>PicDock</th><th>Fravora</th><th>Fotoo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Google Playの表示名 / 開発元</td><td>フォトスライドショー・デジタルフレーム / DD_studio</td><td>Fravora: Digital Photo Frame / aniujual software</td><td>Fotoo - スライドショー付きフォトフレーム / Bopp Studio</td></tr>
+                <tr><td>説明に書かれたソース</td><td>端末、Googleフォト、Dropbox、OneDrive、iCloud共有アルバム、NAS/SMB、Webアップロード（プレミアム）</td><td>ローカルフォルダ、SMB経由のSynology/QNAP NAS、Googleフォト、Microsoft OneDrive、Dropbox、Immich</td><td>ローカルのフォトギャラリー、Google フォト、Dropbox、Google ドライブ、Microsoft OneDrive、Samba/SMB</td></tr>
+                <tr><td>複数のソースを1つのスライドショーに</td><td>はい（組み合わせ）</td><td>はい：「シームレスなスライドショーで表示」</td><td>記載なし</td></tr>
+                <tr><td>Googleフォトの読み込み方</td><td>Googleの選択ツール。選んだ写真をタブレットに保存</td><td>記載なし</td><td>説明には記載なし</td></tr>
+                <tr><td>天気と時計</td><td>あり</td><td>あり</td><td>あり</td></tr>
+                <tr><td>そのほか書かれている機能</td><td>デュアルモード、BGM、スクリーンセーバー、顔検出フィルター（ペットフィルターはプレミアム）</td><td>内蔵ラジオ、音声コントロール、焼き付き防止の微細なシフト、再生時間のスケジュール</td><td>BGM、スクリーンセーバー、スケジュール自動再生。最新情報（英語）ではバッテリー残量表示と顔を意識したフォーカス効果</td></tr>
+                <tr><td>表示されている価格（アプリ内購入）</td><td>￥150～￥2,980/アイテム</td><td>￥1,000/アイテム</td><td>￥1,499～￥2,500/アイテム</td></tr>
+                <tr><td>「広告が表示されます」の表示</td><td>なし*</td><td>あり（説明によると任意のリワード広告1つ）</td><td>なし</td></tr>
+                <tr><td>ダウンロード数</td><td>1万+</td><td>100+</td><td>100万+</td></tr>
+                <tr><td>評価</td><td>4.8（183件のレビュー）</td><td>評価の表示なし</td><td>3.9（6770件のレビュー）</td></tr>
+                <tr><td>更新日</td><td>2026/10/25</td><td>2026/08/21</td><td>2026/09/21</td></tr>
+            </tbody>
+        </table>
+        <p><small>* PicDockはスライドショー画面そのものには広告を表示しません。Google Playの無料版では、7日間のお試し期間のあと設定画面にバナーが出ることがあり、希望すればリワード広告でプレミアムを一時的に使えます（<a href="https://devdad.kr/picdock/facts/ja/">ファクトシート</a>）。<br>出典（2026-10-31取得、日本のストア）：<a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;hl=ja&amp;gl=JP">PicDock</a>、<a href="https://play.google.com/store/apps/details?id=com.aniujual.fravora&amp;hl=ja&amp;gl=JP">Fravora</a>、<a href="https://play.google.com/store/apps/details?id=com.bo.fotoo&amp;hl=ja&amp;gl=JP">Fotoo</a>。価格と評価は国によって異なり、変わることがあります。</small></p>
+
+        <h3>Fravoraのほうが優れている点</h3>
+        <ul>
+            <li><strong>ソースを混ぜられるとはっきり書いている</strong>：「ローカルフォルダ、SMB/NASネットワーク共有、クラウドストレージに保存された写真を、シームレスなスライドショーで表示します。」</li>
+            <li>セルフホストの写真サーバー<strong>Immich</strong>がソースに入っています。PicDockはImmichに対応していません。</li>
+            <li><strong>内蔵ラジオと音声コントロール</strong>（「デバイス上のウェイクフレーズ検出機能」）、さらに24時間表示の画面向けに「焼き付き防止のための微細なシフト機能」があります。</li>
+            <li>説明には「サブスクリプション不要」とあり、表示されているアプリ内購入は￥1,000の1種類だけです。まだ新しいアプリで、ダウンロードは100+、評価はまだ表示されていません。</li>
+        </ul>
+
+        <h3>Fotooのほうが優れている点</h3>
+        <ul>
+            <li>PicDockが対応していない<strong>Google ドライブ</strong>に対応しています。</li>
+            <li><strong>実績</strong>：100万+ダウンロード、6770件のレビュー。</li>
+            <li>最新情報（英語）によると、<strong>顔を意識したフォーカス効果</strong>とバッテリー残量表示が加わりました。ただし、Google フォトとOneDriveを同じスライドショーで流せるかは説明に書かれていません。</li>
+        </ul>
+        <p>PicDockが向いているのは、GoogleフォトとOneDrive（あるいはDropbox、NAS、iCloud共有アルバム）を<strong>同じスライドショー</strong>で流し、時計、天気、夜間の減光、充電器につないだときの自動スタートも使いたい場合です。Webアップロード以外の写真ソースはすべて無料です。</p>
+
+        <h2>PicDockにできないこと</h2>
+        <ul>
+            <li><strong>Googleフォトの部分は自動では更新されません。</strong>Googleフォトのアルバムに追加した写真は、選び直すまで表示されません。家族が触らずに写真を足していけるフレームにしたいなら、その写真はOneDriveかDropboxのフォルダに入れてください。</li>
+            <li><strong>Googleドライブには対応していません。</strong></li>
+            <li><strong>クラウドに保存された動画は再生しません。</strong>Googleフォト、OneDrive、Dropboxから表示するのは写真だけです。動画は端末から、またオプトインのベータ機能としてNASから再生します。</li>
+            <li><strong>Androidのスクリーンセーバーで表示されるのは端末の写真だけです。</strong>組み合わせソースはアプリの全画面スライドショーで再生します。</li>
+            <li><strong>クラウドとNASのソースはAndroid版だけです。</strong>iPhone・iPad版のPicDock（iOS 15以降）は別のアプリで、端末の写真ライブラリ（参加しているiCloud共有アルバムをアルバムとして選ぶことも含む）を表示します。Googleフォト、OneDrive、Dropbox、NASのソースはありません。</li>
+        </ul>
+
+        <h2>料金</h2>
+        <p>Google Play版は無料でダウンロードして使えます。<strong>Webアップロードを除くすべての写真ソースが無料</strong>で、組み合わせも無料です。プレミアムは任意で、<strong>買い切り（米国ではUS$19.99）、年額サブスクリプション、月額サブスクリプション</strong>から選べます。お住まいの国の価格はアプリ内に表示されます。新しくインストールすると全機能を7日間お試しできます。FireタブレットのAmazonアプリストア版はUS$4.99の有料アプリです。詳しくは<a href="https://devdad.kr/picdock/facts/ja/">ファクトシート</a>をご覧ください。</p>
+        <p><strong>PicDockはサブスクリプションのアプリですか？</strong> サブスクリプションは必須ではありませんが、販売はしています。任意のプレミアムは買い切り、年額、月額の3種類なので、PicDockをサブスクリプションのないアプリと言うのは正確ではありません。インストールは無料で、Webアップロード以外の写真ソースはすべて無料です。iPhone・iPad版は別のApp Storeアプリで、機能と価格が異なります。</p>
+
+        <h2>よくある質問</h2>
+
+        <h3>GoogleフォトとOneDriveの写真を一緒に表示できるフォトフレームアプリはありますか？</h3>
+        <p>あります。AndroidのPicDockは、Googleフォト（選んだ写真）、OneDriveとDropboxのフォルダ、iCloud共有アルバム、NAS共有、端末の写真を1つのスライドショーにまとめます。日本のGoogle Playの説明によると、Fravoraもローカル、NAS、クラウド（GoogleフォトとOneDriveを含む）の写真を混ぜて表示します。Fotooの説明は両方のサービスを挙げていますが、混ぜられるかは書かれていません。</p>
+
+        <h3>GoogleフォトやOneDriveに追加した新しい写真は、フレームに自動で表示されますか？</h3>
+        <p>PicDockでは、OneDrive、Dropbox、iCloud共有アルバム、NASの新しい写真は自動で表示されます。Googleフォトの新しい写真は表示されません。一般のアプリが受け取れるのは選択ツールで選んだ写真だけだからです。もう一度選んで追加してください。</p>
+
+        <h3>PicDockでソースを混ぜるのは無料ですか？</h3>
+        <p>無料です。Google Play版ではWebアップロードを除くすべての写真ソースが無料で、組み合わせも無料です。プレミアムは任意で、買い切り（米国ではUS$19.99）、年額サブスクリプション、月額サブスクリプションがありますが、どれも買わずに使えます。Amazon版はUS$4.99の有料アプリです。</p>
+
+        <h3>iPhone・iPad版のPicDockでもGoogleフォトとOneDriveを混ぜられますか？</h3>
+        <p>できません。クラウドとNASのソースはAndroid版だけです。iOS版は端末の写真ライブラリ（参加しているiCloud共有アルバムを含む）を表示します。</p>
+
+        <h2>まとめ</h2>
+        <p>1台のAndroidタブレットで、GoogleフォトとOneDriveを一緒に表示できます。PicDockでは、2つ目のソースを<strong>「現在のスライドショーに追加」</strong>で足します。OneDriveのフォルダは自動で最新の状態に追従し、Googleフォトの部分は選んだときのまま、と考えてください。Googleドライブが必要ならFotoo、Immich、ラジオ、音声コントロールが必要ならFravoraも検討してください。関連記事：<a href="https://devdad.kr/blog/ja-google-photos-android-photo-frame.html">Googleフォトをフォトフレームに表示する方法</a> · <a href="https://devdad.kr/blog/ja-onedrive-folder-android-photo-frame.html">OneDriveフォルダのフォトフレーム</a> · <a href="https://devdad.kr/blog/ja-nas-photo-frame-apps-compared.html">NAS対応フォトフレームアプリの比較</a> · <a href="https://devdad.kr/blog/ja-android-tablet-digital-photo-frame-app-comparison.html">Androidタブレット向けフォトフレームアプリ比較</a>。</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad%26utm_medium%3Dblog%26utm_campaign%3Dmixed_sources_ja" data-store="google_play">Google PlayでPicDockを入手</a> · <a href="https://devdad.kr/picdock/facts/ja/">PicDockファクトシート</a> · <a href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html" hreflang="en">English</a> · <a href="https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html" hreflang="de">Deutsch</a> · <a href="https://devdad.kr/blog/ko-google-photos-onedrive-one-slideshow-android.html" hreflang="ko">한국어</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.querySelectorAll('a[data-store]').forEach(function(a){a.addEventListener('click',function(){gtag('event','store_outbound_click',{store:a.dataset.store,campaign:'mixed_sources_ja',link_url:a.href});});});</script>
+</body>
+</html>

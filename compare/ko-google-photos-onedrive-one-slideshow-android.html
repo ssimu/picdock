@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Copy for crawler access; canonical = devdad.kr original -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZW7JP1CP38"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZW7JP1CP38');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 포토와 원드라이브 사진을 한 슬라이드쇼로 — 안드로이드 태블릿 디지털 액자 (2026)</title>
+    <meta name="description" content="안드로이드 태블릿 한 대로 구글 포토와 원드라이브(OneDrive) 사진을 함께 띄울 수 있을까? PicDock의 결합 소스로 Google 포토(선택 도구), OneDrive, Dropbox, NAS, iCloud 공유 앨범, 기기 사진을 섞는 방법, 저절로 늘지 않는 부분, 그리고 Fravora·Fotoo의 한국 Google Play 설명(2026년 10월 31일 확인) 비교.">
+    <link rel="canonical" href="https://devdad.kr/blog/ko-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="en" href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="de" href="https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="ja" href="https://devdad.kr/blog/ja-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="ko" href="https://devdad.kr/blog/ko-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="alternate" hreflang="x-default" href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="구글 포토와 원드라이브 사진을 한 슬라이드쇼로 — 안드로이드 태블릿">
+    <meta property="og:description" content="여러 사진 소스를 태블릿 액자 하나에 섞는 방법. 되는 것, 저절로 갱신되지 않는 것, PicDock·Fravora·Fotoo의 정직한 비교.">
+    <meta property="og:image" content="https://devdad.kr/blog/images/picdock-source-picker-ko.jpg">
+    <meta property="og:url" content="https://devdad.kr/blog/ko-google-photos-onedrive-one-slideshow-android.html">
+    <link rel="stylesheet" href="https://devdad.kr/styles.css">
+    <link rel="stylesheet" href="https://devdad.kr/blog/blog.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "구글 포토와 원드라이브 사진을 한 슬라이드쇼로 — 안드로이드 태블릿 디지털 액자 (2026)",
+  "description": "글쓴이가 개발하는 안드로이드 액자 앱 PicDock에는 기기 사진, Google 포토(Google 선택 도구로 골라 태블릿에 저장), OneDrive, Dropbox, iCloud 공유 앨범, NAS/SMB 공유를 한 슬라이드쇼로 섞는 결합 소스가 있습니다. OneDrive·Dropbox·iCloud·NAS 부분은 자동으로 다시 읽지만, Google 포토 부분은 2025년 3월 31일 Google API 변경 때문에 손으로 고른 고정 묶음입니다. 클라우드 동영상은 재생하지 않고 Google 드라이브는 지원하지 않으며, 클라우드·NAS 소스는 안드로이드 앱에만 있습니다. 한국 Google Play 설명(2026-10-31 확인)에 따르면 Fravora는 로컬 폴더, SMB/NAS, 클라우드(Google 포토, OneDrive, Dropbox, Immich) 사진을 하나의 슬라이드쇼로 보여 주고, Fotoo는 Google Photos, Dropbox, Google Drive, Microsoft OneDrive, Samba/SMB를 적어 두었습니다.",
+  "image": "https://devdad.kr/blog/images/picdock-source-picker-ko.jpg",
+  "author": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "publisher": {"@type": "Organization", "name": "DevDad", "url": "https://devdad.kr/"},
+  "datePublished": "2026-10-31",
+  "dateModified": "2026-10-31",
+  "inLanguage": "ko",
+  "mainEntityOfPage": "https://devdad.kr/blog/ko-google-photos-onedrive-one-slideshow-android.html",
+  "citation": [
+    "https://play.google.com/store/apps/details?id=com.aniujual.fravora&hl=ko&gl=KR",
+    "https://play.google.com/store/apps/details?id=com.bo.fotoo&hl=ko&gl=KR",
+    "https://developers.google.com/photos/support/updates"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ko",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "구글 포토와 원드라이브 사진을 함께 보여 주는 액자 앱이 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "있습니다. 안드로이드 앱 PicDock은 Google 포토(Google 선택 도구로 고른 사진), OneDrive 폴더, Dropbox 폴더, iCloud 공유 앨범, NAS/SMB 공유, 기기 사진을 한 슬라이드쇼로 묶을 수 있습니다. 한국 Google Play 설명에 따르면 Fravora도 로컬 폴더, NAS, 클라우드(Google 포토와 OneDrive 포함) 사진을 하나의 슬라이드쇼로 보여 줍니다. Fotoo의 설명은 두 서비스를 모두 적어 두었지만, 섞어서 재생할 수 있는지는 적혀 있지 않습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "구글 포토나 원드라이브에 새로 올린 사진이 액자에 저절로 나오나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PicDock에서는 고른 OneDrive·Dropbox 폴더, iCloud 공유 앨범, NAS 공유에 새로 들어온 사진이 저절로 나옵니다. 슬라이드쇼가 도는 동안 이 소스들을 일정 간격으로 다시 읽기 때문입니다. Google 포토의 새 사진은 저절로 늘지 않습니다. 2025년 3월 31일부터 일반 앱은 Google 선택 도구에서 고른 사진만 받을 수 있어서, 새 사진은 다시 골라 추가해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "PicDock에서 소스를 섞는 건 무료인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "무료입니다. Google Play 버전은 웹 업로드를 제외한 모든 사진 소스가 무료이고, 결합도 무료입니다. 프리미엄은 선택 사항이며 평생 이용권(미국 US$19.99), 연간 구독, 월간 구독 세 가지입니다. 구독 상품도 팔고 있으니 PicDock을 구독 없는 앱이라고 말하는 것은 정확하지 않지만, 아무것도 사지 않고 쓸 수 있습니다. Fire 태블릿용 Amazon Appstore 버전은 US$4.99 유료 앱입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "아이폰·아이패드용 PicDock에서도 구글 포토와 원드라이브를 섞을 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 클라우드와 NAS 소스는 안드로이드 앱에만 있습니다. 아이폰·아이패드용 PicDock은 별개의 앱으로, 기기의 사진 보관함(참여한 iCloud 공유 앨범을 앨범으로 고르는 것 포함)을 보여 줍니다. Google 포토, OneDrive, Dropbox, NAS 소스는 없습니다."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <a href="https://devdad.kr/" class="logo">DevDad</a>
+            <nav class="nav-links">
+                <a href="https://devdad.kr/blog/">Blog</a>
+                <a href="https://devdad.kr/picdock/">PicDock</a>
+                <a href="https://devdad.kr/weatherdeck/">WeatherDock</a>
+                <a href="https://devdad.kr/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <h1>구글 포토와 원드라이브 사진을<br>한 슬라이드쇼로</h1>
+        <p>안드로이드 태블릿 액자 하나에 여러 사진 소스를 섞는 방법. 되는 것, 저절로 갱신되지 않는 것, 앱 세 개 비교.</p>
+        <div class="post-meta">2026년 10월 · 7분 읽기</div>
+    </div>
+
+    <article class="post">
+        <p><strong>먼저 밝힙니다.</strong> 이 글에서 소개하는 안드로이드 앱 PicDock은 저희가 개발하고 있습니다. 그러니 중립이 아닙니다. PicDock에 대한 내용은 <a href="https://devdad.kr/picdock/facts/ko/">PicDock 팩트 시트</a>에 적힌 것만 씁니다. Fravora와 Fotoo에 대한 내용은 2026년 10월 31일에 받아 본 한국 Google Play 설명(hl=ko, gl=KR)에서만 가져왔고, 상대가 더 나은 점도 적겠습니다. PicDock은 한국 Google Play에 ‘사진 슬라이드쇼 - 디지털 액자 시계, 알림, BGM’(개발사 DD_studio)이라는 이름으로 올라 있습니다.</p>
+
+        <p>가족 사진이 한곳에 모여 있는 집은 드뭅니다. 한 사람의 휴대폰은 구글 포토에 백업되고, 다른 사람의 윈도우 노트북은 원드라이브에 사진을 쌓고, 부모님 댁 옛 인화 사진은 스캔해서 NAS에 넣어 두었습니다. 소스 하나만 읽는 액자 앱으로는 가족 사진 대부분이 화면에 나오지 않습니다.</p>
+
+        <p><strong>짧은 답:</strong> 네, 안드로이드 태블릿에서 구글 포토와 원드라이브를 한 슬라이드쇼로 볼 수 있습니다. PicDock에서는 소스 하나를 먼저 설정하고, 다음 소스를 고를 때 <strong>‘현재 슬라이드쇼에 추가’</strong>를 누르면 사진이 함께 섞여 나옵니다. 정직하게 밝혀 둘 점이 하나 있습니다. 2025년 Google API 변경 때문에 <strong>구글 포토 부분은 손으로 고른 묶음</strong>이라 저절로 늘지 않습니다. 반면 원드라이브 부분은 폴더 내용을 자동으로 따라갑니다.</p>
+
+        <p>이 내용은 <strong>안드로이드 앱 기준</strong>입니다. 아이폰·아이패드용 PicDock에는 구글 포토·원드라이브 소스가 없어서 이렇게 섞을 수 없습니다.</p>
+
+        <figure>
+            <img src="https://devdad.kr/blog/images/picdock-source-picker-ko.jpg" alt="PicDock의 사진/동영상 소스 선택 화면: 모든 사진 및 동영상, 앨범 선택, 즐겨찾기, SMB/NAS, Dropbox, OneDrive, iCloud 공유 앨범, Google Photos" width="1100" height="970" loading="lazy">
+            <figcaption>이 목록의 소스는 모두 재생 중인 슬라이드쇼에 추가할 수 있습니다.</figcaption>
+        </figure>
+
+        <h2>왜 구글 포토만 어려운가</h2>
+        <p>원드라이브, 드롭박스, NAS 공유는 액자 앱이 언제든 폴더를 다시 읽을 수 있습니다. 구글 포토는 이제 그렇지 않습니다. Google의 <a href="https://developers.google.com/photos/support/updates">API 업데이트 페이지</a>에 따르면 보관함을 읽는 권한(스코프)은 <strong>2025년 3월 31일</strong>에 없어졌고, 일반 앱은 사용자가 Google 선택 도구(Picker)에서 고른 항목만 받습니다. 그러니 ‘구글 포토 + 원드라이브’ 액자는 사실 성격이 다른 두 종류의 소스를 나란히 쓰는 셈입니다. 이 변경에 대한 자세한 설명은 <a href="https://devdad.kr/blog/google-photos-android-photo-frame.html">구글 포토 액자 가이드</a>(영어)에 있습니다.</p>
+
+        <h2>PicDock이 한 슬라이드쇼에 담을 수 있는 것</h2>
+        <p>결합 소스에는 아래 소스를 원하는 대로 섞을 수 있습니다(안드로이드 앱, Google Play 버전).</p>
+        <table>
+            <thead>
+                <tr><th>소스</th><th>추가하는 방법</th><th>새 사진이 저절로 나오나?</th><th>동영상</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>기기 사진</td><td>모든 사진 및 동영상, 고른 앨범, 즐겨찾기</td><td>예</td><td>예</td></tr>
+                <tr><td>Google 포토</td><td>Google 선택 도구에서 사진을 고름. PicDock이 태블릿에 저장</td><td><strong>아니요</strong>. 새 사진은 다시 골라야 함</td><td>아니요</td></tr>
+                <tr><td>OneDrive</td><td>로그인하고 폴더 체크(여러 개 가능)</td><td>예. 일정 간격으로 다시 읽음</td><td>아니요</td></tr>
+                <tr><td>Dropbox</td><td>로그인하고 폴더 체크(여러 개 가능)</td><td>예. 일정 간격으로 다시 읽음</td><td>아니요</td></tr>
+                <tr><td>iCloud 공유 앨범</td><td>앨범의 공개 링크 붙여넣기</td><td>예. 일정 간격으로 다시 읽음</td><td>아니요</td></tr>
+                <tr><td>NAS / SMB 공유</td><td>호스트, 공유 이름, 계정 입력</td><td>예. 일정 간격으로 다시 읽음</td><td>선택 사항인 베타</td></tr>
+            </tbody>
+        </table>
+        <p>모든 부분의 사진이 하나의 목록으로 섞입니다. 클라우드와 NAS 소스는 일정 간격으로 자동 갱신되므로, 고른 폴더에 새 파일이 생기면 태블릿을 만지지 않아도 액자에 나타납니다.</p>
+
+        <h2>설정 방법: PicDock에서 구글 포토 + 원드라이브</h2>
+        <p>필요한 것은 Android 7.0 이상 태블릿이나 휴대폰, 그리고 Google Play의 <strong>PicDock</strong>(이름 ‘사진 슬라이드쇼 - 디지털 액자 시계, 알림, BGM’, 개발사 DD_studio)입니다. 이름이 같은 macOS 유틸리티(picdock.app)와는 다른 제품입니다.</p>
+        <ol>
+            <li><strong>원드라이브부터 시작합니다.</strong> ‘사진/동영상 소스’ → ‘OneDrive’에서 개인 Microsoft 계정으로 로그인하고, 액자용 폴더를 체크합니다. 자세한 방법은 <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">원드라이브 폴더 가이드</a>(영어)에 있습니다.</li>
+            <li><strong>구글 포토를 추가합니다.</strong> ‘사진/동영상 소스’ → ‘Google Photos’ → <strong>‘사진 추가하기’</strong>로 사진을 고르고(앨범을 열어 그 안에서 고를 수도 있습니다), PicDock으로 돌아와 <strong>‘저장된 사진 전체 재생’</strong>을 누릅니다.</li>
+            <li>PicDock이 <em>“선택한 소스로 교체할까요, 현재 슬라이드쇼에 추가할까요?”</em>라고 물으면 <strong>‘현재 슬라이드쇼에 추가’</strong>를 고릅니다.</li>
+            <li>원하면 Dropbox, NAS 공유, iCloud 공유 앨범, 기기 앨범도 같은 방법으로 더합니다. 순서는 상관없습니다.</li>
+            <li>나중에 일부를 잠시 끄거나 빼려면 설정의 ‘사진/동영상 소스’에서 <strong>‘혼합 구성 관리’</strong>를 엽니다. 체크를 해제하면 잠시 끄고, 휴지통을 누르면 목록에서 제거합니다.</li>
+        </ol>
+        <p>슬라이드쇼를 불러올 때 일부 소스에 연결되지 않으면(NAS가 잠들어 있거나 Wi-Fi가 아직 안 잡혔을 때), PicDock은 <em>“소스 N개를 불러오지 못했습니다 — 나머지 사진만 표시합니다”</em>라고 알리고 나머지 소스의 사진을 보여 줍니다. 그 뒤 자동 갱신에서는 일부가 실패해도 액자가 비지 않고, 모든 소스가 다시 응답할 때까지 지금 목록을 유지합니다.</p>
+
+        <h2>Fravora와 Fotoo: 스토어 설명에 적힌 것</h2>
+        <p>2026년 10월 31일 한국 Google Play(hl=ko, gl=KR) 설명에 적힌 사실만 썼습니다. Fravora와 Fotoo는 저희가 직접 써 보지 않았습니다.</p>
+        <table>
+            <thead>
+                <tr><th></th><th>PicDock</th><th>Fravora</th><th>Fotoo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Google Play 이름 / 개발사</td><td>사진 슬라이드쇼 - 디지털 액자 시계, 알림, BGM / DD_studio</td><td>Fravora: Digital Photo Frame / aniujual software</td><td>Fotoo - 디지털 액자 사진 슬라이드쇼 플레이어 / Bopp Studio</td></tr>
+                <tr><td>설명에 적힌 소스</td><td>기기, Google 포토, Dropbox, OneDrive, iCloud 공유 앨범, NAS/SMB, 웹 업로드(프리미엄)</td><td>로컬 폴더, Synology·QNAP NAS(SMB 연결), Google 포토, Microsoft OneDrive, Dropbox, Immich</td><td>포토 갤러리, Google Photos, Dropbox, Google Drive, Microsoft OneDrive, Samba/SMB</td></tr>
+                <tr><td>여러 소스를 한 슬라이드쇼로</td><td>예(결합 소스)</td><td>예: “하나의 매끄러운 슬라이드쇼로”</td><td>적혀 있지 않음</td></tr>
+                <tr><td>구글 포토를 읽는 방식</td><td>Google 선택 도구. 고른 사진을 태블릿에 저장</td><td>적혀 있지 않음</td><td>설명에 적혀 있지 않음</td></tr>
+                <tr><td>날씨와 시계</td><td>있음</td><td>있음</td><td>있음</td></tr>
+                <tr><td>그 밖에 적힌 기능</td><td>듀얼 모드, 배경 음악, 화면 보호기, 얼굴 인식 필터(반려동물 필터는 프리미엄)</td><td>내장 라디오, 음성 제어, 번인 방지 마이크로 시프트, 사용 시간대 예약</td><td>배경 음악, 화면 보호기, 예약 자동 재생. 업데이트 소식(영어)에 배터리 잔량 표시와 얼굴을 인식하는 포커스 효과</td></tr>
+                <tr><td>표시된 가격(인앱 구매)</td><td>항목당 ₩1,000 - ₩20,000</td><td>항목당 ₩9,500</td><td>항목당 ₩15,000 - ₩25,000</td></tr>
+                <tr><td>‘광고 포함’ 표시</td><td>없음*</td><td>있음(설명에 따르면 선택해서 보는 광고 하나)</td><td>없음</td></tr>
+                <tr><td>다운로드</td><td>1만+</td><td>100+</td><td>100만+</td></tr>
+                <tr><td>평점</td><td>4.8(리뷰 183개)</td><td>평점 표시 없음</td><td>4.2(리뷰 6.77천 개)</td></tr>
+                <tr><td>업데이트 날짜</td><td>2026. 10. 25.</td><td>2026. 8. 21.</td><td>2026. 9. 21.</td></tr>
+            </tbody>
+        </table>
+        <p><small>* PicDock은 슬라이드쇼 화면 자체에는 광고를 띄우지 않습니다. Google Play 무료 버전에서는 7일 체험이 끝난 뒤 설정 화면에 배너가 나올 수 있고, 원하면 보상형 광고로 프리미엄을 잠시 열 수 있습니다(<a href="https://devdad.kr/picdock/facts/ko/">팩트 시트</a>).<br>출처(2026-10-31 확인, 한국 스토어): <a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;hl=ko&amp;gl=KR">PicDock</a>, <a href="https://play.google.com/store/apps/details?id=com.aniujual.fravora&amp;hl=ko&amp;gl=KR">Fravora</a>, <a href="https://play.google.com/store/apps/details?id=com.bo.fotoo&amp;hl=ko&amp;gl=KR">Fotoo</a>. 가격과 평점은 국가마다 다르고 바뀔 수 있습니다.</small></p>
+
+        <h3>Fravora가 더 나은 점</h3>
+        <ul>
+            <li><strong>소스를 섞는다고 분명히 적어 두었습니다</strong>: “로컬 폴더, SMB/NAS 네트워크 공유, 클라우드 저장소의 사진을 하나의 매끄러운 슬라이드쇼로 감상할 수 있습니다.”</li>
+            <li>직접 운영하는 사진 서버 <strong>Immich</strong>가 소스 목록에 있습니다. PicDock은 Immich를 지원하지 않습니다.</li>
+            <li><strong>내장 라디오와 음성 제어</strong>(“기기 내 음성 인식 기능”), 그리고 24시간 켜 두는 화면을 위한 “화면 번인 방지 마이크로 시프트 기능”이 있습니다.</li>
+            <li>설명에 “구독료나 강제 광고 없이 이용 가능”하다고 적혀 있고, 표시된 인앱 상품은 ₩9,500 하나입니다. 아직 새 앱이라 다운로드 100+에 평점은 아직 표시되지 않습니다.</li>
+        </ul>
+
+        <h3>Fotoo가 더 나은 점</h3>
+        <ul>
+            <li>PicDock이 지원하지 않는 <strong>Google Drive</strong>를 지원합니다.</li>
+            <li><strong>사용자 규모</strong>: 다운로드 100만+, 리뷰 6.77천 개.</li>
+            <li>최근 업데이트 소식(영어)에 따르면 <strong>얼굴을 인식하는 포커스 효과</strong>와 배터리 잔량 표시가 더해졌습니다. 다만 Google Photos와 OneDrive를 같은 슬라이드쇼로 돌릴 수 있는지는 설명에 적혀 있지 않습니다.</li>
+        </ul>
+        <p>PicDock이 맞는 경우: 구글 포토와 원드라이브(또는 드롭박스, NAS, iCloud 공유 앨범)를 <strong>같은 슬라이드쇼</strong>로 돌리면서 시계, 날씨, 밤 시간 밝기 낮춤, 충전기 연결 시 자동 시작도 쓰고 싶을 때입니다. 웹 업로드를 제외한 모든 사진 소스가 무료입니다.</p>
+
+        <h2>PicDock이 못 하는 것</h2>
+        <ul>
+            <li><strong>구글 포토 부분은 저절로 갱신되지 않습니다.</strong> 구글 포토 앨범에 새로 넣은 사진은 다시 고르기 전까지 나오지 않습니다. 가족이 액자를 만지지 않고 사진을 계속 채우게 하려면 그 사진을 원드라이브나 드롭박스 폴더에 넣으세요.</li>
+            <li><strong>Google 드라이브는 지원하지 않습니다.</strong></li>
+            <li><strong>클라우드에 저장된 동영상은 재생하지 않습니다.</strong> Google 포토, OneDrive, Dropbox에서는 사진만 보여 줍니다. 동영상은 기기에서, 그리고 선택 사항인 베타 기능으로 NAS에서 재생합니다.</li>
+            <li><strong>안드로이드 화면 보호기에는 기기 사진만 나옵니다.</strong> 결합 소스는 앱의 전체 화면 슬라이드쇼에서 재생됩니다.</li>
+            <li><strong>클라우드와 NAS 소스는 안드로이드 앱에만 있습니다.</strong> 아이폰·아이패드용 PicDock(iOS 15 이상)은 별개의 앱이며, 기기의 사진 보관함(참여한 iCloud 공유 앨범을 앨범으로 고르는 것 포함)을 보여 줍니다. Google 포토, OneDrive, Dropbox, NAS 소스는 없습니다.</li>
+        </ul>
+
+        <h2>비용</h2>
+        <p>Google Play 버전은 무료로 설치해 쓸 수 있습니다. <strong>웹 업로드를 제외한 모든 사진 소스가 무료</strong>이고, 결합도 무료입니다. 프리미엄은 선택 사항이며 <strong>평생 이용권(미국 US$19.99), 연간 구독, 월간 구독</strong> 중에서 고릅니다. 가격은 앱에 표시되며 국가마다 다릅니다. 새로 설치하면 모든 기능을 7일 동안 체험할 수 있습니다. Fire 태블릿용 Amazon Appstore 버전은 US$4.99 유료 앱입니다. 자세한 내용은 <a href="https://devdad.kr/picdock/facts/ko/">팩트 시트</a>에 있습니다.</p>
+        <p><strong>PicDock은 구독 앱인가요?</strong> 구독이 꼭 필요하지는 않지만, 구독 상품을 팔고는 있습니다. 선택 사항인 프리미엄이 평생 이용권·연간 구독·월간 구독 세 가지라서, PicDock을 구독 없는 앱이라고 말하는 것은 정확하지 않습니다. 설치는 무료이고, 웹 업로드를 제외한 모든 사진 소스가 무료입니다. 아이폰·아이패드용은 App Store의 별개 앱으로 기능과 가격이 다릅니다.</p>
+
+        <h2>자주 묻는 질문</h2>
+
+        <h3>구글 포토와 원드라이브 사진을 함께 보여 주는 액자 앱이 있나요?</h3>
+        <p>있습니다. 안드로이드 앱 PicDock은 Google 포토(고른 사진), OneDrive·Dropbox 폴더, iCloud 공유 앨범, NAS 공유, 기기 사진을 한 슬라이드쇼로 묶습니다. 한국 Google Play 설명에 따르면 Fravora도 로컬, NAS, 클라우드(Google 포토와 OneDrive 포함) 사진을 섞어 보여 줍니다. Fotoo의 설명은 두 서비스를 모두 적었지만 섞을 수 있는지는 적혀 있지 않습니다.</p>
+
+        <h3>구글 포토나 원드라이브에 새로 올린 사진이 액자에 저절로 나오나요?</h3>
+        <p>PicDock에서는 OneDrive, Dropbox, iCloud 공유 앨범, NAS의 새 사진은 저절로 나옵니다. Google 포토의 새 사진은 나오지 않습니다. 일반 앱은 선택 도구에서 고른 사진만 받을 수 있기 때문입니다. 다시 골라 추가하세요.</p>
+
+        <h3>PicDock에서 소스를 섞는 건 무료인가요?</h3>
+        <p>무료입니다. Google Play 버전은 웹 업로드를 제외한 모든 사진 소스가 무료이고, 결합도 무료입니다. 프리미엄은 선택 사항으로 평생 이용권(미국 US$19.99), 연간 구독, 월간 구독이 있지만, 아무것도 사지 않고 쓸 수 있습니다. Amazon 버전은 US$4.99 유료 앱입니다.</p>
+
+        <h3>아이폰·아이패드용 PicDock에서도 구글 포토와 원드라이브를 섞을 수 있나요?</h3>
+        <p>아니요. 클라우드와 NAS 소스는 안드로이드 앱에만 있습니다. iOS 앱은 기기의 사진 보관함(참여한 iCloud 공유 앨범 포함)을 보여 줍니다.</p>
+
+        <h2>정리</h2>
+        <p>안드로이드 태블릿 한 대로 구글 포토와 원드라이브를 함께 띄울 수 있습니다. PicDock에서는 두 번째 소스를 <strong>‘현재 슬라이드쇼에 추가’</strong>로 더합니다. 원드라이브 폴더는 저절로 최신 상태를 따라가고, 구글 포토 부분은 고른 그대로 남는다고 생각하면 됩니다. Google Drive가 필요하면 Fotoo를, Immich·라디오·음성 제어가 필요하면 Fravora를 살펴보세요. 함께 읽기: <a href="https://devdad.kr/blog/ko-nas-photo-frame-app.html">NAS 사진을 바로 띄우는 액자 앱 고르기</a> · <a href="https://devdad.kr/blog/ko-icloud-shared-album-android-photo-frame.html">iCloud 공유 앨범을 안드로이드 액자로</a> · <a href="https://devdad.kr/blog/ko-android-tablet-digital-photo-frame-app-comparison.html">안드로이드 태블릿 액자 앱 비교</a> · <a href="https://devdad.kr/blog/onedrive-folder-android-photo-frame.html">원드라이브 폴더 액자(영어)</a>.</p>
+
+        <p><a href="https://play.google.com/store/apps/details?id=kr.devdad.picdock&amp;referrer=utm_source%3Ddevdad%26utm_medium%3Dblog%26utm_campaign%3Dmixed_sources_ko" data-store="google_play">Google Play에서 PicDock 받기</a> · <a href="https://devdad.kr/picdock/facts/ko/">PicDock 팩트 시트</a> · <a href="https://devdad.kr/blog/google-photos-onedrive-one-slideshow-android.html" hreflang="en">English</a> · <a href="https://devdad.kr/blog/de-google-photos-onedrive-one-slideshow-android.html" hreflang="de">Deutsch</a> · <a href="https://devdad.kr/blog/ja-google-photos-onedrive-one-slideshow-android.html" hreflang="ja">日本語</a></p>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 DevDad. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>document.querySelectorAll('a[data-store]').forEach(function(a){a.addEventListener('click',function(){gtag('event','store_outbound_click',{store:a.dataset.store,campaign:'mixed_sources_ko',link_url:a.href});});});</script>
+</body>
+</html>
